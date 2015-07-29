@@ -40,6 +40,27 @@ RSpec.describe LocationsController, type: :controller do
     end
   end
 
+  describe "get #species" do
+    before do
+      @location = create(:location)
+      @species = create(:location)
+      @species_location = create(:species_location, location_id: @location.id, species_id: @species.id)
+      get :species, id: @location.id
+    end
+
+    it "returns http status 200" do
+      expect(response.status).to eq(200)
+    end
+
+    it "returns a list of species for the requested location as json" do
+      expect(response.body).to eq(@location.species.all.to_json)
+    end
+
+    it "assigns @species to the list of species for the requested location" do
+      expect(assigns(:species)).to eq(@location.species.all)
+    end
+  end
+
   after do
     Location.destroy_all
   end
