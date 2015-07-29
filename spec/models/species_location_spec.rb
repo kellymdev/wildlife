@@ -7,6 +7,10 @@ RSpec.describe SpeciesLocation, type: :model do
     it "has a species" do
       expect(species_location).to belong_to(:species)
     end
+
+    it "has a location" do
+      expect(species_location).to belong_to(:location)
+    end
   end
 
   after do
