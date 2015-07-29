@@ -3,11 +3,13 @@ require 'rails_helper'
 RSpec.describe SpeciesLocation, type: :model do
   let!(:species_location) { create(:species_location) }
 
-  it "has a species" do
-    expect(:species_location).to
+  describe "relationships" do
+    it "has a species" do
+      expect(species_location).to belong_to(:species)
+    end
   end
 
   after do
-    Species_Location.destroy_all
+    SpeciesLocation.destroy_all
   end
 end
