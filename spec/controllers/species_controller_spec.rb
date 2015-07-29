@@ -18,6 +18,28 @@ RSpec.describe SpeciesController, type: :controller do
     it "assigns @species to the list of species" do
       expect(assigns(:species)).to eq(Species.all)
     end
+  end
 
+  describe "get #show" do
+    before do
+      @species = create(:species)
+      get :show, id: @species.id
+    end
+
+    it "returns http status 200" do
+      expect(response.status).to eq(200)
+    end
+
+    it "returns details for the requested species as json" do
+      expect(response.body).to eq(@species.to_json)
+    end
+
+    it "assigns @animal to the list of species" do
+      expect(assigns(:animal)).to eq(@species)
+    end
+  end
+
+  after do
+    Species.destroy_all
   end
 end
