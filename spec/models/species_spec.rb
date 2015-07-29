@@ -14,4 +14,8 @@ RSpec.describe Species, type: :model do
   it "has a description" do
     expect(species).to validate_presence_of(:description)
   end
+
+  after do
+    Species.destroy_all
+  end
 end
