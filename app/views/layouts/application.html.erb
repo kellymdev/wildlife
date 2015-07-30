@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Wildlife</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Wellington Wildlife Watching</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
 
-<%= yield %>
+  <body>
+    <nav>
+      <ul>
+        <li><%= link_to "Locations", locations_path %></li>
+        <li><%= link_to "Species", species_index_path %></li>
+        <li><a class="location_search" href="/">Location Search</a></li>
+        <li><a class="species_search" href="/">Species Search</a></li>
+      </ul>
+    </nav>
 
-</body>
+  <%= yield %>
+
+  </body>
 </html>
