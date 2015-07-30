@@ -52,6 +52,19 @@
         3,
         null,
         null,
+        1,
+        7,
+        7,
+        7,
+        7,
+        null,
+        7,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/Kel/Documents/dev/git/wildlife/app/models/location.rb": [
@@ -80,6 +93,6 @@
         null
       ]
     },
-    "timestamp": 1438220823
+    "timestamp": 1438223321
   }
 }
