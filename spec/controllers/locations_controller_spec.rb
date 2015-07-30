@@ -61,6 +61,25 @@ RSpec.describe LocationsController, type: :controller do
     end
   end
 
+  describe "get #search" do
+    before do
+      @location = create(:location, name: "Zealandia Ecosanctuary")
+      get :search, query: "Zealandia"
+    end
+
+    it "returns http status 200" do
+      expect(response.status).to eq(200)
+    end
+
+    it "returns a list of locations matching the search term as json" do
+      expect(response.body).to eq((Location.where("lower(name) LIKE ?", "%zealandia%")).to_json)
+    end
+
+    it "assigns @locations to the list of locations matching the search term" do
+      expect(assigns(:locations)).to eq(Location.where("lower(name) LIKE ?", "%zealandia%"))
+    end
+  end
+
   after do
     Location.destroy_all
   end

@@ -16,4 +16,10 @@ class LocationsController < ApplicationController
     render json: @species
   end
 
+  def search
+    term = "%" + params[:query].downcase + "%"
+    @locations = Location.where("lower(name) LIKE ?", term )
+    render json: @locations
+  end
+
 end

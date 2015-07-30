@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :location do
-    name "Makara Beach"
-    description "The rain in Spain falls mainly on the plains."
+    name "Waikanae Estuary"
+    description "A coastal lagooon and wetland area. Home to several species of sea bird."
   end
 
 end
