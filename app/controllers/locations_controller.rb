@@ -7,13 +7,11 @@ class LocationsController < ApplicationController
 
   def show
     @location = Location.find_by(id: params[:id])
-    render json: @location
-  end
-
-  def species
-    location = Location.find_by(id: params[:id])
-    @species = location.species.all
-    render json: @species
+    @species = @location.species.all
+    render json:  {
+                    "location" => @location,
+                    "species" => @species
+                  }
   end
 
   def search

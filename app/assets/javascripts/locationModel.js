@@ -22,15 +22,3 @@ LocationModel.prototype.requestLocationDetails = function(locationUrl, successFu
     errorFunction();
   });
 };
-
-LocationModel.prototype.requestLocationSpecies = function(locationUrl, successFunction, errorFunction) {
-  var requestUrl = locationUrl + '/species';
-  $.ajax({
-    type: 'get',
-    url: requestUrl
-  }).done(function(jsonResponse) {
-    successFunction(jsonResponse);
-  }).fail(function() {
-    errorFunction();
-  });
-};

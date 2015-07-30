@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-30T14:40:14+12:00">2015-07-30T14:40:14+12:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-30T17:23:52+12:00">2015-07-30T17:23:52+12:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.22
+         2.29
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>8</b> files in total.
-    <b>47</b> relevant lines. 
-    <span class="green"><b>47</b> lines covered</span> and
+    <b>44</b> relevant lines. 
+    <span class="green"><b>44</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -63,11 +63,11 @@
       <tr>
         <td class="strong"><a href="#9ae88fb5d521346d3c8def9b18c699426d24f7cc" class="src_link" title="app/controllers/locations_controller.rb">app/controllers/locations_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>25</td>
-        <td>15</td>
-        <td>15</td>
+        <td>23</td>
+        <td>12</td>
+        <td>12</td>
         <td>0</td>
-        <td>2.3</td>
+        <td>2.6</td>
       </tr>
       
       <tr>
@@ -143,15 +143,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.79
+         2.96
        </span>
     </span> hits/line)
   </h2>
   <a name="Controllers"></a>
   <div>
     <b>4</b> files in total.
-    <b>32</b> relevant lines. 
-    <span class="green"><b>32</b> lines covered</span> and
+    <b>29</b> relevant lines. 
+    <span class="green"><b>29</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -181,11 +181,11 @@
       <tr>
         <td class="strong"><a href="#9ae88fb5d521346d3c8def9b18c699426d24f7cc" class="src_link" title="app/controllers/locations_controller.rb">app/controllers/locations_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>25</td>
-        <td>15</td>
-        <td>15</td>
+        <td>23</td>
+        <td>12</td>
+        <td>12</td>
         <td>0</td>
-        <td>2.3</td>
+        <td>2.6</td>
       </tr>
       
       <tr>
@@ -464,8 +464,8 @@
     <h3>app/controllers/locations_controller.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>15</b> relevant lines. 
-      <span class="green"><b>15</b> lines covered</span> and
+      <b>12</b> relevant lines. 
+      <span class="green"><b>12</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -521,103 +521,91 @@
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="9">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="9">
+          <span class="hits">4</span>
           
           <code class="ruby">    @location = Location.find_by(id: params[:id])</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="10">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="10">
+          <span class="hits">4</span>
           
-          <code class="ruby">    render json: @location</code>
+          <code class="ruby">    @species = @location.species.all</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="covered" data-hits="4" data-linenumber="11">
+          <span class="hits">4</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    render json:  {</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">                    &quot;location&quot; =&gt; @location,</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="13">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="13">
           
-          <code class="ruby">  def species</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="14">
-          <span class="hits">3</span>
           
-          <code class="ruby">    location = Location.find_by(id: params[:id])</code>
+          <code class="ruby">                    &quot;species&quot; =&gt; @species</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="15">
-          <span class="hits">3</span>
+        <li class="never" data-hits="" data-linenumber="14">
           
-          <code class="ruby">    @species = location.species.all</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="16">
-          <span class="hits">3</span>
           
-          <code class="ruby">    render json: @species</code>
+          <code class="ruby">                  }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
+        <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
           <code class="ruby">  def search</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="20">
+        <li class="covered" data-hits="3" data-linenumber="18">
           <span class="hits">3</span>
           
           <code class="ruby">    term = &quot;%&quot; + params[:query].downcase + &quot;%&quot;</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="21">
+        <li class="covered" data-hits="3" data-linenumber="19">
           <span class="hits">3</span>
           
           <code class="ruby">    @locations = Location.where(&quot;lower(name) LIKE ?&quot;, term )</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="22">
+        <li class="covered" data-hits="3" data-linenumber="20">
           <span class="hits">3</span>
           
           <code class="ruby">    render json: @locations</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby">end</code>

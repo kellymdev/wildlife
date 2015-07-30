@@ -9,5 +9,4 @@ LocationController.prototype.locationListRequest = function() {
 
 LocationController.prototype.locationDetailsRequest = function(locationUrl) {
   this.locationModel.requestLocationDetails(locationUrl, this.view.displayLocationDetails, this.view.displayErrorMessage);
-  this.locationModel.requestLocationSpecies(locationUrl, this.view.displayLocationSpecies, this.view.displayErrorMessage);
 };
