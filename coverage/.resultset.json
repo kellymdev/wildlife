@@ -39,6 +39,14 @@
         1,
         null
       ],
+      "/Users/Kel/Documents/dev/git/wildlife/app/controllers/pages_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
       "/Users/Kel/Documents/dev/git/wildlife/app/controllers/species_controller.rb": [
         1,
         null,
@@ -93,6 +101,6 @@
         null
       ]
     },
-    "timestamp": 1438223321
+    "timestamp": 1438224014
   }
 }
