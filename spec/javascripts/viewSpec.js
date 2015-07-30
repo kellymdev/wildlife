@@ -24,19 +24,19 @@ describe("View", function() {
     });
 
     it("displays the location names", function() {
-      expect('.content .locationList').toContainText('Cape Palliser');
-      expect('.content .locationList').toContainText('Foxton Estuary');
+      expect('.locationList').toContainText('Cape Palliser');
+      expect('locationList').toContainText('Foxton Estuary');
     });
 
     it("displays the location descriptions", function() {
-      expect('.content .locationList').toContainText('Rocky cap on the Wairarapa Coast.');
-      expect('.content .locationList').toContainText('One of the widest ranges of wading and shore birds in New Zealand.');
+      expect('.locationList').toContainText('Rocky cap on the Wairarapa Coast.');
+      expect('.locationList').toContainText('One of the widest ranges of wading and shore birds in New Zealand.');
     });
   });
 
   describe("displayLocationDetails", function() {
     beforeEach(function() {
-      var locationDetails = '{"id":1,"name":"Cape Palliser","description":"Rocky cape on the Wairarapa Coast."}'
+      var locationDetails = '{"location":{"id":1,"name":"Cape Palliser","description":"Rocky cape on the Wairarapa Coast."},"species":[{"id":25,"name":"New Zealand Fur Seal","scientific_name":"Arctocephalus forsteri","maori_name":"Kekeno","description":"Large furry mammal found around the New Zealand coastline."';
       view.displayLocationDetails(locationDetails);
     });
 
@@ -45,11 +45,77 @@ describe("View", function() {
     });
 
     it("displays the location name", function() {
-      expect('.content .locationDetails').toContainText('Cape Palliser');
+      expect('.locationDetails').toContainText('Cape Palliser');
     });
 
-    it("displays the locationDescription", function() {
-      expect('.content .locationDetails').toContainText('Rocky cape on the Wairarapa Coast.');
+    it("displays the location description", function() {
+      expect('.locationDetails').toContainText('Rocky cape on the Wairarapa Coast.');
+    });
+
+    it("appends a speciesList div to the page", function() {
+      expect('.content .speciesList').toBeInDOM();
+    });
+
+    it("displays a list of species found at the location", function() {
+      expect('.speciesList').toContainText("New Zealand Fur Seal");
+    });
+  });
+
+  describe("displaySpeciesDetails", function() {
+    describe("species without a maori name", function() {
+      beforeEach(function() {
+        var speciesDetails = '{"id":8,"name":"Caspian Tern","scientific_name":"Hydroprogne caspia","maori_name":null,"description":"Large gull-like bird, found in coastal waters, lakes and rivers."}';
+        view.displaySpeciesDetails(speciesDetails);
+      });
+
+      it("appends a speciesDetails div to the page", function() {
+        expect('.content .speciesDetails').toBeInDOM();
+      });
+
+      it("displays the common name for the species", function() {
+        expect('.speciesDetails').toContainText('Capsian Tern');
+      });
+
+      it("displays the scientific name for the species", function() {
+        expect('.speciesDetails').toContainText('Hydroprogne caspia');
+      });
+
+      it("displays the description for the species", function() {
+        expect('.speciesDetails').toContainText('Large gull-like bird, found in coastal waters, lakes and rivers.');
+      });
+    });
+
+    describe("species with a maori name", function() {
+      beforeEach(function() {
+        var speciesDetails = '{"id":28,"name":"New Zealand Wood Pigeon","scientific_name":"Hemiphaga novaeseelandiae","maori_name":"Kereru","description":"Large native pigeon, endemic to New Zealand"}';
+        view.displaySpeciesDetails(speciesDetails);
+      });
+
+      it("displays the common name for the species", function() {
+        expect('.speciesDetails').toContainText('New Zealand Wood Pigeon');
+      });
+
+      it("displays the scientific name for the species", function() {
+        expect('.speciesDetails').toContainText('Hemiphaga novaeseelandiae');
+      });
+
+      it("displays the maori name for the species", function() {
+        expect('.speciesDetails').toContainText('Kereru');
+      });
+
+      it("displays the description for the species", function() {
+        expect('.speciesDetails').toContainText('Large native pigeon, endemic to New Zealand');
+      });
+    });
+  });
+
+  describe("displayErrorMessage", function() {
+    beforeEach(function() {
+      view.displayErrorMessage();
+    });
+
+    it("displays an error message", function() {
+      expect('.content').toContainText('Sorry, something went wrong. Please try again.');
     });
   });
 });

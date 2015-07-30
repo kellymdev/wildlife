@@ -19,7 +19,7 @@ View.prototype.displayLocationDetails = function(details) {
   var locationHtml = '<div class="locationDetails">' +
                         '<h2>' + details.location.name + '</h2>' +
                         '<p>' + details.location.description + '</p>';
-  locationHtml += '<div class="speciesDetails">' +
+  locationHtml += '<div class="speciesList">' +
                     '<h3>Species</h3>' +
                     '<ul>';
   details.species.forEach(function(animal) {
@@ -30,7 +30,24 @@ View.prototype.displayLocationDetails = function(details) {
   $('.content').append(locationHtml);
 };
 
+View.prototype.displaySpeciesDetails = function(details) {
+  $('.content').html("");
+  var speciesHtml = '<div class="speciesDetails">' +
+                      '<h2>' + details.name;
+
+  if (details.maori_name != null) {
+    speciesHtml += ' (' + details.maori_name + ')';
+  }
+
+  speciesHtml +=  '</h2>' +
+                  '<p>Scientific name: ' + details.scientific_name + '</p>' +
+                  '<p>' + details.description + '</p>' +
+                  '<p><a class="back" href="/">Back to locations</a></p>' +
+                '</div>';
+  $('.content').append(speciesHtml);
+};
+
 View.prototype.displayErrorMessage = function() {
-  var errorHtml = '<p>Sorry, something went wrong. Please try again.</p>';
+  var errorHtml = '<p class="error">Sorry, something went wrong. Please try again.</p>';
   $('.content').append(errorHtml);
 };

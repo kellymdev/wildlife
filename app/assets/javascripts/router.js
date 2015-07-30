@@ -1,5 +1,6 @@
 $(document).ready(function() {
   var locationController = new LocationController();
+  var speciesController = new SpeciesController();
 
   locationController.locationListRequest();
 
@@ -9,8 +10,9 @@ $(document).ready(function() {
     locationController.locationDetailsRequest(locationUrl);
   });
 
-  $('.content').on('click', '.locationDetails a.back', function(e) {
+  $('.content').on('click', '.speciesList a', function(e) {
     e.preventDefault();
-    locationController.locationListRequest();
+    var speciesUrl = $(this).attr('href');
+    speciesController.speciesDetailsRequest(speciesUrl);
   });
 });
