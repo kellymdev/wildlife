@@ -33,17 +33,24 @@ View.prototype.displayLocationDetails = function(details) {
 View.prototype.displaySpeciesDetails = function(details) {
   $('.content').html("");
   var speciesHtml = '<div class="speciesDetails">' +
-                      '<h2>' + details.name;
+                      '<h2>' + details.species.name;
 
   if (details.maori_name != null) {
-    speciesHtml += ' (' + details.maori_name + ')';
+    speciesHtml += ' (' + details.species.maori_name + ')';
   }
 
   speciesHtml +=  '</h2>' +
-                  '<p>Scientific name: ' + details.scientific_name + '</p>' +
-                  '<p>' + details.description + '</p>' +
-                  '<p><a class="back" href="/">Back to locations</a></p>' +
-                '</div>';
+                  '<p>Scientific name: ' + details.species.scientific_name + '</p>' +
+                  '<p>' + details.species.description + '</p>' +
+                  '<div class="locationList">' +
+                    '<h3>Locations</h3>' +
+                    '<ul>';
+
+  details.locations.forEach(function(location) {
+    speciesHtml += '<li id="' + location.id + '"><a href="/locations/' + location.id + '">' + location.name + '</a></li>';
+  });
+
+  speciesHtml +=  '</ul></div><p><a class="back" href="/">Back to locations</a></p></div>';
   $('.content').append(speciesHtml);
 };
 

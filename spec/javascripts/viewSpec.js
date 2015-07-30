@@ -36,7 +36,7 @@ describe("View", function() {
 
   describe("displayLocationDetails", function() {
     beforeEach(function() {
-      var locationDetails = '{"location":{"id":1,"name":"Cape Palliser","description":"Rocky cape on the Wairarapa Coast."},"species":[{"id":25,"name":"New Zealand Fur Seal","scientific_name":"Arctocephalus forsteri","maori_name":"Kekeno","description":"Large furry mammal found around the New Zealand coastline."';
+      var locationDetails = '{"location":{"id":1,"name":"Cape Palliser","description":"Rocky cape on the Wairarapa Coast."},"species":[{"id":25,"name":"New Zealand Fur Seal"}]}';
       view.displayLocationDetails(locationDetails);
     });
 
@@ -64,7 +64,7 @@ describe("View", function() {
   describe("displaySpeciesDetails", function() {
     describe("species without a maori name", function() {
       beforeEach(function() {
-        var speciesDetails = '{"id":8,"name":"Caspian Tern","scientific_name":"Hydroprogne caspia","maori_name":null,"description":"Large gull-like bird, found in coastal waters, lakes and rivers."}';
+        var speciesDetails = '{"species":{"id":8,"name":"Caspian Tern","scientific_name":"Hydroprogne caspia","maori_name":null,"description":"Large gull-like bird, found in coastal waters, lakes and rivers."},"locations":[{"id":9,"name":"Pauatahanui Wildlife Reserve"}]}';
         view.displaySpeciesDetails(speciesDetails);
       });
 
@@ -83,11 +83,19 @@ describe("View", function() {
       it("displays the description for the species", function() {
         expect('.speciesDetails').toContainText('Large gull-like bird, found in coastal waters, lakes and rivers.');
       });
+
+      it("appends a locationsList div to the page", function() {
+        expect('.content .locationList').toBeInDOM();
+      });
+
+      it("displays a list of locations for the species", function() {
+        expect('.locationList').toContainText('Pauatahanui Wildlife Reserve');
+      });
     });
 
     describe("species with a maori name", function() {
       beforeEach(function() {
-        var speciesDetails = '{"id":28,"name":"New Zealand Wood Pigeon","scientific_name":"Hemiphaga novaeseelandiae","maori_name":"Kereru","description":"Large native pigeon, endemic to New Zealand"}';
+        var speciesDetails = '{"id":28,"name":"New Zealand Wood Pigeon","scientific_name":"Hemiphaga novaeseelandiae","maori_name":"Kereru","description":"Large native pigeon, endemic to New Zealand"},"locations":[{"id":3,"name":"Kapiti Island Nature Reserve"},{"id":8,"name":"Otari-Wiltons Bush"},{"id":16,"name":"Zealandia Ecosanctuary"}]}';
         view.displaySpeciesDetails(speciesDetails);
       });
 
@@ -105,6 +113,12 @@ describe("View", function() {
 
       it("displays the description for the species", function() {
         expect('.speciesDetails').toContainText('Large native pigeon, endemic to New Zealand');
+      });
+
+      it("displays a list of locations for the species", function() {
+        expect('.locationsList').toContainText('Kapiti Island Nature Reserve');
+        expect('.locationsList').toContainText('Otari-Wiltons Bush');
+        expect('.locationsList').toContainText('Zealandia Ecosanctuary');
       });
     });
   });
