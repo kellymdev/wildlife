@@ -23,6 +23,8 @@ RSpec.describe SpeciesController, type: :controller do
   describe "get #show" do
     before do
       @species = create(:species)
+      @location = create(:location)
+      @species_location = create(:species_location, location_id: @location.id, species_id: @species.id)
       get :show, id: @species.id
     end
 
@@ -30,12 +32,20 @@ RSpec.describe SpeciesController, type: :controller do
       expect(response.status).to eq(200)
     end
 
-    it "returns details for the requested species as json" do
-      expect(response.body).to eq(@species.to_json)
+    it "returns species details and a list of locations for the requested species as json" do
+      expected_data = {
+                        "species" => @species,
+                        "locations" => @species.locations.all
+                      }
+      expect(response.body).to eq(expected_data.to_json)
     end
 
     it "assigns @animal to the requested species" do
       expect(assigns(:animal)).to eq(@species)
+    end
+
+    it "assigns @locations to the list of locations for the requested species" do
+      expect(assigns(:locations)).to eq(@species.locations.all)
     end
   end
 
