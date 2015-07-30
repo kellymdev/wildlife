@@ -3,6 +3,7 @@ function View() {
 
 View.prototype.displayLocationList = function(list) {
   $('.content').html("");
+  $('.speciesList').html("");
   var listHtml = '<div class="locationList">' +
                     '<h2>Locations</h2>';
   list.forEach(function(listItem) {
@@ -21,6 +22,19 @@ View.prototype.displayLocationDetails = function(details) {
                         '<p><a class="back" href="/">Back to locations</a></p>' +
                       '</div>';
   $('.content').append(locationHtml);
+};
+
+View.prototype.displayLocationSpecies = function(species) {
+  $('.speciesList').html("");
+  var speciesHtml = '<div class="speciesDetails">' +
+                      '<h3>Species</h3>' +
+                      '<ul>';
+  species.forEach(function(animal) {
+    speciesHtml += '<li id="' + animal.id + '"><a href="/species/' + animal.id + '">' + animal.name + '</a></li>';
+  });
+  speciesHtml +=    '</ul>' +
+                  '</div>';
+  $('.speciesList').append(speciesHtml);
 };
 
 View.prototype.displayErrorMessage = function() {
