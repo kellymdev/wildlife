@@ -10,10 +10,10 @@
   <body>
     <nav>
       <ul>
-        <li><%= link_to "Locations", locations_path %></li>
-        <li><%= link_to "Species", species_index_path %></li>
-        <li><a class="location_search" href="/">Location Search</a></li>
-        <li><a class="species_search" href="/">Species Search</a></li>
+        <li><%= link_to "Locations", locations_path, id: "locations-link" %></li>
+        <li><%= link_to "Species", species_index_path, id: "species-link" %></li>
+        <li><a id="location_search" href="/">Location Search</a></li>
+        <li><a id="species_search" href="/">Species Search</a></li>
       </ul>
     </nav>
 

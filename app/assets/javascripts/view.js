@@ -2,8 +2,7 @@ function View() {
 }
 
 View.prototype.displayLocationList = function(list) {
-  $('.content').html("");
-  $('.speciesList').html("");
+  $('#content').html("");
   var listHtml = '<div class="locationList">' +
                     '<h2>Locations</h2>';
   list.forEach(function(listItem) {
@@ -11,11 +10,11 @@ View.prototype.displayLocationList = function(list) {
                 '<p>' + listItem.description + '</p>';
   });
   listHtml += '</div>';
-  $('.content').append(listHtml);
+  $('#content').append(listHtml);
 };
 
 View.prototype.displayLocationDetails = function(details) {
-  $('.content').html("");
+  $('#content').html("");
   var locationHtml = '<div class="locationDetails">' +
                         '<h2>' + details.location.name + '</h2>' +
                         '<p>' + details.location.description + '</p>';
@@ -27,15 +26,31 @@ View.prototype.displayLocationDetails = function(details) {
   });
 
   locationHtml += '</ul></div><p><a class="back" href="/">Back to locations</a></p></div>';
-  $('.content').append(locationHtml);
+  $('#content').append(locationHtml);
+};
+
+View.prototype.displaySpeciesList = function(list) {
+  $('#content').html("");
+  var speciesListHtml = '<div class="speciesList">' +
+                          '<h2>Species</h2>';
+  list.forEach(function(listItem) {
+    speciesListHtml += '<h3 id="' + listItem.id + '"><a href="/species/' + listItem.id + '">' + listItem.name;
+
+    if (listItem.maori_name != null) {
+      speciesListHtml += ' (' + listItem.maori_name + ')';
+    }
+  speciesListHtml += '</a></h3>';
+  });
+  speciesListHtml += '</div>';
+  $('#content').append(speciesListHtml);
 };
 
 View.prototype.displaySpeciesDetails = function(details) {
-  $('.content').html("");
+  $('#content').html("");
   var speciesHtml = '<div class="speciesDetails">' +
                       '<h2>' + details.species.name;
 
-  if (details.maori_name != null) {
+  if (details.species.maori_name != null) {
     speciesHtml += ' (' + details.species.maori_name + ')';
   }
 
@@ -51,10 +66,10 @@ View.prototype.displaySpeciesDetails = function(details) {
   });
 
   speciesHtml +=  '</ul></div><p><a class="back" href="/">Back to locations</a></p></div>';
-  $('.content').append(speciesHtml);
+  $('#content').append(speciesHtml);
 };
 
 View.prototype.displayErrorMessage = function() {
   var errorHtml = '<p class="error">Sorry, something went wrong. Please try again.</p>';
-  $('.content').append(errorHtml);
+  $('#content').append(errorHtml);
 };
