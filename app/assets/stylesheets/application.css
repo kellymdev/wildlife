@@ -5,10 +5,6 @@
 
 /*----------General Styles-----------------------*/
 
-/** {
-  box-sizing: border-box;
-}*/
-
  body {
   color: #878787;
   margin: 0;
@@ -35,9 +31,17 @@ h1 {
   text-align: center;
 }
 
+h2,
+h3 {
+  color: #4e8077;
+}
+
 h2 {
-  color: #4E8077;
-  border-bottom: 2px solid #4E8077;
+  border-bottom: 2px solid #4e8077;
+}
+
+h3 {
+  border-bottom: 1px solid #4e8077;
 }
 
 
@@ -45,7 +49,7 @@ h2 {
 
 a:link,
 a:visited {
-  color: #4E8077;
+  color: #4e8077;
   text-decoration: none;
 }
 
@@ -93,10 +97,21 @@ nav a {
   padding: 15px 10px;
 }
 
-nav a:link, nav a:visited {
+nav a:link,
+nav a:visited {
   color: #e4fff0;
 }
 
-nav a.selected, nav a:hover {
+nav a:hover {
   color: #b3d8cb;
+}
+
+
+/*----------Footer Styles------------------------*/
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9em;
+  border-top: 1px solid #4e8077;
 }
