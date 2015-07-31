@@ -1,16 +1,16 @@
 function SpeciesController() {
   this.speciesModel = new SpeciesModel();
-  this.view = new View();
+  this.speciesView = new SpeciesView();
 }
 
 SpeciesController.prototype.speciesListRequest = function() {
-  this.speciesModel.requestSpeciesList(this.view.displaySpeciesList, this.view.displayErrorMessage);
+  this.speciesModel.requestSpeciesList(this.speciesView.displaySpeciesList, this.speciesView.displayErrorMessage);
 };
 
 SpeciesController.prototype.speciesDetailsRequest = function(speciesUrl) {
-  this.speciesModel.requestSpeciesDetails(speciesUrl, this.view.displaySpeciesDetails, this.view.displayErrorMessage);
+  this.speciesModel.requestSpeciesDetails(speciesUrl, this.speciesView.displaySpeciesDetails, this.speciesView.displayErrorMessage);
 };
 
 SpeciesController.prototype.speciesSearchFormRequest = function() {
-  this.view.displaySpeciesSearchForm();
+  this.speciesView.displaySpeciesSearchForm();
 };

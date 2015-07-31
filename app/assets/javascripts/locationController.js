@@ -1,20 +1,20 @@
 function LocationController() {
   this.locationModel = new LocationModel();
-  this.view = new View();
+  this.locationView = new LocationView();
 }
 
 LocationController.prototype.locationListRequest = function() {
-  this.locationModel.requestLocationList(this.view.displayLocationList, this.view.displayErrorMessage);
+  this.locationModel.requestLocationList(this.locationView.displayLocationList, this.locationView.displayErrorMessage);
 };
 
 LocationController.prototype.locationDetailsRequest = function(locationUrl) {
-  this.locationModel.requestLocationDetails(locationUrl, this.view.displayLocationDetails, this.view.displayErrorMessage);
+  this.locationModel.requestLocationDetails(locationUrl, this.locationView.displayLocationDetails, this.locationView.displayErrorMessage);
 };
 
 LocationController.prototype.locationSearchFormRequest = function() {
-  this.view.displayLocationSearchForm();
+  this.locationView.displayLocationSearchForm();
 };
 
 LocationController.prototype.locationSearchRequest = function(searchQuery) {
-  this.locationModel.requestLocationSearch(searchQuery, this.view.displayLocationSearchResults, this.view.displayErrorMessage);
+  this.locationModel.requestLocationSearch(searchQuery, this.locationView.displayLocationSearchResults, this.locationView.displayErrorMessage);
 };
