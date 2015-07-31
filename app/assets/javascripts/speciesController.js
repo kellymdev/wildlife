@@ -10,3 +10,7 @@ SpeciesController.prototype.speciesListRequest = function() {
 SpeciesController.prototype.speciesDetailsRequest = function(speciesUrl) {
   this.speciesModel.requestSpeciesDetails(speciesUrl, this.view.displaySpeciesDetails, this.view.displayErrorMessage);
 };
+
+SpeciesController.prototype.speciesSearchFormRequest = function() {
+  this.view.displaySpeciesSearchForm();
+};

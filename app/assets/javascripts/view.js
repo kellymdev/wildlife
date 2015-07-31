@@ -82,6 +82,19 @@ View.prototype.displayLocationSearchForm = function() {
   $('#content').append(searchHtml);
 };
 
+View.prototype.displaySpeciesSearchForm = function() {
+  $('#content').html("");
+  var searchHtml = '<div class="speciesSearch">' +
+                      '<h2>Species Search</h2>' +
+                      '<form id="speciesSearchForm" action="/species/search/" method="get">' +
+                        '<label for="query">Species Name (Common name, Scientific name or Maori name)</label>' +
+                        '<input type="text" id="query" name="query">' +
+                        '<button type="submit">Search</button>' +
+                      '</form>' +
+                    '</div>';
+  $('#content').append(searchHtml);
+};
+
 View.prototype.displayErrorMessage = function() {
   var errorHtml = '<p class="error">Sorry, something went wrong. Please try again.</p>';
   $('#content').append(errorHtml);

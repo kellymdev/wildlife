@@ -157,6 +157,24 @@ describe("View", function() {
     });
   });
 
+  describe("displaySpeciesSearchForm", function() {
+    beforeEach(function() {
+      view.displaySpeciesSearchForm();
+    });
+
+    it("appends a speciesSearch div to the page", function() {
+      expect($('#content .speciesSearch')).toBeInDOM();
+    });
+
+    it("displays the species search form", function() {
+      expect($('.speciesSearch')).toContainText('Species Name');
+    });
+
+    it("states which name fields will be searched", function() {
+      expect($('.speciesSearch')).toContainText('Common name, Scientific name or Maori name');
+    });
+  });
+
   describe("displayErrorMessage", function() {
     beforeEach(function() {
       view.displayErrorMessage();
