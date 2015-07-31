@@ -166,7 +166,7 @@ describe("SpeciesView", function() {
       it("displays a no results found message", function() {
         expect('.noResults').toContainText('Sorry, we didn\'t find any results for that species.');
       });
-    })
+    });
   });
 
   describe("displayErrorMessage", function() {
