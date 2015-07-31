@@ -152,6 +152,21 @@ describe("SpeciesView", function() {
         expect('.maoriNameResults').toContainText('Whio');
       });
     });
+
+    describe("no results returned", function() {
+      beforeEach(function() {
+        var result = {"commonName":[],"scientificName":[],"maoriName":[]};
+        view.displaySpeciesSearchResults(result);
+      });
+
+      it("appends a noResults div to the page", function() {
+        expect('.speciesResults .noResults').toBeInDOM();
+      });
+
+      it("displays a no results found message", function() {
+        expect('.noResults').toContainText('Sorry, we didn\'t find any results for that species.');
+      });
+    })
   });
 
   describe("displayErrorMessage", function() {

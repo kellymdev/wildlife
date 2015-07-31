@@ -88,6 +88,21 @@ describe("LocationView", function() {
     it("displays the location name for the search result", function() {
       expect($('.locationResults')).toContainText('Cape Palliser');
     });
+
+    describe("no results returned", function() {
+      beforeEach(function() {
+        var result = [];
+        view.displayLocationSearchResults(result);
+      });
+
+      it("appends a noResults div to the page", function() {
+        expect($('.locationResults .noResults')).toBeInDOM();
+      });
+
+      it("displays a no results found message", function() {
+        expect($('.noResults')).toContainText("Sorry, we didn\'t find any results for that location.");
+      });
+    });
   });
 
   describe("displayErrorMessage", function() {

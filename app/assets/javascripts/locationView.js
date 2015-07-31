@@ -25,7 +25,7 @@ LocationView.prototype.displayLocationDetails = function(details) {
     locationHtml += '<li id="' + animal.id + '"><a href="/species/' + animal.id + '">' + animal.name + '</a></li>';
   });
 
-  locationHtml += '</ul></div><p><a class="back" href="/">Back to locations</a></p></div>';
+  locationHtml += '</ul></div></div>';
   $('#content').append(locationHtml);
 };
 
@@ -46,9 +46,17 @@ LocationView.prototype.displayLocationSearchResults = function(searchResults) {
   $('#content').html("");
   var resultHtml = '<div class="locationResults">' +
                       '<h2>Location Search Results</h2>';
+
   searchResults.forEach(function(result) {
     resultHtml += '<p><a href="/locations/' + result.id + '">' + result.name + '</a></p>';
   });
+
+  if (searchResults.length === 0) {
+    resultHtml += '<div class="noResults">' +
+                    '<p>Sorry, we didn\'t find any results for that location.</p>' +
+                  '</div>';
+  }
+
   resultHtml += '</div>';
   $('#content').append(resultHtml);
 };

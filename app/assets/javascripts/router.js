@@ -47,4 +47,16 @@ $(document).ready(function() {
     var request = $('#query').val();
     speciesController.speciesSearchRequest(request);
   });
+
+  $('#content').on('click', '.locationResults a', function(e) {
+    e.preventDefault();
+    var locationUrl = $(this).attr('href');
+    locationController.locationDetailsRequest(locationUrl);
+  });
+
+  $('#content').on('click', '.speciesResults a', function(e) {
+    e.preventDefault();
+    var speciesUrl = $(this).attr('href');
+    speciesController.speciesDetailsRequest(speciesUrl);
+  });
 });

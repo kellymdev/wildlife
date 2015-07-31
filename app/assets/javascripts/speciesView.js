@@ -37,7 +37,7 @@ SpeciesView.prototype.displaySpeciesDetails = function(details) {
     speciesHtml += '<li id="' + location.id + '"><a href="/locations/' + location.id + '">' + location.name + '</a></li>';
   });
 
-  speciesHtml +=  '</ul></div><p><a class="back" href="/">Back to locations</a></p></div>';
+  speciesHtml +=  '</ul></div></div>';
   $('#content').append(speciesHtml);
 };
 
@@ -84,6 +84,12 @@ SpeciesView.prototype.displaySpeciesSearchResults = function(searchResults) {
       resultHtml += '<h3><a href="/species/' + animal.id + '">' + animal.maori_name + '</a></h3>';
     });
     resultHtml += '</div>';
+  }
+
+  if (searchResults.commonName.length === 0 && searchResults.scientificName.length === 0 && searchResults.maoriName.length === 0) {
+    resultHtml += '<div class="noResults">' +
+                    '<p>Sorry, we didn\'t find any results for that species.</p>' +
+                  '</div>';
   }
 
   $('#content').append(resultHtml);
