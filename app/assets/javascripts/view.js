@@ -69,6 +69,19 @@ View.prototype.displaySpeciesDetails = function(details) {
   $('#content').append(speciesHtml);
 };
 
+View.prototype.displayLocationSearchForm = function() {
+  $('#content').html("");
+  var searchHtml = '<div class="locationSearch">' +
+                      '<h2>Location Search</h2>' +
+                      '<form id="locationSearchForm" action="/locations/search/" method="get">' +
+                        '<label for="query">Location Name</label>' +
+                        '<input type="text" id="query" name="query">' +
+                        '<button type="submit">Search</button>' +
+                      '</form>' +
+                    '</div>';
+  $('#content').append(searchHtml);
+};
+
 View.prototype.displayErrorMessage = function() {
   var errorHtml = '<p class="error">Sorry, something went wrong. Please try again.</p>';
   $('#content').append(errorHtml);

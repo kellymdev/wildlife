@@ -10,3 +10,7 @@ LocationController.prototype.locationListRequest = function() {
 LocationController.prototype.locationDetailsRequest = function(locationUrl) {
   this.locationModel.requestLocationDetails(locationUrl, this.view.displayLocationDetails, this.view.displayErrorMessage);
 };
+
+LocationController.prototype.locationSearchFormRequest = function() {
+  this.view.displayLocationSearchForm();
+};

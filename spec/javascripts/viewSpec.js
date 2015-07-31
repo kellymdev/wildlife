@@ -143,6 +143,20 @@ describe("View", function() {
     });
   });
 
+  describe("displayLocationSearchForm", function() {
+    beforeEach(function() {
+      view.displayLocationSearchForm();
+    });
+
+    it("appends a locationSearch div to the page", function() {
+      expect($('#content .locationSearch')).toBeInDOM();
+    });
+
+    it("displays the location search form", function() {
+      expect($('.locationSearch')).toContainText('Location Name');
+    });
+  });
+
   describe("displayErrorMessage", function() {
     beforeEach(function() {
       view.displayErrorMessage();

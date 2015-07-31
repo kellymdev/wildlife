@@ -25,4 +25,9 @@ $(document).ready(function() {
     e.preventDefault();
     speciesController.speciesListRequest();
   });
+
+  $('nav').on('click', '#location-search', function(e) {
+    e.preventDefault();
+    locationController.locationSearchFormRequest();
+  });
 });
