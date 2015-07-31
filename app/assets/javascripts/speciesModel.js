@@ -22,3 +22,16 @@ SpeciesModel.prototype.requestSpeciesDetails = function(speciesUrl, successFunct
     errorFunction();
   });
 };
+
+SpeciesModel.prototype.requestSpeciesSearch = function(searchQuery, successFunction, errorFunction) {
+  var requestUrl = '/species/search/' + searchQuery;
+
+  $.ajax({
+    type: 'get',
+    url: requestUrl
+  }).done(function(jsonResponse) {
+    successFunction(jsonResponse);
+  }).fail(function() {
+    errorFunction();
+  });
+};

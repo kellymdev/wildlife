@@ -54,6 +54,41 @@ SpeciesView.prototype.displaySpeciesSearchForm = function() {
   $('#content').append(searchHtml);
 };
 
+SpeciesView.prototype.displaySpeciesSearchResults = function(searchResults) {
+  $('#content').html("");
+  var resultHtml = '<div class="speciesResults">' +
+                      '<h2>Species Search Results</h2>';
+
+  if (searchResults.commonName.length !== 0) {
+    resultHtml += '<div class="commonNameResults">' +
+                    '<h2>Matches on Common Name</h2>';
+    searchResults.commonName.forEach(function(animal) {
+      resultHtml += '<h3><a href="/species/' + animal.id + '">' + animal.name + '</a></h3>';
+    });
+    resultHtml += '</div>';
+  }
+
+  if (searchResults.scientificName.length !== 0) {
+    resultHtml += '<div class="scientificNameResults">' +
+                    '<h2>Matches on Scientific Name</h2>';
+    searchResults.scientificName.forEach(function(animal) {
+      resultHtml += '<h3><a href="/species/' + animal.id + '">' + animal.scientific_name + '</a></h3>';
+    });
+    resultHtml += '</div>';
+  }
+
+  if (searchResults.maoriName.length !== 0) {
+    resultHtml += '<div class="maoriNameResults">' +
+                    '<h2>Matches on Maori Name</h2>';
+    searchResults.maoriName.forEach(function(animal) {
+      resultHtml += '<h3><a href="/species/' + animal.id + '">' + animal.maori_name + '</a></h3>';
+    });
+    resultHtml += '</div>';
+  }
+
+  $('#content').append(resultHtml);
+};
+
 SpeciesView.prototype.displayErrorMessage = function() {
   var errorHtml = '<p class="error">Sorry, we couldn\'t find that species. Please try again.</p>';
   $('#content').append(errorHtml);

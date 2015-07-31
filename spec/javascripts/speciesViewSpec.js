@@ -113,6 +113,47 @@ describe("SpeciesView", function() {
     });
   });
 
+  describe("displaySpeciesSearchResults", function() {
+    beforeEach(function() {
+      var result = {"commonName":[{"id":28,"name":"New Zealand Wood Pigeon","scientific_name":"Hemiphaga novaeseelandiae","maori_name":"Kereru","description":"Large native pigeon, endemic to New Zealand"}],"scientificName":[{"id":2,"name":"Australasian Gannet","scientific_name":"Morus serrator","maori_name":null,"description":"Large white seabird with a distinctive orange head"}],"maoriName":[{"id":6,"name":"Blue Duck","scientific_name":"Hymenolaimus malacorhynchos","maori_name":"Whio","description":"Rare duck, found in fast flowing rivers."}]};
+      view.displaySpeciesSearchResults(result);
+    });
+
+    it("appends a speciesResults div to the page", function() {
+      expect($('#content .speciesResults')).toBeInDOM();
+    });
+
+    describe("common name results", function() {
+      it("appends a commonNameResults div to the page", function() {
+        expect('.speciesResults .commonNameResults').toBeInDOM();
+      });
+
+      it("displays a list of results that match the common name", function() {
+        expect('.commonNameResults').toContainText('New Zealand Wood Pigeon');
+      });
+    });
+
+    describe("scientific name results", function() {
+      it("appends a scientificNameResults div to the page", function() {
+        expect('.speciesResults .scientificNameResults').toBeInDOM();
+      });
+
+      it("displays a list of results that match the scientific name", function() {
+        expect('.scientificNameResults').toContainText('Morus serrator');
+      });
+    });
+
+    describe("maori name results", function() {
+      it("appends a maoriNameResults div to the page", function() {
+        expect('.speciesResults .maoriNameResults').toBeInDOM();
+      });
+
+      it("displays a list of results that match the maori name", function() {
+        expect('.maoriNameResults').toContainText('Whio');
+      });
+    });
+  });
+
   describe("displayErrorMessage", function() {
     beforeEach(function() {
       view.displayErrorMessage();

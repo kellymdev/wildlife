@@ -14,3 +14,7 @@ SpeciesController.prototype.speciesDetailsRequest = function(speciesUrl) {
 SpeciesController.prototype.speciesSearchFormRequest = function() {
   this.speciesView.displaySpeciesSearchForm();
 };
+
+SpeciesController.prototype.speciesSearchRequest = function(searchQuery) {
+  this.speciesModel.requestSpeciesSearch(searchQuery, this.speciesView.displaySpeciesSearchResults, this.speciesView.displayErrorMessage);
+};
