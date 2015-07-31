@@ -21,9 +21,9 @@ class SpeciesController < ApplicationController
     @maori_names = Species.where("lower(maori_name) LIKE ?", term)
 
     render json:  {
-                    "common name" => @species,
-                    "scientific name" => @scientific_names,
-                    "maori name" => @maori_names
+                    "commonName" => @species,
+                    "scientificName" => @scientific_names,
+                    "maoriName" => @maori_names
                   }
   end
 

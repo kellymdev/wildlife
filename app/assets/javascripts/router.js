@@ -35,4 +35,10 @@ $(document).ready(function() {
     e.preventDefault();
     speciesController.speciesSearchFormRequest();
   });
+
+  $('#content').on('submit', '#locationSearchForm', function(e) {
+    e.preventDefault();
+    var request = $('#query').val();
+    locationController.locationSearchRequest(request);
+  });
 });

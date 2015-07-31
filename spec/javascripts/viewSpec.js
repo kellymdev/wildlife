@@ -157,6 +157,21 @@ describe("View", function() {
     });
   });
 
+  describe("displayLocationSearchResults", function() {
+    beforeEach(function() {
+      var result = [{"id":1,"name":"Cape Palliser","description":"Rocky cape on the Wairarapa Coast."}];
+      view.displayLocationSearchResults(result);
+    });
+
+    it("appends a locationResults div to the page", function() {
+      expect($('#content .locationResults')).toBeInDOM();
+    });
+
+    it("displays the location name for the search result", function() {
+      expect($('.locationResults')).toContainText('Cape Palliser');
+    });
+  });
+
   describe("displaySpeciesSearchForm", function() {
     beforeEach(function() {
       view.displaySpeciesSearchForm();

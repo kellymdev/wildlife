@@ -82,6 +82,17 @@ View.prototype.displayLocationSearchForm = function() {
   $('#content').append(searchHtml);
 };
 
+View.prototype.displayLocationSearchResults = function(searchResults) {
+  $('#content').html("");
+  var resultHtml = '<div class="locationResults">' +
+                      '<h2>Location Search Results</h2>';
+  searchResults.forEach(function(result) {
+    resultHtml += '<p><a href="/locations/' + result.id + '">' + result.name + '</a></p>';
+  });
+  resultHtml += '</div>';
+  $('#content').append(resultHtml);
+};
+
 View.prototype.displaySpeciesSearchForm = function() {
   $('#content').html("");
   var searchHtml = '<div class="speciesSearch">' +
