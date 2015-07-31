@@ -9,8 +9,8 @@ class SpeciesController < ApplicationController
     @animal = Species.find_by(id: params[:id])
     @locations = @animal.locations.all
     render json:  {
-                    "species" => @animal,
-                    "locations" => @locations
+                    species: @animal,
+                    locations: @locations
                   }
   end
 
@@ -21,9 +21,9 @@ class SpeciesController < ApplicationController
     @maori_names = Species.where("lower(maori_name) LIKE ?", term)
 
     render json:  {
-                    "commonName" => @species,
-                    "scientificName" => @scientific_names,
-                    "maoriName" => @maori_names
+                    commonName: @species,
+                    scientificName: @scientific_names,
+                    maoriName: @maori_names
                   }
   end
 
