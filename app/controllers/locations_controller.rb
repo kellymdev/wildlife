@@ -9,8 +9,8 @@ class LocationsController < ApplicationController
     @location = Location.find_by(id: params[:id])
     @species = @location.species.all
     render json:  {
-                    "location" => @location,
-                    "species" => @species
+                    location: @location,
+                    species: @species
                   }
   end
 
