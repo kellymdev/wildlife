@@ -24,6 +24,8 @@ RSpec.describe LocationsController, type: :controller do
   describe "get #show" do
     before do
       @location = create(:location)
+      @species = create(:species)
+      @species_location = create(:species_location, location_id: @location.id, species_id: @species.id)
       get :show, id: @location.id
     end
 
@@ -31,33 +33,39 @@ RSpec.describe LocationsController, type: :controller do
       expect(response.status).to eq(200)
     end
 
-    it "returns details for the requested location as json" do
-      expect(response.body).to eq(@location.to_json)
-    end
-
     it "assigns @location to the requested location" do
       expect(assigns(:location)).to eq(@location)
     end
+
+    it "returns location details and a list of species for the requested location as json" do
+      expected_data = {
+                        "location" => @location,
+                        "species" => @location.species.all
+                      }
+      expect(response.body).to eq(expected_data.to_json)
+    end
+
+    it "assigns @species to the list of species for the requested location" do
+      expect(assigns(:species)).to eq(@location.species.all)
+    end
   end
 
-  describe "get #species" do
+  describe "get #search" do
     before do
-      @location = create(:location)
-      @species = create(:location)
-      @species_location = create(:species_location, location_id: @location.id, species_id: @species.id)
-      get :species, id: @location.id
+      @location = create(:location, name: "Zealandia Ecosanctuary")
+      get :search, query: "Zealandia"
     end
 
     it "returns http status 200" do
       expect(response.status).to eq(200)
     end
 
-    it "returns a list of species for the requested location as json" do
-      expect(response.body).to eq(@location.species.all.to_json)
+    it "returns a list of locations matching the search term as json" do
+      expect(response.body).to eq((Location.where("lower(name) LIKE ?", "%zealandia%")).to_json)
     end
 
-    it "assigns @species to the list of species for the requested location" do
-      expect(assigns(:species)).to eq(@location.species.all)
+    it "assigns @locations to the list of locations matching the search term" do
+      expect(assigns(:locations)).to eq(Location.where("lower(name) LIKE ?", "%zealandia%"))
     end
   end
 
