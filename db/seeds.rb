@@ -119,7 +119,7 @@ Species.create([
                   description: "White duck found throughout New Zealand. Commonly kept as pets, or at wildlife parks."
                 },
                 {
-                  name: "Fantail Doves (aka Garden Fantail or English Fantail",
+                  name: "Fantail Doves (aka Garden Fantail or English Fantail)",
                   scientific_name: "Columba livia",
                   description: "White doves."
                 },
@@ -282,15 +282,15 @@ Species.create([
                   description: "The only large gull found in New Zealand."
                 },
                 {
-                  name: "Spotted Shag",
-                  scientific_name: "Stictocarbo punctatus",
-                  description: "A yellow footed shag endemic to New Zealand"
-                },
-                {
                   name: "South Island Robin",
                   scientific_name: "Petroica australis",
                   maori_name: "Toutouwai",
                   description: "Similar to the North Island Robin, but found in the South Island."
+                },
+                {
+                  name: "Spotted Shag",
+                  scientific_name: "Stictocarbo punctatus",
+                  description: "A yellow footed shag endemic to New Zealand"
                 },
                 {
                   name: "Stitchbird",
@@ -372,6 +372,22 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
                           },
                           {
+                            species_id: Species.find_by_name("Common Bottlenose Dolphin").id,
+                            location_id: Location.find_by_name("Marlborough Sounds").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Domestic Duck").id,
+                            location_id: Location.find_by_name("Staglands Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Fantail Doves (aka Garden Fantail or English Fantail)").id,
+                            location_id: Location.find_by_name("Staglands Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Fluttering Shearwater").id,
+                            location_id: Location.find_by_name("Marlborough Sounds").id
+                          },
+                          {
                             species_id: Species.find_by_name("Grey Warbler").id,
                             location_id: Location.find_by_name("Otari-Wiltons Bush").id
                           },
@@ -380,12 +396,48 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Zealandia Ecosanctuary").id
                           },
                           {
+                            species_id: Species.find_by_name("House Sparrow").id,
+                            location_id: Location.find_by_name("Nga Manu Nature Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("House Sparrow").id,
+                            location_id: Location.find_by_name("Otari-Wiltons Bush").id
+                          },
+                          {
+                            species_id: Species.find_by_name("House Sparrow").id,
+                            location_id: Location.find_by_name("Zealandia Ecosanctuary").id
+                          },
+                          {
                             species_id: Species.find_by_name("Kea").id,
                             location_id: Location.find_by_name("Staglands Wildlife Reserve").id
                           },
                           {
+                            species_id: Species.find_by_name("King Shag").id,
+                            location_id: Location.find_by_name("Marlborough Sounds").id
+                          },
+                          {
                             species_id: Species.find_by_name("Little Spotted Kiwi").id,
                             location_id: Location.find_by_name("Zealandia Ecosanctuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Mallard Duck").id,
+                            location_id: Location.find_by_name("Nga Manu Nature Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Mallard Duck").id,
+                            location_id: Location.find_by_name("Staglands Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Mallard Duck").id,
+                            location_id: Location.find_by_name("Waikanae Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Mallard Duck").id,
+                            location_id: Location.find_by_name("Zealandia Ecosanctuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Mandarin Duck").id,
+                            location_id: Location.find_by_name("Staglands Wildlife Reserve").id
                           },
                           {
                             species_id: Species.find_by_name("Morepork").id,
@@ -412,6 +464,14 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Staglands Wildlife Reserve").id
                           },
                           {
+                            species_id: Species.find_by_name("New Zealand Fantail").id,
+                            location_id: Location.find_by_name("Otari-Wiltons Bush").id
+                          },
+                          {
+                            species_id: Species.find_by_name("New Zealand Fantail").id,
+                            location_id: Location.find_by_name("Zealandia Ecosanctuary").id
+                          },
+                          {
                             species_id: Species.find_by_name("New Zealand Fur Seal").id,
                             location_id: Location.find_by_name("Cape Palliser").id
                           },
@@ -432,6 +492,10 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Zealandia Ecosanctuary").id
                           },
                           {
+                            species_id: Species.find_by_name("New Zealand Scaup").id,
+                            location_id: Location.find_by_name("Zealandia Ecosanctuary").id
+                          },
+                          {
                             species_id: Species.find_by_name("New Zealand Wood Pigeon").id,
                             location_id: Location.find_by_name("Kapiti Island Nature Reserve").id
                           },
@@ -444,6 +508,10 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Zealandia Ecosanctuary").id
                           },
                           {
+                            species_id: Species.find_by_name("North Island Robin").id,
+                            location_id: Location.find_by_name("Zealandia Ecosanctuary").id
+                          },
+                          {
                             species_id: Species.find_by_name("Paradise Shelduck").id,
                             location_id: Location.find_by_name("Nga Manu Nature Reserve").id
                           },
@@ -452,8 +520,16 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
                           },
                           {
+                            species_id: Species.find_by_name("Paradise Shelduck").id,
+                            location_id: Location.find_by_name("Zealandia Ecosanctuary").id
+                          },
+                          {
                             species_id: Species.find_by_name("Pied Stilt").id,
                             location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Pigeon").id,
+                            location_id: Location.find_by_name("Wellington Waterfront").id
                           },
                           {
                             species_id: Species.find_by_name("Pukeko").id,
@@ -482,6 +558,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Red-billed Gull").id,
                             location_id: Location.find_by_name("Wellington Waterfront").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Red-crowned Parakeet").id,
+                            location_id: Location.find_by_name("Zealandia Ecosanctuary").id
                           },
                           {
                             species_id: Species.find_by_name("Royal Spoonbill").id,
@@ -520,7 +600,19 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Wellington Waterfront").id
                           },
                           {
+                            species_id: Species.find_by_name("South Island Robin").id,
+                            location_id: Location.find_by_name("Marlborough Sounds").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Spotted Shag").id,
+                            location_id: Location.find_by_name("Marlborough Sounds").id
+                          },
+                          {
                             species_id: Species.find_by_name("Stitchbird").id,
+                            location_id: Location.find_by_name("Zealandia Ecosanctuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Takahe").id,
                             location_id: Location.find_by_name("Zealandia Ecosanctuary").id
                           },
                           {
