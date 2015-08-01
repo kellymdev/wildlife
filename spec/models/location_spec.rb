@@ -14,6 +14,10 @@ RSpec.describe Location, type: :model do
   end
 
   describe "relationships" do
+    it "belongs to a region" do
+      expect(location).to belong_to(:region)
+    end
+
     it "has many species" do
       expect(location).to have_many(:species)
     end
@@ -25,5 +29,6 @@ RSpec.describe Location, type: :model do
 
   after do
     Location.destroy_all
+    Region.destroy_all
   end
 end
