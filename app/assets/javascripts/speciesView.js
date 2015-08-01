@@ -61,27 +61,27 @@ SpeciesView.prototype.displaySpeciesSearchResults = function(searchResults) {
 
   if (searchResults.commonName.length !== 0) {
     resultHtml += '<div class="commonNameResults">' +
-                    '<h2>Matches on Common Name</h2>';
+                    '<h3>Matches on Common Name</h3>';
     searchResults.commonName.forEach(function(animal) {
-      resultHtml += '<h3><a href="/species/' + animal.id + '">' + animal.name + '</a></h3>';
+      resultHtml += '<p><a href="/species/' + animal.id + '">' + animal.name + '</a></p>';
     });
     resultHtml += '</div>';
   }
 
   if (searchResults.scientificName.length !== 0) {
     resultHtml += '<div class="scientificNameResults">' +
-                    '<h2>Matches on Scientific Name</h2>';
+                    '<h3>Matches on Scientific Name</h3>';
     searchResults.scientificName.forEach(function(animal) {
-      resultHtml += '<h3><a href="/species/' + animal.id + '">' + animal.scientific_name + '</a></h3>';
+      resultHtml += '<p><a href="/species/' + animal.id + '">' + animal.scientific_name + '</a></p>';
     });
     resultHtml += '</div>';
   }
 
   if (searchResults.maoriName.length !== 0) {
     resultHtml += '<div class="maoriNameResults">' +
-                    '<h2>Matches on Maori Name</h2>';
+                    '<h3>Matches on Maori Name</h3>';
     searchResults.maoriName.forEach(function(animal) {
-      resultHtml += '<h3><a href="/species/' + animal.id + '">' + animal.maori_name + '</a></h3>';
+      resultHtml += '<p><a href="/species/' + animal.id + '">' + animal.maori_name + '</a></p>';
     });
     resultHtml += '</div>';
   }

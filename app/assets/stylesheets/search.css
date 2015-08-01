@@ -8,4 +8,11 @@ input[type="text"] {
 
 button[type="submit"] {
   margin-top: 20px;
+  background: #4e8077;
+  color: #e4fff0;
+  border: 1px solid #e4fff0;
+  border-radius: 3px;
+  padding: 5px 10px;
+  font-family: 'Architects Daughter', Helvetica, Arial, sans-serif;
+  font-size: 0.9em;
 }
