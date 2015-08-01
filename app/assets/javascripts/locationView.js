@@ -17,6 +17,7 @@ LocationView.prototype.displayLocationDetails = function(details) {
   $('#content').html("");
   var locationHtml = '<div class="locationDetails">' +
                         '<h2>' + details.location.name + '</h2>' +
+                        '<p>Region: ' + details.region + '</p>' +
                         '<p>' + details.location.description + '</p>';
   locationHtml += '<div class="speciesList">' +
                     '<h3>Species</h3>' +

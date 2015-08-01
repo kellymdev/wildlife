@@ -24,6 +24,7 @@ RSpec.describe LocationsController, type: :controller do
   describe "get #show" do
     before do
       @location = create(:location)
+      @region = @location.region.name
       @species = create(:species)
       @species_location = create(:species_location, location_id: @location.id, species_id: @species.id)
       get :show, id: @location.id
@@ -37,10 +38,15 @@ RSpec.describe LocationsController, type: :controller do
       expect(assigns(:location)).to eq(@location)
     end
 
+    it "assigns @region to the region name for the requested location" do
+      expect(assigns(:region)).to eq(@location.region.name)
+    end
+
     it "returns location details and a list of species for the requested location as json" do
       expected_data = {
-                        "location" => @location,
-                        "species" => @location.species.all
+                        location: @location,
+                        region: @region,
+                        species: @location.species.all
                       }
       expect(response.body).to eq(expected_data.to_json)
     end
@@ -71,5 +77,8 @@ RSpec.describe LocationsController, type: :controller do
 
   after do
     Location.destroy_all
+    Region.destroy_all
+    Species.destroy_all
+    SpeciesLocation.destroy_all
   end
 end

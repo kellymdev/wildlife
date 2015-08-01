@@ -36,7 +36,7 @@ describe("LocationView", function() {
 
   describe("displayLocationDetails", function() {
     beforeEach(function() {
-      var locationDetails = {"location":{"id":1,"name":"Cape Palliser","description":"Rocky cape on the Wairarapa Coast."},"species":[{"id":25,"name":"New Zealand Fur Seal","maori_name":"Kekeno"}]};
+      var locationDetails = {"location":{"id":1,"name":"Cape Palliser","description":"Rocky cape on the Wairarapa Coast."},"region":"Wairarapa","species":[{"id":25,"name":"New Zealand Fur Seal","maori_name":"Kekeno"}]};
       view.displayLocationDetails(locationDetails);
     });
 
@@ -46,6 +46,10 @@ describe("LocationView", function() {
 
     it("displays the location name", function() {
       expect($('.locationDetails')).toContainText('Cape Palliser');
+    });
+
+    it("displays the location region", function() {
+      expect($('.locationDetails')).toContainText('Wairarapa');
     });
 
     it("displays the location description", function() {
