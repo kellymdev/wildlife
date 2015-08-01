@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-31T23:14:59+12:00">2015-07-31T23:14:59+12:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-08-01T20:48:18+10:00">2015-08-01T20:48:18+10:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.39
+         2.28
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>8</b> files in total.
-    <b>45</b> relevant lines. 
-    <span class="green"><b>45</b> lines covered</span> and
+    <b>9</b> files in total.
+    <b>49</b> relevant lines. 
+    <span class="green"><b>49</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -103,9 +103,19 @@
       <tr>
         <td class="strong"><a href="#d8768e6fa6379ca6f0d7d8a84ddecb2025e1290d" class="src_link" title="app/models/location.rb">app/models/location.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>7</td>
+        <td>8</td>
+        <td>6</td>
+        <td>6</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#288a5149fea78cd2b2a2f6300925e2f54c68e870" class="src_link" title="app/models/region.rb">app/models/region.rb</a></td>
+        <td class="green strong">100.0 %</td>
         <td>5</td>
-        <td>5</td>
+        <td>3</td>
+        <td>3</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -226,9 +236,9 @@
   </h2>
   <a name="Models"></a>
   <div>
-    <b>3</b> files in total.
-    <b>14</b> relevant lines. 
-    <span class="green"><b>14</b> lines covered</span> and
+    <b>4</b> files in total.
+    <b>18</b> relevant lines. 
+    <span class="green"><b>18</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -248,9 +258,19 @@
       <tr>
         <td class="strong"><a href="#d8768e6fa6379ca6f0d7d8a84ddecb2025e1290d" class="src_link" title="app/models/location.rb">app/models/location.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>7</td>
+        <td>8</td>
+        <td>6</td>
+        <td>6</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#288a5149fea78cd2b2a2f6300925e2f54c68e870" class="src_link" title="app/models/region.rb">app/models/region.rb</a></td>
+        <td class="green strong">100.0 %</td>
         <td>5</td>
-        <td>5</td>
+        <td>3</td>
+        <td>3</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -902,8 +922,8 @@
     <h3>app/models/location.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>5</b> relevant lines. 
-      <span class="green"><b>5</b> lines covered</span> and
+      <b>6</b> relevant lines. 
+      <span class="green"><b>6</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -938,16 +958,70 @@
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">  has_many :species_locations</code>
+          <code class="ruby">  belongs_to :region</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
+          <code class="ruby">  has_many :species_locations</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
           <code class="ruby">  has_many :species, through: :species_locations</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="288a5149fea78cd2b2a2f6300925e2f54c68e870">
+  <div class="header">
+    <h3>app/models/region.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>3</b> relevant lines. 
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Region &lt; ActiveRecord::Base</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  validates :name, presence: true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  has_many :locations</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
           
           
           <code class="ruby">end</code>

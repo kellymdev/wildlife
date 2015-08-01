@@ -84,6 +84,14 @@
         null,
         1,
         1,
+        1,
+        null
+      ],
+      "/Users/Kel/Documents/dev/git/wildlife/app/models/region.rb": [
+        1,
+        1,
+        null,
+        1,
         null
       ],
       "/Users/Kel/Documents/dev/git/wildlife/app/models/species_location.rb": [
@@ -103,6 +111,6 @@
         null
       ]
     },
-    "timestamp": 1438341299
+    "timestamp": 1438426098
   }
 }
