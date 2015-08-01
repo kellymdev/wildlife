@@ -36,7 +36,7 @@ describe("LocationView", function() {
 
   describe("displayLocationDetails", function() {
     beforeEach(function() {
-      var locationDetails = {"location":{"id":1,"name":"Cape Palliser","description":"Rocky cape on the Wairarapa Coast."},"species":[{"id":25,"name":"New Zealand Fur Seal"}]};
+      var locationDetails = {"location":{"id":1,"name":"Cape Palliser","description":"Rocky cape on the Wairarapa Coast."},"species":[{"id":25,"name":"New Zealand Fur Seal","maori_name":"Kekeno"}]};
       view.displayLocationDetails(locationDetails);
     });
 
@@ -58,6 +58,10 @@ describe("LocationView", function() {
 
     it("displays a list of species found at the location", function() {
       expect($('.speciesList')).toContainText("New Zealand Fur Seal");
+    });
+
+    it("displays the maori name for the species", function() {
+      expect($('.speciesList')).toContainText("Kekeno");
     });
   });
 

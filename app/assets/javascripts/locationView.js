@@ -22,7 +22,11 @@ LocationView.prototype.displayLocationDetails = function(details) {
                     '<h3>Species</h3>' +
                     '<ul>';
   details.species.forEach(function(animal) {
-    locationHtml += '<li id="' + animal.id + '"><a href="/species/' + animal.id + '">' + animal.name + '</a></li>';
+    locationHtml += '<li id="' + animal.id + '"><a href="/species/' + animal.id + '">' + animal.name;
+    if (animal.maori_name != null) {
+      locationHtml += ' (' + animal.maori_name + ')';
+    }
+    locationHtml += '</a></li>';
   });
 
   locationHtml += '</ul></div></div>';
