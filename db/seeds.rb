@@ -1,7 +1,7 @@
 Location.create([
                   {
                     name: "Cape Palliser",
-                    description: "Rocky cape on the Wairarapa Coast. Cape Palliser is home to the North Island's largest seal colony. Breeding season is from November to January."
+                    description: "Rocky cape on the Wairarapa Coast. Cape Palliser is home to the North Island's largest New Zealand Fur Seal colony. Breeding season is from November to January."
                   },
                   {
                     name: "Foxton Estuary",
@@ -21,7 +21,7 @@ Location.create([
                   },
                   {
                     name: "Marlborough Sounds",
-                    description: "Coastal waterways at the top of the South Island. There are several seal colonies in the Marlborough Sounds, where they like to hang out around the salmon farms."
+                    description: "Coastal waterways at the top of the South Island. There are several New Zealand Fur Seal colonies in the Marlborough Sounds, where they like to hang out around the salmon farms."
                   },
                   {
                     name: "Nga Manu Nature Reserve",
@@ -29,11 +29,11 @@ Location.create([
                   },
                   {
                     name: "Otari-Wiltons Bush",
-                    description: "The only public botanic garden in New Zealand that is dedicated solely to native plants. Commonly seen birds species include tui, kereru, silver eye, kingfisher, grey warbler, bell birds and morepork."
+                    description: "The only public botanic garden in New Zealand that is dedicated solely to native plants. Commonly seen birds species include Tui, Kereru, Silvereye, Kingfisher, Grey Warbler, Bellbirds and Morepork."
                   },
                   {
                     name: "Pauatahanui Wildlife Reserve",
-                    description: "The tidal mud-flats and regenerating scrub land are home to several local and migratory birds. Species include pied stilts, royal spoonbills, kingfishers, pukekos, black shags, capsian terns, bar-tailed godwits, white faced herons and paradise shelducks."
+                    description: "The tidal mud-flats and regenerating scrub land are home to several local and migratory birds. Species include Pied Stilts, Royal Spoonbills, Kingfishers, Pukekos, Black Shags, Caspian Terns, Bar-tailed Godwits, White-faced Herons and Paradise Shelducks."
                   },
                   {
                     name: "Plimmerton Beach",
@@ -41,7 +41,7 @@ Location.create([
                   },
                   {
                     name: "Sinclair Head",
-                    description: "Also known as Te Rimurapa, Sinclair Head is located on Wellington's south coast, near Red Rocks. Up to 150 NZ Fur Seals come ashore between May and August to rest and feed. This colony contains male seals only."
+                    description: "Also known as Te Rimurapa, Sinclair Head is located on Wellington's south coast, near Red Rocks. Up to 150 New Zealand Fur Seals come ashore between May and August to rest and feed. This colony contains male seals only."
                   },
                   {
                     name: "Staglands Wildlife Reserve",
@@ -53,7 +53,7 @@ Location.create([
                   },
                   {
                     name: "Wellington Waterfront",
-                    description: "Red-billed gulls and black-backed gulls are found throughout Wellington city, including along the waterfront in the CBD."
+                    description: "Red-billed Gulls and Black-backed Gulls are found throughout Wellington city, including along the waterfront in the CBD."
                   },
                   {
                     name: "Wellington Zoo",
@@ -61,7 +61,7 @@ Location.create([
                   },
                   {
                     name: "Zealandia Ecosanctuary",
-                    description: "A predator-fenced open-air wildlife and bird sanctuary, 10 minutes drive from the Wellington CBD. As well as some of the more common native birds, Zealandia is also home to rarer species such as saddlebacks, hihi, kaka, and little spotted kiwi. Admission charges apply."
+                    description: "A predator-fenced open-air wildlife and bird sanctuary, 10 minutes drive from the Wellington CBD. As well as some of the more common native birds, Zealandia is also home to rarer species such as Saddlebacks, Hihi, Kaka, and Little Spotted Kiwi. Admission charges apply."
                   }
                 ])
 
