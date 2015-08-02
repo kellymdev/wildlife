@@ -85,21 +85,37 @@ describe("LocationView", function() {
 
   describe("displayLocationSearchResults", function() {
     beforeEach(function() {
-      var result = [{"id":1,"name":"Cape Palliser","description":"Rocky cape on the Wairarapa Coast."}];
+      var result = {"locations":[{"id":1,"name":"Cape Palliser","description":"Rocky cape on the Wairarapa Coast."}],"regions":[{"id":1,"name":"Wellington"}]};
       view.displayLocationSearchResults(result);
     });
 
-    it("appends a locationResults div to the page", function() {
-      expect($('#content .locationResults')).toBeInDOM();
+    describe("location name results", function() {
+      it("appends a locationResults div to the page", function() {
+        expect($('#content .locationResults')).toBeInDOM();
+      });
+
+      it("appends a locationNameResults div to the page", function() {
+        expect($('.locationResults .locationNameResults')).toBeInDOM();
+      });
+
+      it("displays the location name for the search result", function() {
+        expect($('.locationNameResults')).toContainText('Cape Palliser');
+      });
     });
 
-    it("displays the location name for the search result", function() {
-      expect($('.locationResults')).toContainText('Cape Palliser');
+    describe("region results", function() {
+      it("appends a regionResults div to the page", function() {
+        expect($('.locationResults .regionResults')).toBeInDOM();
+      });
+
+      it("displays the region name for the search result", function() {
+        expect($('.locationResults')).toContainText('Wellington');
+      });
     });
 
     describe("no results returned", function() {
       beforeEach(function() {
-        var result = [];
+        var result = {"locations":[],"regions":[]};
         view.displayLocationSearchResults(result);
       });
 
