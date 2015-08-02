@@ -1,6 +1,7 @@
 $(document).ready(function() {
   var locationController = new LocationController();
   var speciesController = new SpeciesController();
+  var regionController = new RegionController();
 
   locationController.locationListRequest();
 
@@ -48,15 +49,27 @@ $(document).ready(function() {
     speciesController.speciesSearchRequest(request);
   });
 
-  $('#content').on('click', '.locationResults a', function(e) {
+  $('#content').on('click', '.locationNameResults a', function(e) {
     e.preventDefault();
     var locationUrl = $(this).attr('href');
     locationController.locationDetailsRequest(locationUrl);
+  });
+
+  $('#content').on('click', '.regionResults a', function(e) {
+    e.preventDefault();
+    var regionUrl = $(this).attr('href');
+    regionController.regionDetailsRequest(regionUrl);
   });
 
   $('#content').on('click', '.speciesResults a', function(e) {
     e.preventDefault();
     var speciesUrl = $(this).attr('href');
     speciesController.speciesDetailsRequest(speciesUrl);
+  });
+
+  $('#content').on('click', '.regionDetails a', function(e) {
+    e.preventDefault();
+    var locationUrl = $(this).attr('href');
+    locationController.locationDetailsRequest(locationUrl);
   });
 });
