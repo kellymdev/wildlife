@@ -57,21 +57,39 @@ RSpec.describe LocationsController, type: :controller do
   end
 
   describe "get #search" do
-    before do
-      @location = create(:location, name: "Zealandia Ecosanctuary")
-      get :search, query: "Zealandia"
+    context "search for a location" do
+      before do
+        @location = create(:location, name: "Zealandia Ecosanctuary")
+        get :search, query: "Zealandia"
+      end
+
+      it "returns http status 200" do
+        expect(response.status).to eq(200)
+      end
+
+      it "returns a list of locations matching the search term as json" do
+        expect(response.body).to include((Location.where("lower(name) LIKE ?", "%zealandia%")).to_json)
+      end
+
+      it "assigns @locations to the list of locations matching the search term" do
+        expect(assigns(:locations)).to eq(Location.where("lower(name) LIKE ?", "%zealandia%"))
+      end
     end
 
-    it "returns http status 200" do
-      expect(response.status).to eq(200)
-    end
+    context "search for a region" do
+      before do
+        @region = create(:region, name: "Wellington")
+        @location = create(:location, region_id: @region.id)
+        get :search, query: "Wellington"
+      end
 
-    it "returns a list of locations matching the search term as json" do
-      expect(response.body).to eq((Location.where("lower(name) LIKE ?", "%zealandia%")).to_json)
-    end
+      it "returns a list of regions matching the search term as json" do
+        expect(response.body).to include((Region.where("lower(name) LIKE ?", '%wellington%')).to_json)
+      end
 
-    it "assigns @locations to the list of locations matching the search term" do
-      expect(assigns(:locations)).to eq(Location.where("lower(name) LIKE ?", "%zealandia%"))
+      it "assigns @regions to the list of regions matching the search term as json" do
+        expect(assigns(:regions)).to eq(Region.where("lower(name) LIKE ?", '%wellington%'))
+      end
     end
   end
 

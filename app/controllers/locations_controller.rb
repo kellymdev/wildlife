@@ -18,8 +18,13 @@ class LocationsController < ApplicationController
 
   def search
     term = "%" + params[:query].downcase + "%"
-    @locations = Location.where("lower(name) LIKE ?", term )
-    render json: @locations
+    @locations = Location.where("lower(name) LIKE ?", term)
+    @regions = Region.where("lower(name) LIKE ?", term)
+
+    render json:  {
+                    locations: @locations,
+                    regions: @regions
+                  }
   end
 
 end

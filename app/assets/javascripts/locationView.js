@@ -52,11 +52,25 @@ LocationView.prototype.displayLocationSearchResults = function(searchResults) {
   var resultHtml = '<div class="locationResults">' +
                       '<h2>Location Search Results</h2>';
 
-  searchResults.forEach(function(result) {
-    resultHtml += '<p><a href="/locations/' + result.id + '">' + result.name + '</a></p>';
-  });
+  if (searchResults.locations.length !== 0) {
+    resultHtml += '<div class="locationNameResults">' +
+                    '<h3>Matches on Location Name</h3>';
+    searchResults.locations.forEach(function(result) {
+      resultHtml += '<p><a href="/locations/' + result.id + '">' + result.name + '</a></p>';
+    });
+    resultHtml += '</div>';
+  }
 
-  if (searchResults.length === 0) {
+  if (searchResults.regions.length !== 0) {
+    resultHtml += '<div class="regionResults">' +
+                    '<h3>Matches on Region</h3>';
+    searchResults.regions.forEach(function(result) {
+      resultHtml += '<p><a href="/regions/' + result.id + '">' + result.name + '</a></p>';
+    });
+    resultHtml += '</div>';
+  }
+
+  if (searchResults.locations.length === 0 && searchResults.regions.length === 0) {
     resultHtml += '<div class="noResults">' +
                     '<p>Sorry, we didn\'t find any results for that location.</p>' +
                   '</div>';
