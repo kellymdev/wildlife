@@ -15,10 +15,6 @@ RSpec.describe LocationsController, type: :controller do
     it "returns a list of locations as json" do
       expect(response.body).to eq(Location.all.to_json)
     end
-
-    it "assigns @locations to the list of locations" do
-      expect(assigns(:locations)).to eq(Location.all)
-    end
   end
 
   describe "get #show" do
@@ -34,14 +30,6 @@ RSpec.describe LocationsController, type: :controller do
       expect(response.status).to eq(200)
     end
 
-    it "assigns @location to the requested location" do
-      expect(assigns(:location)).to eq(@location)
-    end
-
-    it "assigns @region to the region name for the requested location" do
-      expect(assigns(:region)).to eq(@location.region.name)
-    end
-
     it "returns location details and a list of species for the requested location as json" do
       expected_data = {
                         location: @location,
@@ -49,10 +37,6 @@ RSpec.describe LocationsController, type: :controller do
                         species: @location.species.all
                       }
       expect(response.body).to eq(expected_data.to_json)
-    end
-
-    it "assigns @species to the list of species for the requested location" do
-      expect(assigns(:species)).to eq(@location.species.all)
     end
   end
 
@@ -70,10 +54,6 @@ RSpec.describe LocationsController, type: :controller do
       it "returns a list of locations matching the search term as json" do
         expect(response.body).to include((Location.where("lower(name) LIKE ?", "%zealandia%")).to_json)
       end
-
-      it "assigns @locations to the list of locations matching the search term" do
-        expect(assigns(:locations)).to eq(Location.where("lower(name) LIKE ?", "%zealandia%"))
-      end
     end
 
     context "search for a region" do
@@ -85,10 +65,6 @@ RSpec.describe LocationsController, type: :controller do
 
       it "returns a list of regions matching the search term as json" do
         expect(response.body).to include((Region.where("lower(name) LIKE ?", '%wellington%')).to_json)
-      end
-
-      it "assigns @regions to the list of regions matching the search term as json" do
-        expect(assigns(:regions)).to eq(Region.where("lower(name) LIKE ?", '%wellington%'))
       end
     end
   end
