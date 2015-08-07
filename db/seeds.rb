@@ -31,13 +31,6 @@ Location.create([
                     lng: 175.290120
                   },
                   {
-                    name: "Foxton Estuary (Manawatu Estuary)",
-                    description: "Approximately 2 hours drive north of Wellington, Foxton Estuary has one of the widest ranges of wading and shore birds in New Zealand. A total of 95 species have been identified there.",
-                    region_id: Region.find_by_name("Manawatu").id,
-                    lat: -40.465553,
-                    lng: 175.224206
-                  },
-                  {
                     name: "Kapiti Island Nature Reserve",
                     description: "A predator free wildlife reserve island off the coast of Paraparaumu. Home to several species of forest bird. Bookings required.",
                     region_id: Region.find_by_name("Kapiti").id,
@@ -57,6 +50,13 @@ Location.create([
                     region_id: Region.find_by_name("Porirua").id,
                     lat: -41.089787,
                     lng: 174.781180
+                  },
+                  {
+                    name: "Manawatu Estuary",
+                    description: "Approximately 2 hours drive north of Wellington, Manawatu Estuary (at Foxton Beach) has one of the widest ranges of wading and shore birds in New Zealand. A total of 95 species have been identified there.",
+                    region_id: Region.find_by_name("Manawatu").id,
+                    lat: -40.465553,
+                    lng: 175.224206
                   },
                   {
                     name: "Marlborough Sounds",
@@ -146,21 +146,25 @@ Species.create([
                 {
                   name: "Australasian Gannet",
                   scientific_name: "Morus serrator",
+                  maori_name: "Takapu",
                   description: "Large white seabird with a distinctive orange head"
                 },
                 {
                   name: "Banded Dotterel",
                   scientific_name: "Charadrius bicinctus",
+                  maori_name: "Pohowera",
                   description: "A small brown and white plover."
                 },
                 {
                   name: "Bar-tailed Godwit",
                   scientific_name: "Limosa lapponica",
+                  maori_name: 'Kuaka',
                   description: "Often seen foraging on mud flats. During migration, they perform the longest non-stop flight of any sea bird."
                 },
                 {
                   name: "Black Shag",
                   scientific_name: "Phalacrocorax carbo",
+                  maori_name: "Kawau",
                   description: "Black Shags roost in trees or along rocky coastlines."
                 },
                 {
@@ -178,6 +182,7 @@ Species.create([
                 {
                   name: "Caspian Tern",
                   scientific_name: "Hydroprogne caspia",
+                  maori_name: "Taranui",
                   description: "Large gull-like bird, found in coastal waters, lakes and rivers."
                 },
                 {
@@ -198,11 +203,13 @@ Species.create([
                 {
                   name: "Fluttering Shearwater",
                   scientific_name: "Puffinus gavia",
+                  maori_name: "Pakaha",
                   description: "Has a distinctive fluttering flight pattern."
                 },
                 {
                   name: "Grey Warbler",
                   scientific_name: "Gerygone igata",
+                  maori_name: "Riroriro",
                   description: "Small forest bird that is often easier to hear than it is to see."
                 },
                 {
@@ -250,6 +257,7 @@ Species.create([
                 {
                   name: "New Zealand Dabchick",
                   scientific_name: "Poliocephalus rufopectus",
+                  maori_name: "Weweia",
                   description: "Found in lakes and sheltered inlets."
                 },
                 {
@@ -278,6 +286,7 @@ Species.create([
                 {
                   name: "New Zealand Scaup",
                   scientific_name: "Aythya novaeseelandiae",
+                  maori_name: "Papango",
                   description: "Small native duck"
                 },
                 {
@@ -295,6 +304,7 @@ Species.create([
                 {
                   name: "Paradise Shelduck",
                   scientific_name: "Tadorna variegata",
+                  maori_name: "Putangitangi",
                   description: "Endemic to New Zealand."
                 },
                 {
@@ -346,11 +356,13 @@ Species.create([
                 {
                   name: "Silvereye",
                   scientific_name: "Zosterops lateralis",
+                  maori_name: "Tauhou",
                   description: "Small forest bird with a distinctive white ring around its eye."
                 },
                 {
                   name: "Southern Black-backed Gull",
                   scientific_name: "Larus dominicanus",
+                  maori_name: "Karoro",
                   description: "The only large gull found in New Zealand."
                 },
                 {
@@ -362,6 +374,7 @@ Species.create([
                 {
                   name: "Spotted Shag",
                   scientific_name: "Stictocarbo punctatus",
+                  maori_name: "Parekareka",
                   description: "A yellow footed shag endemic to New Zealand"
                 },
                 {
@@ -383,6 +396,7 @@ Species.create([
                 {
                   name: "Variable Oystercatcher",
                   scientific_name: "Haematopus unicolor",
+                  maori_name: "Torea pango",
                   description: "Black coastal bird with a long orange bill."
                 },
                 {
@@ -393,12 +407,19 @@ Species.create([
                 {
                   name: "White-faced Heron",
                   scientific_name: "Egretta novaehollandiae",
+                  maori_name: "Matuku moana",
                   description: "A blue-grey bird, with a white face. The most common Heron species in New Zealand."
                 },
                 {
                   name: "White-fronted Tern",
                   scientific_name: "Sterna striata",
                   description: "Commonly found along the New Zealand coastline."
+                },
+                {
+                  name: "Wrybill",
+                  scientific_name: "Anarhynchus frontalis",
+                  maori_name: "Ngutu pare",
+                  description: "A small plover that only breeds in the braided rivers of the South Island of New Zealand. It migrates to northern New Zealand for winter."
                 }
               ])
 
@@ -414,6 +435,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Banded Dotterel").id,
                             location_id: Location.find_by_name("Waikanae Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Bar-tailed Godwit").id,
+                            location_id: Location.find_by_name("Manawatu Estuary").id
                           },
                           {
                             species_id: Species.find_by_name("Bar-tailed Godwit").id,
@@ -438,6 +463,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Brown Teal").id,
                             location_id: Location.find_by_name("Zealandia Ecosanctuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Caspian Tern").id,
+                            location_id: Location.find_by_name("Manawatu Estuary").id
                           },
                           {
                             species_id: Species.find_by_name("Caspian Tern").id,
@@ -722,5 +751,9 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("White-fronted Tern").id,
                             location_id: Location.find_by_name("Waikanae Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Wrybill").id,
+                            location_id: Location.find_by_name("Manawatu Estuary").id
                           }
                         ])
