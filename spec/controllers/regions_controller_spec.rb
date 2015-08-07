@@ -14,10 +14,6 @@ RSpec.describe RegionsController, type: :controller do
     it "returns a list of regions as json" do
       expect(response.body).to eq(Region.all.to_json)
     end
-
-    it "assigns @regions to the list of regions" do
-      expect(assigns(:regions)).to eq(Region.all)
-    end
   end
 
   describe "get #show" do
@@ -35,16 +31,8 @@ RSpec.describe RegionsController, type: :controller do
       expect(response.body).to include(@region.to_json)
     end
 
-    it "assigns @region to the specified region" do
-      expect(assigns(:region)).to eq(@region)
-    end
-
     it "returns a list of locations in that region as json" do
       expect(response.body).to include(@region.locations.to_json)
-    end
-
-    it "assigns @locations to the list of locations" do
-      expect(assigns(:locations)).to eq(@region.locations)
     end
   end
 

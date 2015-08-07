@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-08-07T17:13:16+12:00">2015-08-07T17:13:16+12:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-08-07T17:30:17+12:00">2015-08-07T17:30:17+12:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.62
+         1.71
        </span>
     </span> hits/line)
   </h2>
@@ -67,7 +67,7 @@
         <td>14</td>
         <td>14</td>
         <td>0</td>
-        <td>3.6</td>
+        <td>2.0</td>
       </tr>
       
       <tr>
@@ -87,7 +87,7 @@
         <td>8</td>
         <td>8</td>
         <td>0</td>
-        <td>3.0</td>
+        <td>2.0</td>
       </tr>
       
       <tr>
@@ -97,7 +97,7 @@
         <td>14</td>
         <td>14</td>
         <td>0</td>
-        <td>4.1</td>
+        <td>2.4</td>
       </tr>
       
       <tr>
@@ -163,7 +163,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.4
+         2.04
        </span>
     </span> hits/line)
   </h2>
@@ -205,7 +205,7 @@
         <td>14</td>
         <td>14</td>
         <td>0</td>
-        <td>3.6</td>
+        <td>2.0</td>
       </tr>
       
       <tr>
@@ -225,7 +225,7 @@
         <td>8</td>
         <td>8</td>
         <td>0</td>
-        <td>3.0</td>
+        <td>2.0</td>
       </tr>
       
       <tr>
@@ -235,7 +235,7 @@
         <td>14</td>
         <td>14</td>
         <td>0</td>
-        <td>4.1</td>
+        <td>2.4</td>
       </tr>
       
     </tbody>
@@ -531,16 +531,16 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="4">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="2" data-linenumber="4">
+          <span class="hits">2</span>
           
-          <code class="ruby">    @locations = Location.all</code>
+          <code class="ruby">    locations = Location.all</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="5">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="2" data-linenumber="5">
+          <span class="hits">2</span>
           
-          <code class="ruby">    render json: @locations</code>
+          <code class="ruby">    render json: locations</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
@@ -561,26 +561,26 @@
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="9">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="2" data-linenumber="9">
+          <span class="hits">2</span>
           
-          <code class="ruby">    @location = Location.find_by(id: params[:id])</code>
+          <code class="ruby">    location = Location.find_by(id: params[:id])</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="10">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="2" data-linenumber="10">
+          <span class="hits">2</span>
           
-          <code class="ruby">    @region = @location.region.name</code>
+          <code class="ruby">    region = location.region.name</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="11">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="2" data-linenumber="11">
+          <span class="hits">2</span>
           
-          <code class="ruby">    @species = @location.species.all</code>
+          <code class="ruby">    species = location.species.all</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="12">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="2" data-linenumber="12">
+          <span class="hits">2</span>
           
           <code class="ruby">    render json:  {</code>
         </li>
@@ -588,19 +588,19 @@
         <li class="never" data-hits="" data-linenumber="13">
           
           
-          <code class="ruby">                    location: @location,</code>
+          <code class="ruby">                    location: location,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
           
           
-          <code class="ruby">                    region: @region,</code>
+          <code class="ruby">                    region: region,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
           
           
-          <code class="ruby">                    species: @species</code>
+          <code class="ruby">                    species: species</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
@@ -627,22 +627,22 @@
           <code class="ruby">  def search</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="20">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="3" data-linenumber="20">
+          <span class="hits">3</span>
           
           <code class="ruby">    term = &quot;%&quot; + params[:query].downcase + &quot;%&quot;</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="21">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="3" data-linenumber="21">
+          <span class="hits">3</span>
           
-          <code class="ruby">    @locations = Location.where(&quot;lower(name) LIKE ?&quot;, term)</code>
+          <code class="ruby">    locations = Location.where(&quot;lower(name) LIKE ?&quot;, term)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="22">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="3" data-linenumber="22">
+          <span class="hits">3</span>
           
-          <code class="ruby">    @regions = Region.where(&quot;lower(name) LIKE ?&quot;, term)</code>
+          <code class="ruby">    regions = Region.where(&quot;lower(name) LIKE ?&quot;, term)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="23">
@@ -651,8 +651,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="24">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="3" data-linenumber="24">
+          <span class="hits">3</span>
           
           <code class="ruby">    render json:  {</code>
         </li>
@@ -660,13 +660,13 @@
         <li class="never" data-hits="" data-linenumber="25">
           
           
-          <code class="ruby">                    locations: @locations,</code>
+          <code class="ruby">                    locations: locations,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="26">
           
           
-          <code class="ruby">                    regions: @regions</code>
+          <code class="ruby">                    regions: regions</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="27">
@@ -783,16 +783,16 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="4">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="2" data-linenumber="4">
+          <span class="hits">2</span>
           
-          <code class="ruby">    @regions = Region.all</code>
+          <code class="ruby">    regions = Region.all</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="5">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="2" data-linenumber="5">
+          <span class="hits">2</span>
           
-          <code class="ruby">    render json: @regions</code>
+          <code class="ruby">    render json: regions</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
@@ -813,16 +813,16 @@
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="9">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="3" data-linenumber="9">
+          <span class="hits">3</span>
           
-          <code class="ruby">    @region = Region.find_by(id: params[:id])</code>
+          <code class="ruby">    region = Region.find_by(id: params[:id])</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="10">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="3" data-linenumber="10">
+          <span class="hits">3</span>
           
-          <code class="ruby">    @locations = @region.locations</code>
+          <code class="ruby">    locations = region.locations</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
@@ -831,8 +831,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="12">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="3" data-linenumber="12">
+          <span class="hits">3</span>
           
           <code class="ruby">    render json:  {</code>
         </li>
@@ -840,13 +840,13 @@
         <li class="never" data-hits="" data-linenumber="13">
           
           
-          <code class="ruby">                    region: @region,</code>
+          <code class="ruby">                    region: region,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
           
           
-          <code class="ruby">                    locations: @locations</code>
+          <code class="ruby">                    locations: locations</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
@@ -909,16 +909,16 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="4">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="2" data-linenumber="4">
+          <span class="hits">2</span>
           
-          <code class="ruby">    @species = Species.all</code>
+          <code class="ruby">    species = Species.all</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="5">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="2" data-linenumber="5">
+          <span class="hits">2</span>
           
-          <code class="ruby">    render json: @species</code>
+          <code class="ruby">    render json: species</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
@@ -939,20 +939,20 @@
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="9">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="2" data-linenumber="9">
+          <span class="hits">2</span>
           
-          <code class="ruby">    @animal = Species.find_by(id: params[:id])</code>
+          <code class="ruby">    animal = Species.find_by(id: params[:id])</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="10">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="2" data-linenumber="10">
+          <span class="hits">2</span>
           
-          <code class="ruby">    @locations = @animal.locations.all</code>
+          <code class="ruby">    locations = animal.locations.all</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="11">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="2" data-linenumber="11">
+          <span class="hits">2</span>
           
           <code class="ruby">    render json:  {</code>
         </li>
@@ -960,13 +960,13 @@
         <li class="never" data-hits="" data-linenumber="12">
           
           
-          <code class="ruby">                    species: @animal,</code>
+          <code class="ruby">                    species: animal,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
           
           
-          <code class="ruby">                    locations: @locations</code>
+          <code class="ruby">                    locations: locations</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
@@ -993,28 +993,28 @@
           <code class="ruby">  def search</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="18">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="4" data-linenumber="18">
+          <span class="hits">4</span>
           
           <code class="ruby">    term = &quot;%&quot; + params[:query].downcase + &quot;%&quot;</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="19">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="4" data-linenumber="19">
+          <span class="hits">4</span>
           
-          <code class="ruby">    @species = Species.where(&quot;lower(name) LIKE ?&quot;, term)</code>
+          <code class="ruby">    species = Species.where(&quot;lower(name) LIKE ?&quot;, term)</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="20">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="4" data-linenumber="20">
+          <span class="hits">4</span>
           
-          <code class="ruby">    @scientific_names = Species.where(&quot;lower(scientific_name) LIKE ?&quot;, term)</code>
+          <code class="ruby">    scientific_names = Species.where(&quot;lower(scientific_name) LIKE ?&quot;, term)</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="21">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="4" data-linenumber="21">
+          <span class="hits">4</span>
           
-          <code class="ruby">    @maori_names = Species.where(&quot;lower(maori_name) LIKE ?&quot;, term)</code>
+          <code class="ruby">    maori_names = Species.where(&quot;lower(maori_name) LIKE ?&quot;, term)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="22">
@@ -1023,8 +1023,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="23">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="4" data-linenumber="23">
+          <span class="hits">4</span>
           
           <code class="ruby">    render json:  {</code>
         </li>
@@ -1032,19 +1032,19 @@
         <li class="never" data-hits="" data-linenumber="24">
           
           
-          <code class="ruby">                    commonName: @species,</code>
+          <code class="ruby">                    commonName: species,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="25">
           
           
-          <code class="ruby">                    scientificName: @scientific_names,</code>
+          <code class="ruby">                    scientificName: scientific_names,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="26">
           
           
-          <code class="ruby">                    maoriName: @maori_names</code>
+          <code class="ruby">                    maoriName: maori_names</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="27">
