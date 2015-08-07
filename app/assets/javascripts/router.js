@@ -11,6 +11,12 @@ $(document).ready(function() {
     locationController.locationDetailsRequest(locationUrl);
   });
 
+  $('#content').on('click', '.regionList a', function(e) {
+    e.preventDefault();
+    var regionUrl = $(this).attr('href');
+    regionController.regionDetailsRequest(regionUrl);
+  });
+
   $('#content').on('click', '.speciesList a', function(e) {
     e.preventDefault();
     var speciesUrl = $(this).attr('href');
@@ -20,6 +26,11 @@ $(document).ready(function() {
   $('nav').on('click', '#locations-link', function(e) {
     e.preventDefault();
     locationController.locationListRequest();
+  });
+
+  $('nav').on('click', '#regions-link', function(e) {
+    e.preventDefault();
+    regionController.regionListRequest();
   });
 
   $('nav').on('click', '#species-link', function(e) {
