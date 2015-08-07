@@ -1,6 +1,7 @@
 src_files:
   - assets/application.js
   - ... - assets/jasmine-jquery.js
+  - https://maps.googleapis.com/maps/api/js
 
 stylesheets:
   - assets/application.css

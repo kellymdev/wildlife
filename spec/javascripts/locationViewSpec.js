@@ -67,6 +67,10 @@ describe("LocationView", function() {
     it("displays the maori name for the species", function() {
       expect($('.speciesList')).toContainText("Kekeno");
     });
+
+    it("appends a map-canvas div to the page", function() {
+      expect($('#content #map-canvas')).toBeInDOM();
+    });
   });
 
   describe("displayLocationSearchForm", function() {

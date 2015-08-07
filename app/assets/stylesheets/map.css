@@ -1,0 +1,11 @@
+#details {
+  float: left;
+  width: 45%;
+}
+
+#map-canvas {
+  margin-top: 16px;
+  float: right;
+  width: 500px;
+  height: 400px;
+}

@@ -17,8 +17,10 @@ LocationView.prototype.displayLocationDetails = function(details) {
   $('#content').html("");
   var locationHtml = '<div class="locationDetails">' +
                         '<h2>' + details.location.name + '</h2>' +
-                        '<p>Region: ' + details.region + '</p>' +
-                        '<p>' + details.location.description + '</p>';
+                        '<div class="location clearfix">' +
+                          '<div id="details">' +
+                            '<p>Region: ' + details.region + '</p>' +
+                            '<p>' + details.location.description + '</p>';
   locationHtml += '<div class="speciesList">' +
                     '<h3>Species</h3>' +
                     '<ul>';
@@ -31,7 +33,25 @@ LocationView.prototype.displayLocationDetails = function(details) {
   });
 
   locationHtml += '</ul></div></div>';
+  locationHtml += '<div id="map-canvas">' +
+                  '</div>' +
+                  '</div>' +
+                  '</div>';
   $('#content').append(locationHtml);
+
+  var mapLatLng = new google.maps.LatLng(details.location.lat, details.location.lng);
+  var mapCanvas = document.getElementById('map-canvas');
+  var mapOptions = {
+    center: mapLatLng,
+    zoom: 13,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  var map = new google.maps.Map(mapCanvas, mapOptions)
+  var marker = new google.maps.Marker({
+    position: mapLatLng,
+    map: map,
+    title: details.location.name
+  });
 };
 
 LocationView.prototype.displayLocationSearchForm = function() {
