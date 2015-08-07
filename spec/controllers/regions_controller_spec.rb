@@ -1,6 +1,25 @@
 require 'rails_helper'
 
 RSpec.describe RegionsController, type: :controller do
+  describe "get #index" do
+    before do
+      @region = create(:region)
+      get :index
+    end
+
+    it "returns http status 200" do
+      expect(response.status).to eq(200)
+    end
+
+    it "returns a list of regions as json" do
+      expect(response.body).to eq(Region.all.to_json)
+    end
+
+    it "assigns @regions to the list of regions" do
+      expect(assigns(:regions)).to eq(Region.all)
+    end
+  end
+
   describe "get #show" do
     before do
       @region = create(:region, name: "Wellington")
