@@ -26,82 +26,114 @@ Location.create([
                   {
                     name: "Cape Palliser",
                     description: "Rocky cape on the Wairarapa Coast. Cape Palliser is home to the North Island's largest New Zealand Fur Seal colony. Breeding season is from November to January.",
-                    region_id: Region.find_by_name("Wairarapa").id
+                    region_id: Region.find_by_name("Wairarapa").id,
+                    lat: -41.611885,
+                    lng: 175.290120
                   },
                   {
-                    name: "Foxton Estuary",
+                    name: "Foxton Estuary (Manawatu Estuary)",
                     description: "Approximately 2 hours drive north of Wellington, Foxton Estuary has one of the widest ranges of wading and shore birds in New Zealand. A total of 95 species have been identified there.",
-                    region_id: Region.find_by_name("Manawatu").id
+                    region_id: Region.find_by_name("Manawatu").id,
+                    lat: -40.465553,
+                    lng: 175.224206
                   },
                   {
                     name: "Kapiti Island Nature Reserve",
                     description: "A predator free wildlife reserve island off the coast of Paraparaumu. Home to several species of forest bird. Bookings required.",
-                    region_id: Region.find_by_name("Kapiti").id
+                    region_id: Region.find_by_name("Kapiti").id,
+                    lat: -40.851211,
+                    lng: 174.914481
                   },
                   {
                     name: "Makara Beach",
                     description: "A beach on Wellington's rugged south-west coast.",
-                    region_id: Region.find_by_name("Wellington").id
+                    region_id: Region.find_by_name("Wellington").id,
+                    lat: -41.218469,
+                    lng: 174.714538
                   },
                   {
                     name: "Mana Island",
                     description: "A predator-free island off the Plimmerton coast.",
-                    region_id: Region.find_by_name("Porirua").id
+                    region_id: Region.find_by_name("Porirua").id,
+                    lat: -41.089787,
+                    lng: 174.781180
                   },
                   {
                     name: "Marlborough Sounds",
                     description: "Coastal waterways at the top of the South Island. There are several New Zealand Fur Seal colonies in the Marlborough Sounds, where they like to hang out around the salmon farms.",
-                    region_id: Region.find_by_name("Marlborough").id
+                    region_id: Region.find_by_name("Marlborough").id,
+                    lat: -41.288518,
+                    lng: 174.007811
                   },
                   {
                     name: "Nga Manu Nature Reserve",
                     description: "A wildlife reserve in Waikanae. Home to various bird species, both native and introduced. Admission charges apply.",
-                    region_id: Region.find_by_name("Kapiti").id
+                    region_id: Region.find_by_name("Kapiti").id,
+                    lat: -40.862606,
+                    lng: 175.059043
                   },
                   {
                     name: "Otari-Wiltons Bush",
                     description: "The only public botanic garden in New Zealand that is dedicated solely to native plants. Commonly seen birds species include Tui, Kereru, Silvereye, Kingfisher, Grey Warbler, Bellbirds and Morepork.",
-                    region_id: Region.find_by_name("Wellington").id
+                    region_id: Region.find_by_name("Wellington").id,
+                    lat: -41.265532,
+                    lng: 174.751153
                   },
                   {
                     name: "Pauatahanui Wildlife Reserve",
                     description: "The tidal mud-flats and regenerating scrub land are home to several local and migratory birds. Species include Pied Stilts, Royal Spoonbills, Kingfishers, Pukekos, Black Shags, Caspian Terns, Bar-tailed Godwits, White-faced Herons and Paradise Shelducks.",
-                    region_id: Region.find_by_name("Porirua").id
+                    region_id: Region.find_by_name("Porirua").id,
+                    lat: -41.100991,
+                    lng: 174.914734
                   },
                   {
                     name: "Plimmerton Beach",
                     description: "A rocky beach on the Porirua coast.",
-                    region_id: Region.find_by_name("Porirua").id
+                    region_id: Region.find_by_name("Porirua").id,
+                    lat: -41.072284,
+                    lng: 174.855179
                   },
                   {
                     name: "Sinclair Head",
                     description: "Also known as Te Rimurapa, Sinclair Head is located on Wellington's south coast, near Red Rocks. Up to 150 New Zealand Fur Seals come ashore between May and August to rest and feed. This colony contains male seals only.",
-                    region_id: Region.find_by_name("Wellington").id
+                    region_id: Region.find_by_name("Wellington").id,
+                    lat: -41.361974,
+                    lng: 174.716164
                   },
                   {
                     name: "Staglands Wildlife Reserve",
                     description: "Home to several species of farm animal. Admission charges apply.",
-                    region_id: Region.find_by_name("Upper Hutt").id
+                    region_id: Region.find_by_name("Upper Hutt").id,
+                    lat: -40.986882,
+                    lng: 175.123073
                   },
                   {
                     name: "Waikanae Estuary",
                     description: "A coastal lagooon and wetland area. Home to several species of sea bird.",
-                    region_id: Region.find_by_name("Kapiti").id
+                    region_id: Region.find_by_name("Kapiti").id,
+                    lat: -40.872699,
+                    lng: 175.009446
                   },
                   {
                     name: "Wellington Waterfront",
                     description: "Red-billed Gulls and Black-backed Gulls are found throughout Wellington city, including along the waterfront in the CBD.",
-                    region_id: Region.find_by_name("Wellington").id
+                    region_id: Region.find_by_name("Wellington").id,
+                    lat: -41.284971,
+                    lng: 174.779272
                   },
                   {
                     name: "Wellington Zoo",
                     description: "Home to several exotic species.",
-                    region_id: Region.find_by_name("Wellington").id
+                    region_id: Region.find_by_name("Wellington").id,
+                    lat: -41.319535,
+                    lng: 174.784633
                   },
                   {
                     name: "Zealandia Ecosanctuary",
                     description: "A predator-fenced open-air wildlife and bird sanctuary, 10 minutes drive from the Wellington CBD. As well as some of the more common native birds, Zealandia is also home to rarer species such as Saddlebacks, Hihi, Kaka, and Little Spotted Kiwi. Admission charges apply.",
-                    region_id: Region.find_by_name("Wellington").id
+                    region_id: Region.find_by_name("Wellington").id,
+                    lat: -41.300538,
+                    lng: 174.744877
                   }
                 ])
 
