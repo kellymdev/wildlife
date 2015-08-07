@@ -8,7 +8,7 @@
  body {
   color: #878787;
   margin: 0;
-  font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Maven Pro', sans-serif;
   background: #e4fff0;
 }
 
@@ -16,9 +16,8 @@
 /*----------Text Styles--------------------------*/
 
 h1,
-h2,
-h3 {
-  font-family: 'Architects Daughter', Helvetica, Arial, sans-serif;
+h2 {
+  font-family: 'Architects Daughter', cursive;
   font-weight: normal;
 }
 
@@ -37,6 +36,8 @@ h3 {
 }
 
 h2 {
+  font-size: 2rem;
+  padding-bottom: 5px;
   border-bottom: 2px solid #4e8077;
 }
 
@@ -66,7 +67,7 @@ a:active {
   height: 380px;
   background: linear-gradient(#4e8077, transparent 90%),
               linear-gradient(0deg, #e4fff0, transparent),
-              #4e8077 url('piedstilt.jpg') no-repeat center;
+              #4e8077 url('https://s3-ap-southeast-2.amazonaws.com/wildlifesite/piedstilt.jpg') no-repeat center;
   background-size: cover;
 }
 
@@ -78,7 +79,7 @@ nav {
   padding: 10px 0;
   margin: 20px 0;
   background: #4e8077;
-  font-family: 'Architects Daughter', Helvetica, Arial, sans-serif;
+  font-family: 'Architects Daughter', cursive;
   font-size: 1.2em;
 }
 
