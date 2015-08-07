@@ -3,7 +3,10 @@ form {
 }
 
 input[type="text"] {
+  margin-top: 5px;
   width: 100%;
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 1em;
 }
 
 button[type="submit"] {
@@ -13,6 +16,6 @@ button[type="submit"] {
   border: 1px solid #e4fff0;
   border-radius: 3px;
   padding: 5px 10px;
-  font-family: 'Architects Daughter', Helvetica, Arial, sans-serif;
+  font-family: 'Architects Daughter', cursive;
   font-size: 0.9em;
 }
