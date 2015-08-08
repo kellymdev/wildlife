@@ -53,7 +53,7 @@ Location.create([
                   },
                   {
                     name: "Manawatu Estuary",
-                    description: "Approximately 2 hours drive north of Wellington, Manawatu Estuary (at Foxton Beach) has one of the widest ranges of wading and shore birds in New Zealand. A total of 95 species have been identified there.",
+                    description: "Approximately 2 hours drive north of Wellington, Manawatu Estuary (at Foxton Beach) has one of the widest ranges of wading and shore birds in New Zealand. A total of 95 species have been identified there. Parking, information panels and access to the estuary are located on Holben Parade. There is also a viewing platform on Dawick Street. Manawatu Estuary is an internationally significant wetland (Ramsar site).",
                     region_id: Region.find_by_name("Manawatu").id,
                     lat: -40.465553,
                     lng: 175.224206
@@ -150,6 +150,12 @@ Species.create([
                   description: "Large white seabird with a distinctive orange head"
                 },
                 {
+                  name: "Australasian Shoveler",
+                  scientific_name: "Anas rhynchotis",
+                  maori_name: "Kuruwhengi",
+                  description: "Water bird with a large shovel-shaped bill."
+                },
+                {
                   name: "Banded Dotterel",
                   scientific_name: "Charadrius bicinctus",
                   maori_name: "Pohowera",
@@ -162,10 +168,22 @@ Species.create([
                   description: "Often seen foraging on mud flats. During migration, they perform the longest non-stop flight of any sea bird."
                 },
                 {
+                  name: "Black-billed Gull",
+                  scientific_name: "Larus bulleri",
+                  maori_name: "Tarapuka",
+                  description: "Found only in New Zealand, the Black-billed gull is the most threatened gull species in the world."
+                },
+                {
                   name: "Black Shag",
                   scientific_name: "Phalacrocorax carbo",
                   maori_name: "Kawau",
                   description: "Black Shags roost in trees or along rocky coastlines."
+                },
+                {
+                  name: "Black Swan",
+                  scientific_name: "Cygnus atratus",
+                  maori_name: "Kakianau",
+                  description: "Found throughout New Zealand on lakes, ponds and estuaries."
                 },
                 {
                   name: "Blue Duck",
@@ -180,10 +198,20 @@ Species.create([
                   description: "Small brown native duck."
                 },
                 {
+                  name: "Canada Goose",
+                  scientific_name: "Branta canadensis",
+                  description: "Large light-brown goose."
+                },
+                {
                   name: "Caspian Tern",
                   scientific_name: "Hydroprogne caspia",
                   maori_name: "Taranui",
                   description: "Large gull-like bird, found in coastal waters, lakes and rivers."
+                },
+                {
+                  name: "Cattle Egret",
+                  scientific_name: "Ardea ibis",
+                  description: "Small stocky egret. Often found amongst sheep or cattle."
                 },
                 {
                   name: "Common Bottlenose Dolphin",
@@ -206,10 +234,28 @@ Species.create([
                   description: "White doves."
                 },
                 {
+                  name: "Fernbird",
+                  scientific_name: "Bowdleria punctata",
+                  maori_name: "Matata",
+                  description: "Well camouflaged. Usually heard rather than seen."
+                },
+                {
                   name: "Fluttering Shearwater",
                   scientific_name: "Puffinus gavia",
                   maori_name: "Pakaha",
                   description: "Has a distinctive fluttering flight pattern."
+                },
+                {
+                  name: "Grey Duck",
+                  scientific_name: "Anas superciliosa",
+                  maori_name: "Parera",
+                  description: "Dark brown duck, easily confused with the female Mallard Duck."
+                },
+                {
+                  name: "Grey Teal",
+                  scientific_name: "Anas gracilis",
+                  maori_name: "Tete",
+                  description: "Small duck found on freshwater lakes."
                 },
                 {
                   name: "Grey Warbler",
@@ -313,10 +359,21 @@ Species.create([
                   description: "Often seen on the ground searching for insects in the leaf litter"
                 },
                 {
+                  name: "Pacific Golden Plover",
+                  scientific_name: "Pluvialis fulva",
+                  description: "Ususally seen in small flocks feeding on mudflats at estuaries. Only seen in New Zealand in the summer months."
+                },
+                {
                   name: "Paradise Shelduck",
                   scientific_name: "Tadorna variegata",
                   maori_name: "Putangitangi",
                   description: "Endemic to New Zealand."
+                },
+                {
+                  name: "Pied Oystercatcher",
+                  scientific_name: "Haematopus finschi",
+                  maori_name: "Torea",
+                  description: "Black and white coastal bird with an orange bill."
                 },
                 {
                   name: "Pied Stilt",
@@ -345,6 +402,11 @@ Species.create([
                   scientific_name: "Cyanoramphus novaezelandiae",
                   maori_name: "Kakariki",
                   description: "Bright green parakeet with a red crown, easily camouflaged in the bush."
+                },
+                {
+                  name: "Red Knot",
+                  scientific_name: "Calidrus canutus",
+                  description: "Stocky migrant wading bird."
                 },
                 {
                   name: "Royal Spoonbill",
@@ -459,6 +521,14 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Marlborough Sounds").id
                           },
                           {
+                            species_id: Species.find_by_name("Australasian Shoveler").id,
+                            location_id: Location.find_by_name("Manawatu Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Banded Dotterel").id,
+                            location_id: Location.find_by_name("Manawatu Estuary").id
+                          },
+                          {
                             species_id: Species.find_by_name("Banded Dotterel").id,
                             location_id: Location.find_by_name("Waikanae Estuary").id
                           },
@@ -471,11 +541,27 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
                           },
                           {
+                            species_id: Species.find_by_name("Black-billed Gull").id,
+                            location_id: Location.find_by_name("Manawatu Estuary").id
+                          },
+                          {
                             species_id: Species.find_by_name("Black Shag").id,
                             location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
                           },
                           {
                             species_id: Species.find_by_name("Black Shag").id,
+                            location_id: Location.find_by_name("Waikanae Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Black Swan").id,
+                            location_id: Location.find_by_name("Manawatu Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Black Swan").id,
+                            location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Black Swan").id,
                             location_id: Location.find_by_name("Waikanae Estuary").id
                           },
                           {
@@ -499,12 +585,24 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Zealandia Ecosanctuary").id
                           },
                           {
+                            species_id: Species.find_by_name("Canada Goose").id,
+                            location_id: Location.find_by_name("Manawatu Estuary").id
+                          },
+                          {
                             species_id: Species.find_by_name("Caspian Tern").id,
                             location_id: Location.find_by_name("Manawatu Estuary").id
                           },
                           {
                             species_id: Species.find_by_name("Caspian Tern").id,
                             location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Cattle Egret").id,
+                            location_id: Location.find_by_name("Manawatu Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Cattle Egret").id,
+                            location_id: Location.find_by_name("Waikanae Estuary").id
                           },
                           {
                             species_id: Species.find_by_name("Common Bottlenose Dolphin").id,
@@ -523,12 +621,24 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Staglands Wildlife Reserve").id
                           },
                           {
+                            species_id: Species.find_by_name("Fernbird").id,
+                            location_id: Location.find_by_name("Manawatu Estuary").id
+                          },
+                          {
                             species_id: Species.find_by_name("Fluttering Shearwater").id,
                             location_id: Location.find_by_name("Mana Island").id
                           },
                           {
                             species_id: Species.find_by_name("Fluttering Shearwater").id,
                             location_id: Location.find_by_name("Marlborough Sounds").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Grey Duck").id,
+                            location_id: Location.find_by_name("Manawatu Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Grey Teal").id,
+                            location_id: Location.find_by_name("Manawatu Estuary").id
                           },
                           {
                             species_id: Species.find_by_name("Grey Warbler").id,
@@ -577,6 +687,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Little Spotted Kiwi").id,
                             location_id: Location.find_by_name("Zealandia Ecosanctuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Mallard Duck").id,
+                            location_id: Location.find_by_name("Manawatu Estuary").id
                           },
                           {
                             species_id: Species.find_by_name("Mallard Duck").id,
@@ -699,6 +813,10 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Zealandia Ecosanctuary").id
                           },
                           {
+                            species_id: Species.find_by_name("Pacific Golden Plover").id,
+                            location_id: Location.find_by_name("Manawatu Estuary").id
+                          },
+                          {
                             species_id: Species.find_by_name("Paradise Shelduck").id,
                             location_id: Location.find_by_name("Nga Manu Nature Reserve").id
                           },
@@ -711,12 +829,24 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Zealandia Ecosanctuary").id
                           },
                           {
+                            species_id: Species.find_by_name("Pied Oystercatcher").id,
+                            location_id: Location.find_by_name("Manawatu Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Pied Stilt").id,
+                            location_id: Location.find_by_name("Manawatu Estuary").id
+                          },
+                          {
                             species_id: Species.find_by_name("Pied Stilt").id,
                             location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
                           },
                           {
                             species_id: Species.find_by_name("Pigeon").id,
                             location_id: Location.find_by_name("Wellington Waterfront").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Pukeko").id,
+                            location_id: Location.find_by_name("Manawatu Estuary").id
                           },
                           {
                             species_id: Species.find_by_name("Pukeko").id,
@@ -733,6 +863,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Red-billed Gull").id,
                             location_id: Location.find_by_name("Makara Beach").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Red-billed Gull").id,
+                            location_id: Location.find_by_name("Manawatu Estuary").id
                           },
                           {
                             species_id: Species.find_by_name("Red-billed Gull").id,
@@ -755,8 +889,20 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Zealandia Ecosanctuary").id
                           },
                           {
+                            species_id: Species.find_by_name("Red Knot").id,
+                            location_id: Location.find_by_name("Manawatu Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Royal Spoonbill").id,
+                            location_id: Location.find_by_name("Manawatu Estuary").id
+                          },
+                          {
                             species_id: Species.find_by_name("Royal Spoonbill").id,
                             location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Sacred Kingfisher").id,
+                            location_id: Location.find_by_name("Manawatu Estuary").id
                           },
                           {
                             species_id: Species.find_by_name("Sacred Kingfisher").id,
@@ -781,6 +927,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Southern Black-backed Gull").id,
                             location_id: Location.find_by_name("Makara Beach").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Southern Black-backed Gull").id,
+                            location_id: Location.find_by_name("Manawatu Estuary").id
                           },
                           {
                             species_id: Species.find_by_name("Southern Black-backed Gull").id,
@@ -832,6 +982,10 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("Tui").id,
+                            location_id: Location.find_by_name("Manawatu Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Tui").id,
                             location_id: Location.find_by_name("Nga Manu Nature Reserve").id
                           },
                           {
@@ -841,6 +995,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Tui").id,
                             location_id: Location.find_by_name("Zealandia Ecosanctuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Variable Oystercatcher").id,
+                            location_id: Location.find_by_name("Manawatu Estuary").id
                           },
                           {
                             species_id: Species.find_by_name("Variable Oystercatcher").id,
@@ -856,7 +1014,15 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("White-faced Heron").id,
+                            location_id: Location.find_by_name("Manawatu Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("White-faced Heron").id,
                             location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("White-fronted Tern").id,
+                            location_id: Location.find_by_name("Manawatu Estuary").id
                           },
                           {
                             species_id: Species.find_by_name("White-fronted Tern").id,
