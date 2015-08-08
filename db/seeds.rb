@@ -73,6 +73,13 @@ Location.create([
                     lng: 174.865361
                   },
                   {
+                    name: "Matthews and Boggy Pond Wildlife Reserve",
+                    description: "The Matthews and Boggy Pond Wildlife Reserve is the best place to see birds in the Wairarapa Moana Wetlands Park. Access via Parera Road, off Kahutara Road.",
+                    region_id: Region.find_by_name("Wairarapa").id,
+                    lat: -41.250788,
+                    lng: 175.265776
+                  },
+                  {
                     name: "Motuara Island",
                     description: "A predator-free wildlife reserve island in the outer Queen Charlotte Sound. Little Blue Penguin chicks can be seen in nest boxes during the breeding season.",
                     region_id: Region.find_by_name("Marlborough").id,
@@ -85,6 +92,13 @@ Location.create([
                     region_id: Region.find_by_name("Kapiti").id,
                     lat: -40.862606,
                     lng: 175.059043
+                  },
+                  {
+                    name: "Onoke Spit",
+                    description: "A 3km spit of land that is a breeding ground for the Caspian Tern. Access at the end of Western Lake Road, Palliser Bay.",
+                    region_id: Region.find_by_name("Wairarapa").id,
+                    lat: -41.384889,
+                    lng: 175.104918
                   },
                   {
                     name: "Otari-Wiltons Bush",
@@ -129,6 +143,13 @@ Location.create([
                     lng: 175.000593
                   },
                   {
+                    name: "Wairio Block and Lake Wairarapa Eastern Shore",
+                    description: "An important site for national and international migratory birds. Large flocks of wading birds can be seen on the shoreline during summer. Boardwalk access is opposite the Boggy Pond carpark.",
+                    region_id: Region.find_by_name("Wairarapa").id,
+                    lat: -41.212894,
+                    lng: 175.241927
+                  },
+                  {
                     name: "Wellington Waterfront",
                     description: "Red-billed Gulls and Black-backed Gulls are found throughout Wellington city, including along the waterfront in the CBD.",
                     region_id: Region.find_by_name("Wellington").id,
@@ -156,6 +177,12 @@ Species.create([
                   name: "Arapawa Island Goat",
                   scientific_name: "Capra aegagrus hircus",
                   description: "A rare goat breed, originating from Arapawa Island in the Marlborough Sounds."
+                },
+                {
+                  name: "Australasian Bittern",
+                  scientific_name: "Botaurus poiciloptilus",
+                  maori_name: "Matuku hurepo",
+                  description: "Large stocky bird with dark-brown and beige plumage."
                 },
                 {
                   name: "Australasian Gannet",
@@ -312,7 +339,7 @@ Species.create([
                   name: "Little Black Shag",
                   scientific_name: "Phalacrocorax sulcirostris",
                   maori_name: "Kawau tui",
-                  description: "Small black shag with glossy plummage."
+                  description: "Small black shag with glossy plumage."
                 },
                 {
                   name: "Little Blue Penguin",
@@ -588,6 +615,12 @@ Species.create([
                   description: "Small compact bird with a white head and light-grey body."
                 },
                 {
+                  name: "White Heron",
+                  scientific_name: "Ardea modesta",
+                  maori_name: "Kotuku",
+                  description: "Large white heron with a long yellow bill. The only breeding colony in New Zealand is found near Okarito Lagoon, Westland."
+                },
+                {
                   name: "Wrybill",
                   scientific_name: "Anarhynchus frontalis",
                   maori_name: "Ngutu pare",
@@ -605,6 +638,14 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Arapawa Island Goat").id,
                             location_id: Location.find_by_name("Staglands Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Australasian Bittern").id,
+                            location_id: Location.find_by_name("Matthews and Boggy Pond Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Australasian Bittern").id,
+                            location_id: Location.find_by_name("Wairio Block and Lake Wairarapa Eastern Shore").id
                           },
                           {
                             species_id: Species.find_by_name("Australasian Gannet").id,
@@ -632,7 +673,19 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("Banded Dotterel").id,
+                            location_id: Location.find_by_name("Matthews and Boggy Pond Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Banded Dotterel").id,
+                            location_id: Location.find_by_name("Onoke Spit").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Banded Dotterel").id,
                             location_id: Location.find_by_name("Waikanae Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Banded Dotterel").id,
+                            location_id: Location.find_by_name("Wairio Block and Lake Wairarapa Eastern Shore").id
                           },
                           {
                             species_id: Species.find_by_name("Bar-tailed Godwit").id,
@@ -641,6 +694,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Bar-tailed Godwit").id,
                             location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Bar-tailed Godwit").id,
+                            location_id: Location.find_by_name("Wairio Block and Lake Wairarapa Eastern Shore").id
                           },
                           {
                             species_id: Species.find_by_name("Black-billed Gull").id,
@@ -648,11 +705,19 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("Black Shag").id,
+                            location_id: Location.find_by_name("Matthews and Boggy Pond Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Black Shag").id,
                             location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
                           },
                           {
                             species_id: Species.find_by_name("Black Shag").id,
                             location_id: Location.find_by_name("Waikanae Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Black Shag").id,
+                            location_id: Location.find_by_name("Wairio Block and Lake Wairarapa Eastern Shore").id
                           },
                           {
                             species_id: Species.find_by_name("Black Shag").id,
@@ -661,6 +726,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Black Swan").id,
                             location_id: Location.find_by_name("Manawatu Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Black Swan").id,
+                            location_id: Location.find_by_name("Matthews and Boggy Pond Wildlife Reserve").id
                           },
                           {
                             species_id: Species.find_by_name("Black Swan").id,
@@ -709,6 +778,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Caspian Tern").id,
                             location_id: Location.find_by_name("Manawatu Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Caspian Tern").id,
+                            location_id: Location.find_by_name("Onoke Spit").id
                           },
                           {
                             species_id: Species.find_by_name("Caspian Tern").id,
@@ -768,11 +841,23 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("Grey Duck").id,
+                            location_id: Location.find_by_name("Matthews and Boggy Pond Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Grey Duck").id,
                             location_id: Location.find_by_name("Staglands Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Grey Duck").id,
+                            location_id: Location.find_by_name("Wairio Block and Lake Wairarapa Eastern Shore").id
                           },
                           {
                             species_id: Species.find_by_name("Grey Teal").id,
                             location_id: Location.find_by_name("Manawatu Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Grey Teal").id,
+                            location_id: Location.find_by_name("Matthews and Boggy Pond Wildlife Reserve").id
                           },
                           {
                             species_id: Species.find_by_name("Grey Teal").id,
@@ -816,7 +901,15 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("Little Black Shag").id,
+                            location_id: Location.find_by_name("Matthews and Boggy Pond Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Little Black Shag").id,
                             location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Little Black Shag").id,
+                            location_id: Location.find_by_name("Wairio Block and Lake Wairarapa Eastern Shore").id
                           },
                           {
                             species_id: Species.find_by_name("Little Black Shag").id,
@@ -837,6 +930,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Little Shag").id,
                             location_id: Location.find_by_name("Motuara Island").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Little Shag").id,
+                            location_id: Location.find_by_name("Wairio Block and Lake Wairarapa Eastern Shore").id
                           },
                           {
                             species_id: Species.find_by_name("Little Shag").id,
@@ -861,6 +958,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Mallard Duck").id,
                             location_id: Location.find_by_name("Manawatu Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Mallard Duck").id,
+                            location_id: Location.find_by_name("Matthews and Boggy Pond Wildlife Reserve").id
                           },
                           {
                             species_id: Species.find_by_name("Mallard Duck").id,
@@ -912,7 +1013,15 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("New Zealand Dabchick").id,
+                            location_id: Location.find_by_name("Matthews and Boggy Pond Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("New Zealand Dabchick").id,
                             location_id: Location.find_by_name("Waikanae Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("New Zealand Dabchick").id,
+                            location_id: Location.find_by_name("Wairio Block and Lake Wairarapa Eastern Shore").id
                           },
                           {
                             species_id: Species.find_by_name("New Zealand Falcon").id,
@@ -980,6 +1089,10 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("New Zealand Scaup").id,
+                            location_id: Location.find_by_name("Matthews and Boggy Pond Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("New Zealand Scaup").id,
                             location_id: Location.find_by_name("Nga Manu Nature Reserve").id
                           },
                           {
@@ -1043,6 +1156,10 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Manawatu Estuary").id
                           },
                           {
+                            species_id: Species.find_by_name("Pacific Golden Plover").id,
+                            location_id: Location.find_by_name("Wairio Block and Lake Wairarapa Eastern Shore").id
+                          },
+                          {
                             species_id: Species.find_by_name("Paradise Shelduck").id,
                             location_id: Location.find_by_name("Nga Manu Nature Reserve").id
                           },
@@ -1080,7 +1197,15 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("Pied Stilt").id,
+                            location_id: Location.find_by_name("Matthews and Boggy Pond Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Pied Stilt").id,
                             location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Pied Stilt").id,
+                            location_id: Location.find_by_name("Wairio Block and Lake Wairarapa Eastern Shore").id
                           },
                           {
                             species_id: Species.find_by_name("Pigeon").id,
@@ -1089,6 +1214,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Pukeko").id,
                             location_id: Location.find_by_name("Manawatu Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Pukeko").id,
+                            location_id: Location.find_by_name("Matthews and Boggy Pond Wildlife Reserve").id
                           },
                           {
                             species_id: Species.find_by_name("Pukeko").id,
@@ -1112,11 +1241,19 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("Red-billed Gull").id,
+                            location_id: Location.find_by_name("Onoke Spit").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Red-billed Gull").id,
                             location_id: Location.find_by_name("Plimmerton Beach").id
                           },
                           {
                             species_id: Species.find_by_name("Red-billed Gull").id,
                             location_id: Location.find_by_name("Waikanae Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Red-billed Gull").id,
+                            location_id: Location.find_by_name("Wairio Block and Lake Wairarapa Eastern Shore").id
                           },
                           {
                             species_id: Species.find_by_name("Red-billed Gull").id,
@@ -1139,6 +1276,10 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Manawatu Estuary").id
                           },
                           {
+                            species_id: Species.find_by_name("Red Knot").id,
+                            location_id: Location.find_by_name("Wairio Block and Lake Wairarapa Eastern Shore").id
+                          },
+                          {
                             species_id: Species.find_by_name("Reef Heron").id,
                             location_id: Location.find_by_name("Motuara Island").id
                           },
@@ -1148,7 +1289,15 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("Royal Spoonbill").id,
+                            location_id: Location.find_by_name("Matthews and Boggy Pond Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Royal Spoonbill").id,
                             location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Royal Spoonbill").id,
+                            location_id: Location.find_by_name("Wairio Block and Lake Wairarapa Eastern Shore").id
                           },
                           {
                             species_id: Species.find_by_name("Sacred Kingfisher").id,
@@ -1157,6 +1306,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Sacred Kingfisher").id,
                             location_id: Location.find_by_name("Matiu Somes Island").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Sacred Kingfisher").id,
+                            location_id: Location.find_by_name("Matthews and Boggy Pond Wildlife Reserve").id
                           },
                           {
                             species_id: Species.find_by_name("Sacred Kingfisher").id,
@@ -1197,6 +1350,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Southern Black-backed Gull").id,
                             location_id: Location.find_by_name("Matiu Somes Island").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Southern Black-backed Gull").id,
+                            location_id: Location.find_by_name("Onoke Spit").id
                           },
                           {
                             species_id: Species.find_by_name("Southern Black-backed Gull").id,
@@ -1300,6 +1457,10 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("Variable Oystercatcher").id,
+                            location_id: Location.find_by_name("Onoke Spit").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Variable Oystercatcher").id,
                             location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
                           },
                           {
@@ -1335,8 +1496,16 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Zealandia Ecosanctuary").id
                           },
                           {
+                            species_id: Species.find_by_name("White Heron").id,
+                            location_id: Location.find_by_name("Matthews and Boggy Pond Wildlife Reserve").id
+                          },
+                          {
                             species_id: Species.find_by_name("Wrybill").id,
                             location_id: Location.find_by_name("Manawatu Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Wrybill").id,
+                            location_id: Location.find_by_name("Wairio Block and Lake Wairarapa Eastern Shore").id
                           },
                           {
                             species_id: Species.find_by_name("Yellow-crowned Parakeet").id,
