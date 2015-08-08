@@ -221,6 +221,12 @@ Species.create([
                   description: "Small stocky egret. Often found amongst sheep or cattle."
                 },
                 {
+                  name: "Chaffinch",
+                  scientific_name: "Fringilla coelebs",
+                  maori_name: "Pahirini",
+                  description: "Widespread throughout New Zealand."
+                },
+                {
                   name: "Common Bottlenose Dolphin",
                   scientific_name: "Tursiops truncatus",
                   description: "The most common dolphin species."
@@ -636,6 +642,10 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Waikanae Estuary").id
                           },
                           {
+                            species_id: Species.find_by_name("Chaffinch").id,
+                            location_id: Location.find_by_name("Otari-Wiltons Bush").id
+                          },
+                          {
                             species_id: Species.find_by_name("Common Bottlenose Dolphin").id,
                             location_id: Location.find_by_name("Marlborough Sounds").id
                           },
@@ -882,6 +892,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Paradise Shelduck").id,
                             location_id: Location.find_by_name("Nga Manu Nature Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Paradise Shelduck").id,
+                            location_id: Location.find_by_name("Otari-Wiltons Bush").id
                           },
                           {
                             species_id: Species.find_by_name("Paradise Shelduck").id,
