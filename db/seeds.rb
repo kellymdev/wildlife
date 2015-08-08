@@ -123,7 +123,7 @@ Location.create([
                   },
                   {
                     name: "Wellington Zoo",
-                    description: "Home to several exotic species.",
+                    description: "Home to over 100 species including Sumatran Tigers, Cheetahs, Malayan Sun Bears, White-Cheeked Gibbons and an Australian Pelican. Admission charges apply.",
                     region_id: Region.find_by_name("Wellington").id,
                     lat: -41.319535,
                     lng: 174.784633
@@ -389,6 +389,11 @@ Species.create([
                   description: "Large blue flightless bird"
                 },
                 {
+                  name: "Tuatara",
+                  scientific_name: "Sphenodon punctatus",
+                  description: "Greenish-brown reptile with a spiny crest along the back."
+                },
+                {
                   name: "Tui",
                   scientific_name: "Prosthemadera novaeseelandiae",
                   description: "Nectar-feeding bird that loves rata and flax flowers."
@@ -454,6 +459,10 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("Blue Duck").id,
+                            location_id: Location.find_by_name("Nga Manu Nature Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Blue Duck").id,
                             location_id: Location.find_by_name("Staglands Wildlife Reserve").id
                           },
                           {
@@ -510,11 +519,19 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("Kea").id,
+                            location_id: Location.find_by_name("Nga Manu Nature Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Kea").id,
                             location_id: Location.find_by_name("Staglands Wildlife Reserve").id
                           },
                           {
                             species_id: Species.find_by_name("King Shag").id,
                             location_id: Location.find_by_name("Marlborough Sounds").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Little Spotted Kiwi").id,
+                            location_id: Location.find_by_name("Kapiti Island Nature Reserve").id
                           },
                           {
                             species_id: Species.find_by_name("Little Spotted Kiwi").id,
@@ -542,6 +559,10 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("Morepork").id,
+                            location_id: Location.find_by_name("Nga Manu Nature Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Morepork").id,
                             location_id: Location.find_by_name("Otari-Wiltons Bush").id
                           },
                           {
@@ -566,6 +587,10 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("New Zealand Fantail").id,
+                            location_id: Location.find_by_name("Nga Manu Nature Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("New Zealand Fantail").id,
                             location_id: Location.find_by_name("Otari-Wiltons Bush").id
                           },
                           {
@@ -586,6 +611,14 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("New Zealand Kaka").id,
+                            location_id: Location.find_by_name("Kapiti Island Nature Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("New Zealand Kaka").id,
+                            location_id: Location.find_by_name("Nga Manu Nature Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("New Zealand Kaka").id,
                             location_id: Location.find_by_name("Staglands Wildlife Reserve").id
                           },
                           {
@@ -594,11 +627,19 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("New Zealand Scaup").id,
+                            location_id: Location.find_by_name("Nga Manu Nature Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("New Zealand Scaup").id,
                             location_id: Location.find_by_name("Zealandia Ecosanctuary").id
                           },
                           {
                             species_id: Species.find_by_name("New Zealand Wood Pigeon").id,
                             location_id: Location.find_by_name("Kapiti Island Nature Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("New Zealand Wood Pigeon").id,
+                            location_id: Location.find_by_name("Nga Manu Nature Reserve").id
                           },
                           {
                             species_id: Species.find_by_name("New Zealand Wood Pigeon").id,
@@ -662,6 +703,10 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("Red-crowned Parakeet").id,
+                            location_id: Location.find_by_name("Nga Manu Nature Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Red-crowned Parakeet").id,
                             location_id: Location.find_by_name("Zealandia Ecosanctuary").id
                           },
                           {
@@ -675,6 +720,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Sacred Kingfisher").id,
                             location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Saddleback").id,
+                            location_id: Location.find_by_name("Kapiti Island Nature Reserve").id
                           },
                           {
                             species_id: Species.find_by_name("Saddleback").id,
@@ -714,6 +763,18 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("Takahe").id,
+                            location_id: Location.find_by_name("Kapiti Island Nature Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Takahe").id,
+                            location_id: Location.find_by_name("Zealandia Ecosanctuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Tuatara").id,
+                            location_id: Location.find_by_name("Nga Manu Nature Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Tuatara").id,
                             location_id: Location.find_by_name("Zealandia Ecosanctuary").id
                           },
                           {
