@@ -66,6 +66,13 @@ Location.create([
                     lng: 174.007811
                   },
                   {
+                    name: "Motuara Island",
+                    description: "A predator-free wildlife reserve island in the outer Queen Charlotte Sound. Little Blue Penguin chicks can be seen in nest boxes during the breeding season.",
+                    region_id: Region.find_by_name("Marlborough").id,
+                    lat: -41.092382,
+                    lng: 174.274021
+                  },
+                  {
                     name: "Nga Manu Nature Reserve",
                     description: "A wildlife reserve in Waikanae. Home to various bird species, both native and introduced. Admission charges apply.",
                     region_id: Region.find_by_name("Kapiti").id,
@@ -285,6 +292,12 @@ Species.create([
                   description: "The world's smallest penguin. Found along the New Zealand coastline."
                 },
                 {
+                  name: "Little Shag",
+                  scientific_name: "Phalacrocorax melanoleucos",
+                  maori_name: "Kawau paka",
+                  description: "Small shag found in freshwater and marine environments."
+                },
+                {
                   name: "Little Spotted Kiwi",
                   scientific_name: "Apteryx owenii",
                   description: "The smallest species of Kiwi."
@@ -359,6 +372,12 @@ Species.create([
                   description: "Often seen on the ground searching for insects in the leaf litter"
                 },
                 {
+                  name: "North Island Saddleback",
+                  scientific_name: "Philesturnus rufusater",
+                  maori_name: "Tieke",
+                  description: "A medium-sized black-coloured bird with a distinctive red 'saddle' across the back."
+                },
+                {
                   name: "Pacific Golden Plover",
                   scientific_name: "Pluvialis fulva",
                   description: "Ususally seen in small flocks feeding on mudflats at estuaries. Only seen in New Zealand in the summer months."
@@ -374,6 +393,12 @@ Species.create([
                   scientific_name: "Haematopus finschi",
                   maori_name: "Torea",
                   description: "Black and white coastal bird with an orange bill."
+                },
+                {
+                  name: "Pied Shag",
+                  scientific_name: "Phalacrocorax varius",
+                  maori_name: "Karuhiruhi",
+                  description: "Large black and white shag."
                 },
                 {
                   name: "Pied Stilt",
@@ -409,6 +434,12 @@ Species.create([
                   description: "Stocky migrant wading bird."
                 },
                 {
+                  name: "Reef Heron",
+                  scientific_name: "Egretta sacra",
+                  maori_name: "Matuku moana",
+                  description: "Medium-sized dark grey wading bird."
+                },
+                {
                   name: "Royal Spoonbill",
                   scientific_name: "Platalea regia",
                   maori_name: "Kotuku ngutupapa",
@@ -419,12 +450,6 @@ Species.create([
                   scientific_name: "Todiramphus sanctus",
                   maori_name: "Kotare",
                   description: "Greeny-blue bird with a creamy yellow chest."
-                },
-                {
-                  name: "Saddleback",
-                  scientific_name: "Philesturnus rufusater",
-                  maori_name: "Tieke",
-                  description: "A medium-sized black-coloured bird with a distinctive red 'saddle' across the back."
                 },
                 {
                   name: "Silvereye",
@@ -443,6 +468,12 @@ Species.create([
                   scientific_name: "Petroica australis",
                   maori_name: "Toutouwai",
                   description: "Similar to the North Island Robin, but found in the South Island."
+                },
+                {
+                  name: "South Island Saddleback",
+                  scientific_name: "Philesturnus carunculatus",
+                  maori_name: "Tieke",
+                  description: "A medium-sized black-coloured bird with a distinctive chestnut 'saddle' across the back."
                 },
                 {
                   name: "Spotted Shag",
@@ -677,6 +708,14 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Mana Island").id
                           },
                           {
+                            species_id: Species.find_by_name("Little Blue Penguin").id,
+                            location_id: Location.find_by_name("Motuara Island").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Little Shag").id,
+                            location_id: Location.find_by_name("Motuara Island").id
+                          },
+                          {
                             species_id: Species.find_by_name("Little Spotted Kiwi").id,
                             location_id: Location.find_by_name("Kapiti Island Nature Reserve").id
                           },
@@ -726,6 +765,10 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("New Zealand Bellbird").id,
+                            location_id: Location.find_by_name("Motuara Island").id
+                          },
+                          {
+                            species_id: Species.find_by_name("New Zealand Bellbird").id,
                             location_id: Location.find_by_name("Otari-Wiltons Bush").id
                           },
                           {
@@ -738,7 +781,15 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("New Zealand Falcon").id,
+                            location_id: Location.find_by_name("Motuara Island").id
+                          },
+                          {
+                            species_id: Species.find_by_name("New Zealand Falcon").id,
                             location_id: Location.find_by_name("Staglands Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("New Zealand Fantail").id,
+                            location_id: Location.find_by_name("Motuara Island").id
                           },
                           {
                             species_id: Species.find_by_name("New Zealand Fantail").id,
@@ -794,6 +845,10 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("New Zealand Wood Pigeon").id,
+                            location_id: Location.find_by_name("Motuara Island").id
+                          },
+                          {
+                            species_id: Species.find_by_name("New Zealand Wood Pigeon").id,
                             location_id: Location.find_by_name("Nga Manu Nature Reserve").id
                           },
                           {
@@ -810,6 +865,14 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("North Island Robin").id,
+                            location_id: Location.find_by_name("Zealandia Ecosanctuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("North Island Saddleback").id,
+                            location_id: Location.find_by_name("Kapiti Island Nature Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("North Island Saddleback").id,
                             location_id: Location.find_by_name("Zealandia Ecosanctuary").id
                           },
                           {
@@ -831,6 +894,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Pied Oystercatcher").id,
                             location_id: Location.find_by_name("Manawatu Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Pied Shag").id,
+                            location_id: Location.find_by_name("Motuara Island")
                           },
                           {
                             species_id: Species.find_by_name("Pied Stilt").id,
@@ -893,6 +960,10 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Manawatu Estuary").id
                           },
                           {
+                            species_id: Species.find_by_name("Reef Heron").id,
+                            location_id: Location.find_by_name("Motuara Island").id
+                          },
+                          {
                             species_id: Species.find_by_name("Royal Spoonbill").id,
                             location_id: Location.find_by_name("Manawatu Estuary").id
                           },
@@ -911,14 +982,6 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Sacred Kingfisher").id,
                             location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
-                          },
-                          {
-                            species_id: Species.find_by_name("Saddleback").id,
-                            location_id: Location.find_by_name("Kapiti Island Nature Reserve").id
-                          },
-                          {
-                            species_id: Species.find_by_name("Saddleback").id,
-                            location_id: Location.find_by_name("Zealandia Ecosanctuary").id
                           },
                           {
                             species_id: Species.find_by_name("Silvereye").id,
@@ -946,11 +1009,19 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("South Island Robin").id,
-                            location_id: Location.find_by_name("Marlborough Sounds").id
+                            location_id: Location.find_by_name("Motuara Island").id
+                          },
+                          {
+                            species_id: Species.find_by_name("South Island Saddleback").id,
+                            location_id: Location.find_by_name("Motuara Island").id
                           },
                           {
                             species_id: Species.find_by_name("Spotted Shag").id,
                             location_id: Location.find_by_name("Marlborough Sounds").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Spotted Shag").id,
+                            location_id: Location.find_by_name("Motuara Island").id
                           },
                           {
                             species_id: Species.find_by_name("Stitchbird").id,
@@ -999,6 +1070,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Variable Oystercatcher").id,
                             location_id: Location.find_by_name("Manawatu Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Variable Oystercatcher").id,
+                            location_id: Location.find_by_name("Motuara Island").id
                           },
                           {
                             species_id: Species.find_by_name("Variable Oystercatcher").id,
