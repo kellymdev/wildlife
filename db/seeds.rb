@@ -66,6 +66,13 @@ Location.create([
                     lng: 174.007811
                   },
                   {
+                    name: "Matiu Somes Island",
+                    description: "Pest-free island in Wellington Harbour, where several native bird species can be seen in the wild.",
+                    region_id: Region.find_by_name("Wellington").id,
+                    lat: -41.257122,
+                    lng: 174.865361
+                  },
+                  {
                     name: "Motuara Island",
                     description: "A predator-free wildlife reserve island in the outer Queen Charlotte Sound. Little Blue Penguin chicks can be seen in nest boxes during the breeding season.",
                     region_id: Region.find_by_name("Marlborough").id,
@@ -717,6 +724,10 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("Chaffinch").id,
+                            location_id: Location.find_by_name("Matiu Somes Island").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Chaffinch").id,
                             location_id: Location.find_by_name("Otari-Wiltons Bush").id
                           },
                           {
@@ -817,6 +828,10 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("Little Blue Penguin").id,
+                            location_id: Location.find_by_name("Matiu Somes Island").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Little Blue Penguin").id,
                             location_id: Location.find_by_name("Motuara Island").id
                           },
                           {
@@ -913,6 +928,10 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("New Zealand Fantail").id,
+                            location_id: Location.find_by_name("Matiu Somes Island").id
+                          },
+                          {
+                            species_id: Species.find_by_name("New Zealand Fantail").id,
                             location_id: Location.find_by_name("Motuara Island").id
                           },
                           {
@@ -998,6 +1017,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("North Island Robin").id,
                             location_id: Location.find_by_name("Mana Island").id
+                          },
+                          {
+                            species_id: Species.find_by_name("North Island Robin").id,
+                            location_id: Location.find_by_name("Matiu Somes Island").id
                           },
                           {
                             species_id: Species.find_by_name("North Island Robin").id,
@@ -1101,6 +1124,10 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("Red-crowned Parakeet").id,
+                            location_id: Location.find_by_name("Matiu Somes Island").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Red-crowned Parakeet").id,
                             location_id: Location.find_by_name("Nga Manu Nature Reserve").id
                           },
                           {
@@ -1129,6 +1156,10 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("Sacred Kingfisher").id,
+                            location_id: Location.find_by_name("Matiu Somes Island").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Sacred Kingfisher").id,
                             location_id: Location.find_by_name("Otari-Wiltons Bush").id
                           },
                           {
@@ -1145,6 +1176,10 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("Silvereye").id,
+                            location_id: Location.find_by_name("Matiu Somes Island").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Silvereye").id,
                             location_id: Location.find_by_name("Otari-Wiltons Bush").id
                           },
                           {
@@ -1158,6 +1193,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Southern Black-backed Gull").id,
                             location_id: Location.find_by_name("Manawatu Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Southern Black-backed Gull").id,
+                            location_id: Location.find_by_name("Matiu Somes Island").id
                           },
                           {
                             species_id: Species.find_by_name("Southern Black-backed Gull").id,
@@ -1185,6 +1224,10 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("Spotted Shag").id,
+                            location_id: Location.find_by_name("Matiu Somes Island").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Spotted Shag").id,
                             location_id: Location.find_by_name("Motuara Island").id
                           },
                           {
@@ -1206,6 +1249,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Takahe").id,
                             location_id: Location.find_by_name("Zealandia Ecosanctuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Tuatara").id,
+                            location_id: Location.find_by_name("Matiu Somes Island").id
                           },
                           {
                             species_id: Species.find_by_name("Tuatara").id,
@@ -1242,6 +1289,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Variable Oystercatcher").id,
                             location_id: Location.find_by_name("Manawatu Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Variable Oystercatcher").id,
+                            location_id: Location.find_by_name("Matiu Somes Island").id
                           },
                           {
                             species_id: Species.find_by_name("Variable Oystercatcher").id,
