@@ -191,6 +191,11 @@ Species.create([
                   description: "The most common dolphin species."
                 },
                 {
+                  name: "Common Diving Petrel",
+                  scientific_name: "Pelecanoides urinatrix",
+                  description: "Small seabird found in exposed coastal waters around New Zealand."
+                },
+                {
                   name: "Domestic Duck",
                   scientific_name: "Anas platyrhynchos domesticus",
                   description: "White duck found throughout New Zealand. Commonly kept as pets, or at wildlife parks."
@@ -226,6 +231,12 @@ Species.create([
                   name: "King Shag",
                   scientific_name: "Phalacrocorax carunculatus syn Leucocarbo carunculatus",
                   description: "Endemic to New Zealand. Only found in the outer Marlborough Sounds."
+                },
+                {
+                  name: "Little Blue Penguin",
+                  scientific_name: "Eudyptula minor",
+                  maori_name: "Korora",
+                  description: "The world's smallest penguin. Found along the New Zealand coastline."
                 },
                 {
                   name: "Little Spotted Kiwi",
@@ -333,7 +344,7 @@ Species.create([
                   name: "Red-crowned Parakeet",
                   scientific_name: "Cyanoramphus novaezelandiae",
                   maori_name: "Kakariki",
-                  description: "Bright green parakeet, easily camouflaged in the bush"
+                  description: "Bright green parakeet with a red crown, easily camouflaged in the bush."
                 },
                 {
                   name: "Royal Spoonbill",
@@ -425,6 +436,12 @@ Species.create([
                   scientific_name: "Anarhynchus frontalis",
                   maori_name: "Ngutu pare",
                   description: "A small plover that only breeds in the braided rivers of the South Island of New Zealand. It migrates to northern New Zealand for winter."
+                },
+                {
+                  name: "Yellow-crowned Parakeet",
+                  scientific_name: "Cyanoramphus auriceps",
+                  maori_name: "Kakariki",
+                  description: "Bright green parakeet with a yellow crown."
                 }
               ])
 
@@ -432,6 +449,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Arapawa Island Goat").id,
                             location_id: Location.find_by_name("Staglands Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Australasian Gannet").id,
+                            location_id: Location.find_by_name("Mana Island").id
                           },
                           {
                             species_id: Species.find_by_name("Australasian Gannet").id,
@@ -467,6 +488,10 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("Brown Teal").id,
+                            location_id: Location.find_by_name("Mana Island").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Brown Teal").id,
                             location_id: Location.find_by_name("Staglands Wildlife Reserve").id,
                           },
                           {
@@ -486,12 +511,20 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Marlborough Sounds").id
                           },
                           {
+                            species_id: Species.find_by_name("Common Diving Petrel").id,
+                            location_id: Location.find_by_name("Mana Island").id
+                          },
+                          {
                             species_id: Species.find_by_name("Domestic Duck").id,
                             location_id: Location.find_by_name("Staglands Wildlife Reserve").id
                           },
                           {
                             species_id: Species.find_by_name("Fantail Doves (aka Garden Fantail or English Fantail)").id,
                             location_id: Location.find_by_name("Staglands Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Fluttering Shearwater").id,
+                            location_id: Location.find_by_name("Mana Island").id
                           },
                           {
                             species_id: Species.find_by_name("Fluttering Shearwater").id,
@@ -530,8 +563,16 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Marlborough Sounds").id
                           },
                           {
+                            species_id: Species.find_by_name("Little Blue Penguin").id,
+                            location_id: Location.find_by_name("Mana Island").id
+                          },
+                          {
                             species_id: Species.find_by_name("Little Spotted Kiwi").id,
                             location_id: Location.find_by_name("Kapiti Island Nature Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Little Spotted Kiwi").id,
+                            location_id: Location.find_by_name("Mana Island").id
                           },
                           {
                             species_id: Species.find_by_name("Little Spotted Kiwi").id,
@@ -651,6 +692,10 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("North Island Robin").id,
+                            location_id: Location.find_by_name("Mana Island").id
+                          },
+                          {
+                            species_id: Species.find_by_name("North Island Robin").id,
                             location_id: Location.find_by_name("Zealandia Ecosanctuary").id
                           },
                           {
@@ -767,6 +812,10 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("Takahe").id,
+                            location_id: Location.find_by_name("Mana Island").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Takahe").id,
                             location_id: Location.find_by_name("Zealandia Ecosanctuary").id
                           },
                           {
@@ -816,5 +865,9 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Wrybill").id,
                             location_id: Location.find_by_name("Manawatu Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Yellow-crowned Parakeet").id,
+                            location_id: Location.find_by_name("Mana Island").id
                           }
                         ])
