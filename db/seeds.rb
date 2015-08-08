@@ -182,88 +182,88 @@ Species.create([
                   name: "Australasian Bittern",
                   scientific_name: "Botaurus poiciloptilus",
                   maori_name: "Matuku hurepo",
-                  description: "Large stocky bird with dark-brown and beige plumage."
+                  description: "Native. Large stocky bird with dark-brown and beige plumage."
                 },
                 {
                   name: "Australasian Gannet",
                   scientific_name: "Morus serrator",
                   maori_name: "Takapu",
-                  description: "Large white seabird with a distinctive orange head"
+                  description: "Native. Large white seabird with a distinctive orange head"
                 },
                 {
                   name: "Australasian Shoveler",
                   scientific_name: "Anas rhynchotis",
                   maori_name: "Kuruwhengi",
-                  description: "Also known as the New Zealand Shoveler. Water bird with a large shovel-shaped bill."
+                  description: "Native. Also known as the New Zealand Shoveler. Water bird with a large shovel-shaped bill."
                 },
                 {
                   name: "Banded Dotterel",
                   scientific_name: "Charadrius bicinctus",
                   maori_name: "Pohowera",
-                  description: "A small brown and white plover."
+                  description: "Endemic (only found in New Zealand). A small brown and white plover."
                 },
                 {
                   name: "Bar-tailed Godwit",
                   scientific_name: "Limosa lapponica",
                   maori_name: 'Kuaka',
-                  description: "Often seen foraging on mud flats. During migration, they perform the longest non-stop flight of any sea bird."
+                  description: "Arctic migrant. Often seen foraging on mud flats. During migration, they perform the longest non-stop flight of any sea bird."
                 },
                 {
                   name: "Black-billed Gull",
                   scientific_name: "Larus bulleri",
                   maori_name: "Tarapuka",
-                  description: "Found only in New Zealand, the Black-billed gull is the most threatened gull species in the world."
+                  description: "Endemic (only found in New Zealand). The Black-billed gull is the most threatened gull species in the world."
                 },
                 {
                   name: "Black Shag",
                   scientific_name: "Phalacrocorax carbo",
                   maori_name: "Kawau",
-                  description: "Black Shags roost in trees or along rocky coastlines."
+                  description: "Native. Black Shags roost in trees or along rocky coastlines."
                 },
                 {
                   name: "Black Swan",
                   scientific_name: "Cygnus atratus",
                   maori_name: "Kakianau",
-                  description: "Found throughout New Zealand on lakes, ponds and estuaries."
+                  description: "Native. Found throughout New Zealand on lakes, ponds and estuaries."
                 },
                 {
                   name: "Blue Duck",
                   scientific_name: "Hymenolaimus malacorhynchos",
                   maori_name: "Whio",
-                  description: "Rare duck, found in fast flowing rivers."
+                  description: "Endemic (only found in New Zealand). Rare duck, found in fast flowing rivers."
                 },
                 {
                   name: "Brown Teal",
                   scientific_name: "Anas chlorotis",
                   maori_name: "Pateke",
-                  description: "Small brown native duck."
+                  description: "Endemic (only found in New Zealand). Small brown native duck."
                 },
                 {
                   name: "California Quail",
                   scientific_name: "Callipepla californica",
-                  description: "Small stocky grey-brown birds."
+                  description: "Introduced. Small stocky grey-brown birds."
                 },
                 {
                   name: "Canada Goose",
                   scientific_name: "Branta canadensis",
-                  description: "Large light-brown goose."
+                  description: "Introduced. Large light-brown goose."
                 },
                 {
                   name: "Caspian Tern",
                   scientific_name: "Hydroprogne caspia",
                   maori_name: "Taranui",
-                  description: "Large gull-like bird, found in coastal waters, lakes and rivers."
+                  description: "Native. Large gull-like bird, found in coastal waters, lakes and rivers."
                 },
                 {
                   name: "Cattle Egret",
                   scientific_name: "Ardea ibis",
-                  description: "Small stocky egret. Often found amongst sheep or cattle."
+                  description: "Migrant. Small stocky egret. Often found amongst sheep or cattle."
                 },
                 {
                   name: "Chaffinch",
                   scientific_name: "Fringilla coelebs",
                   maori_name: "Pahirini",
-                  description: "Widespread throughout New Zealand."
+                  description: "Introduced. Widespread throughout New Zealand."
                 },
                 {
                   name: "Common Bottlenose Dolphin",
@@ -273,62 +273,62 @@ Species.create([
                 {
                   name: "Common Diving Petrel",
                   scientific_name: "Pelecanoides urinatrix",
-                  description: "Small seabird found in exposed coastal waters around New Zealand."
+                  description: "Native. Small seabird found in exposed coastal waters around New Zealand."
                 },
                 {
                   name: "Common Starling",
                   scientific_name: "Sturnus vulgaris",
-                  description: "Dark bird with irridescent purple and green feathers."
+                  description: "Introduced. Dark bird with irridescent purple and green feathers."
                 },
                 {
                   name: "Domestic Duck",
                   scientific_name: "Anas platyrhynchos domesticus",
-                  description: "White duck found throughout New Zealand. Commonly kept as pets, or at wildlife parks."
+                  description: "Introduced. White duck found throughout New Zealand. Commonly kept as pets, or at wildlife parks."
                 },
                 {
                   name: "Fantail Doves (aka Garden Fantail or English Fantail)",
                   scientific_name: "Columba livia",
-                  description: "White doves."
+                  description: "Introduced. White doves."
                 },
                 {
                   name: "Fernbird",
                   scientific_name: "Bowdleria punctata",
                   maori_name: "Matata",
-                  description: "Well camouflaged. Usually heard rather than seen."
+                  description: "Endemic (only found in New Zealand). Well camouflaged. Usually heard rather than seen."
                 },
                 {
                   name: "Fluttering Shearwater",
                   scientific_name: "Puffinus gavia",
                   maori_name: "Pakaha",
-                  description: "Has a distinctive fluttering flight pattern."
+                  description: "Endemic (only found in New Zealand). Has a distinctive fluttering flight pattern."
                 },
                 {
                   name: "Grey Duck",
                   scientific_name: "Anas superciliosa",
                   maori_name: "Parera",
-                  description: "Dark brown duck, easily confused with the female Mallard Duck."
+                  description: "Endemic (only found in New Zealand). Dark brown duck, easily confused with the female Mallard Duck."
                 },
                 {
                   name: "Grey Teal",
                   scientific_name: "Anas gracilis",
                   maori_name: "Tete",
-                  description: "Small duck found on freshwater lakes."
+                  description: "Native. Small duck found on freshwater lakes."
                 },
                 {
                   name: "Grey Warbler",
                   scientific_name: "Gerygone igata",
                   maori_name: "Riroriro",
-                  description: "Small forest bird that is often easier to hear than it is to see."
+                  description: "Endemic (only found in New Zealand). Small forest bird that is often easier to hear than it is to see."
                 },
                 {
                   name: "House Sparrow",
                   scientific_name: "Passer domesticus",
-                  description: "A common garden bird, found throughout New Zealand."
+                  description: "Introduced. A common garden bird, found throughout New Zealand."
                 },
                 {
                   name: "Kea",
                   scientific_name: "Nestor notabilis",
-                  description: "A green alpine parrot with orange feathers under its wings"
+                  description: "Endemic (only found in New Zealand). A green alpine parrot with orange feathers under its wings"
                 },
                 {
                   name: "King Shag",
@@ -339,70 +339,70 @@ Species.create([
                   name: "Little Black Shag",
                   scientific_name: "Phalacrocorax sulcirostris",
                   maori_name: "Kawau tui",
-                  description: "Small black shag with glossy plumage."
+                  description: "Native. Small black shag with glossy plumage."
                 },
                 {
                   name: "Little Blue Penguin",
                   scientific_name: "Eudyptula minor",
                   maori_name: "Korora",
-                  description: "The world's smallest penguin. Found along the New Zealand coastline."
+                  description: "Native. The world's smallest penguin. Found along the New Zealand coastline."
                 },
                 {
                   name: "Little Shag",
                   scientific_name: "Phalacrocorax melanoleucos",
                   maori_name: "Kawau paka",
-                  description: "Small shag found in freshwater and marine environments."
+                  description: "Native. Small shag found in freshwater and marine environments."
                 },
                 {
                   name: "Little Spotted Kiwi",
                   scientific_name: "Apteryx owenii",
-                  description: "The smallest species of Kiwi."
+                  description: "Endemic (only found in New Zealand). The smallest species of Kiwi."
                 },
                 {
                   name: "Long-tailed Cuckoo",
                   scientific_name: "Eudynamys taitensis",
                   maori_name: "Koekoea",
-                  description: "Brown cuckoo with a distinctive long tail."
+                  description: "Endemic (only found in New Zealand). Brown cuckoo with a distinctive long tail."
                 },
                 {
                   name: "Mallard Duck",
                   scientific_name: "Anas platyrhynchos",
-                  description: "Common species of duck, widespread throughout New Zealand."
+                  description: "Introduced. Common species of duck, widespread throughout New Zealand."
                 },
                 {
                   name: "Mandarin Duck",
                   scientific_name: "Aix galericulata",
-                  description: "Brightly coloured exotic duck."
+                  description: "Introduced. Brightly coloured exotic duck."
                 },
                 {
                   name: "Morepork",
                   scientific_name: "Ninox novaeseelandiae",
                   maori_name: "Ruru",
-                  description: "Small brown owl found throughout New Zealand."
+                  description: "Native. Small brown owl found throughout New Zealand."
                 },
                 {
                   name: "New Zealand Bellbird",
                   scientific_name: "Anthornis melanura",
                   maori_name: "Korimako",
-                  description: "Green bird with a distinctive song."
+                  description: "Endemic (only found in New Zealand). Green bird with a distinctive song."
                 },
                 {
                   name: "New Zealand Dabchick",
                   scientific_name: "Poliocephalus rufopectus",
                   maori_name: "Weweia",
-                  description: "Found in lakes and sheltered inlets."
+                  description: "Endemic (only found in New Zealand). Found in lakes and sheltered inlets."
                 },
                 {
                   name: "New Zealand Falcon",
                   scientific_name: "Falco novaeseelandiae",
                   maori_name: "Karearea",
-                  description: "A magpie-sized raptor that feeds on live prey."
+                  description: "Endemic (only found in New Zealand). A magpie-sized raptor that feeds on live prey."
                 },
                 {
                   name: "New Zealand Fantail",
                   scientific_name: "Rhipidura fuliginosa",
                   maori_name: "Piwakawaka",
-                  description: "Fantails flit between trees in the forest looking for insects. They have a distinct 'cheep cheep' call, and are usually very talkative. "
+                  description: "Native. Fantails flit between trees in the forest looking for insects. They have a distinct 'cheep cheep' call, and are usually very talkative. "
                 },
                 {
                   name: "New Zealand Fur Seal",
@@ -413,224 +413,224 @@ Species.create([
                 {
                   name: "New Zealand Kaka",
                   scientific_name: "Nestor meridionalis",
-                  description: "A large native parrot."
+                  description: "Endemic (only found in New Zealand). A large native parrot."
                 },
                 {
                   name: "New Zealand Scaup",
                   scientific_name: "Aythya novaeseelandiae",
                   maori_name: "Papango",
-                  description: "Small native duck"
+                  description: "Endemic (only found in New Zealand). Small native duck"
                 },
                 {
                   name: "New Zealand Wood Pigeon",
                   scientific_name: "Hemiphaga novaeseelandiae",
                   maori_name: "Kereru",
-                  description: "Large native pigeon, endemic to New Zealand"
+                  description: "Endemic (only found in New Zealand). Large native pigeon."
                 },
                 {
                   name: "North Island Brown Kiwi",
                   scientific_name: "Apteryx mantelli",
-                  description: "Large brown kiwi."
+                  description: "Endemic (only found in New Zealand). Large brown kiwi."
                 },
                 {
                   name: "North Island Robin",
                   scientific_name: "Petroica longipes",
                   maori_name: "Toutouwai",
-                  description: "Often seen on the ground searching for insects in the leaf litter"
+                  description: "Endemic (only found in New Zealand). Often seen on the ground searching for insects in the leaf litter."
                 },
                 {
                   name: "North Island Saddleback",
                   scientific_name: "Philesturnus rufusater",
                   maori_name: "Tieke",
-                  description: "A medium-sized black-coloured bird with a distinctive red 'saddle' across the back."
+                  description: "Endemic (only found in New Zealand). A medium-sized black-coloured bird with a distinctive red 'saddle' across the back."
                 },
                 {
                   name: "North Island Weka",
                   scientific_name: "Gallirallus australis greyi",
-                  description: "New Zealand woodhen"
+                  description: "Endemic (only found in New Zealand). New Zealand woodhen."
                 },
                 {
                   name: "Pacific Golden Plover",
                   scientific_name: "Pluvialis fulva",
-                  description: "Ususally seen in small flocks feeding on mudflats at estuaries. Only seen in New Zealand in the summer months."
+                  description: "Artic migrant. Usually seen in small flocks feeding on mudflats at estuaries. Only seen in New Zealand in the summer months."
                 },
                 {
                   name: "Paradise Shelduck",
                   scientific_name: "Tadorna variegata",
                   maori_name: "Putangitangi",
-                  description: "Endemic to New Zealand."
+                  description: "Endemic (only found in New Zealand). Large duck, almost always seen in pairs."
                 },
                 {
                   name: "Pied Oystercatcher",
                   scientific_name: "Haematopus finschi",
                   maori_name: "Torea",
-                  description: "Black and white coastal bird with an orange bill."
+                  description: "Endemic (only found in New Zealand). Black and white coastal bird with an orange bill."
                 },
                 {
                   name: "Pied Shag",
                   scientific_name: "Phalacrocorax varius",
                   maori_name: "Karuhiruhi",
-                  description: "Large black and white shag."
+                  description: "Native. Large black and white shag."
                 },
                 {
                   name: "Pied Stilt",
                   scientific_name: "Himantopus himantopus",
                   maori_name: "Poaka",
-                  description: "Black and white wading bird."
+                  description: "Native. Black and white wading bird."
                 },
                 {
                   name: "Pigeon",
                   scientific_name: "Columba livia",
-                  description: "Common in parks in the large cities in New Zealand."
+                  description: "Introduced. Common in parks in the large cities in New Zealand."
                 },
                 {
                   name: "Pukeko",
                   scientific_name: "Porphyrio porphyrio",
-                  description: "Also known as the Purple Swamphen. Often seen feeding in grassy areas beside roads."
+                  description: "Native. Also known as the Purple Swamphen. Often seen feeding in grassy areas beside roads."
                 },
                 {
                   name: "Red-billed Gull",
                   scientific_name: "Chroicocephalus scopulinus",
                   maori_name: "Tarapunga or Akiaki",
-                  description: "Commonly seen at beaches throughout New Zealand."
+                  description: "Native. Commonly seen at beaches throughout New Zealand."
                 },
                 {
                   name: "Red-crowned Parakeet",
                   scientific_name: "Cyanoramphus novaezelandiae",
                   maori_name: "Kakariki",
-                  description: "Bright green parakeet with a red crown, easily camouflaged in the bush."
+                  description: "Endemic (only found in New Zealand). Bright green parakeet with a red crown, easily camouflaged in the bush."
                 },
                 {
                   name: "Red Knot",
                   scientific_name: "Calidrus canutus",
-                  description: "Stocky migrant wading bird."
+                  description: "Arctic migrant. Stocky migrant wading bird."
                 },
                 {
                   name: "Reef Heron",
                   scientific_name: "Egretta sacra",
                   maori_name: "Matuku moana",
-                  description: "Medium-sized dark grey wading bird."
+                  description: "Native. Medium-sized dark grey wading bird."
                 },
                 {
                   name: "Royal Spoonbill",
                   scientific_name: "Platalea regia",
                   maori_name: "Kotuku ngutupapa",
-                  description: "White wading bird with a wide black bill."
+                  description: "Native. White wading bird with a wide black bill."
                 },
                 {
                   name: "Sacred Kingfisher",
                   scientific_name: "Todiramphus sanctus",
                   maori_name: "Kotare",
-                  description: "Greeny-blue bird with a creamy yellow chest."
+                  description: "Native. Greeny-blue bird with a creamy yellow chest."
                 },
                 {
                   name: "Shining Cuckoo",
                   scientific_name: "Chrysococcyx lucidus",
                   maori_name: "Pipiwharauroa",
-                  description: "Small cuckoo with a dark green iridescent back, and white and green bands on the chest. Shining Cuckoos lay their eggs in the nests of Grey Warblers, and the chicks are raised by the Grey Warbler."
+                  description: "Native. Small cuckoo with a dark green iridescent back, and white and green bands on the chest. Shining Cuckoos lay their eggs in the nests of Grey Warblers, and the chicks are raised by the Grey Warbler."
                 },
                 {
                   name: "Silvereye",
                   scientific_name: "Zosterops lateralis",
                   maori_name: "Tauhou",
-                  description: "Small forest bird with a distinctive white ring around its eye."
+                  description: "Native. Small forest bird with a distinctive white ring around its eye."
                 },
                 {
                   name: "Southern Black-backed Gull",
                   scientific_name: "Larus dominicanus",
                   maori_name: "Karoro",
-                  description: "The only large gull found in New Zealand."
+                  description: "Native. The only large gull found in New Zealand."
                 },
                 {
                   name: "South Island Robin",
                   scientific_name: "Petroica australis",
                   maori_name: "Toutouwai",
-                  description: "Similar to the North Island Robin, but found in the South Island."
+                  description: "Endemic (only found in New Zealand). Similar to the North Island Robin, but found in the South Island."
                 },
                 {
                   name: "South Island Saddleback",
                   scientific_name: "Philesturnus carunculatus",
                   maori_name: "Tieke",
-                  description: "A medium-sized black-coloured bird with a distinctive chestnut 'saddle' across the back."
+                  description: "Endemic (only found in New Zealand). A medium-sized black-coloured bird with a distinctive chestnut 'saddle' across the back."
                 },
                 {
                   name: "Spotted Shag",
                   scientific_name: "Stictocarbo punctatus",
                   maori_name: "Parekareka",
-                  description: "A yellow footed shag endemic to New Zealand"
+                  description: "Endemic (only found in New Zealand). A yellow footed shag endemic to New Zealand"
                 },
                 {
                   name: "Spur-winged Plover",
                   scientific_name: "Vanellus miles",
-                  description: "Large stocky black, grey and white wading bird with a yellow bill."
+                  description: "Native. Large stocky black, grey and white wading bird with a yellow bill."
                 },
                 {
                   name: "Stitchbird",
                   scientific_name: "Notiomystis cincta",
                   maori_name: "Hihi",
-                  description: "A medium-sized forest bird. One of the rarest species in New Zealand."
+                  description: "Endemic (only found in New Zealand). A medium-sized forest bird. One of the rarest species in New Zealand."
                 },
                 {
                   name: "Takahe",
                   scientific_name: "Porphyrio hochstetteri",
-                  description: "Large blue flightless bird"
+                  description: "Endemic (only found in New Zealand). Large blue flightless bird"
                 },
                 {
                   name: "Tuatara",
                   scientific_name: "Sphenodon punctatus",
-                  description: "Greenish-brown reptile with a spiny crest along the back."
+                  description: "Endemic (only found in New Zealand). Greenish-brown reptile with a spiny crest along the back."
                 },
                 {
                   name: "Tui",
                   scientific_name: "Prosthemadera novaeseelandiae",
-                  description: "Nectar-feeding bird that loves rata and flax flowers."
+                  description: "Endemic (only found in New Zealand). Nectar-feeding bird that loves rata and flax flowers."
                 },
                 {
                   name: "Variable Oystercatcher",
                   scientific_name: "Haematopus unicolor",
                   maori_name: "Torea pango",
-                  description: "Black coastal bird with a long orange bill."
+                  description: "Endemic (only found in New Zealand). Black coastal bird with a long orange bill."
                 },
                 {
                   name: "Welcome Swallow",
                   scientific_name: "Hirundo neoxena",
                   maori_name: "Warou",
-                  description: "Small fast-flying birds, with an darting flight pattern."
+                  description: "Native. Small fast-flying birds, with an darting flight pattern."
                 },
                 {
                   name: "White-faced Heron",
                   scientific_name: "Egretta novaehollandiae",
                   maori_name: "Matuku moana",
-                  description: "A blue-grey bird, with a white face. The most common Heron species in New Zealand."
+                  description: "Native. A blue-grey bird, with a white face. The most common Heron species in New Zealand."
                 },
                 {
                   name: "White-fronted Tern",
                   scientific_name: "Sterna striata",
-                  description: "Commonly found along the New Zealand coastline."
+                  description: "Endemic (found only in New Zealand). Commonly found along the New Zealand coastline."
                 },
                 {
                   name: "Whitehead",
                   scientific_name: "Mohoua albicilla",
                   maori_name: "Popokatea",
-                  description: "Small compact bird with a white head and light-grey body."
+                  description: "Endemic (only found in New Zealand). Small compact bird with a white head and light-grey body."
                 },
                 {
                   name: "White Heron",
                   scientific_name: "Ardea modesta",
                   maori_name: "Kotuku",
-                  description: "Large white heron with a long yellow bill. The only breeding colony in New Zealand is found near Okarito Lagoon, Westland."
+                  description: "Native. Large white heron with a long yellow bill. The only breeding colony in New Zealand is found near Okarito Lagoon, Westland."
                 },
                 {
                   name: "Wrybill",
                   scientific_name: "Anarhynchus frontalis",
                   maori_name: "Ngutu pare",
-                  description: "A small plover that only breeds in the braided rivers of the South Island of New Zealand. It migrates to northern New Zealand for winter."
+                  description: "Endemic (only found in New Zealand). A small plover that only breeds in the braided rivers of the South Island of New Zealand. It migrates to northern New Zealand for winter."
                 },
                 {
                   name: "Yellow-crowned Parakeet",
                   scientific_name: "Cyanoramphus auriceps",
                   maori_name: "Kakariki",
-                  description: "Bright green parakeet with a yellow crown."
+                  description: "Endemic (only found in New Zealand). Bright green parakeet with a yellow crown."
                 }
               ])
 
