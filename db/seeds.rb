@@ -160,7 +160,7 @@ Species.create([
                   name: "Australasian Shoveler",
                   scientific_name: "Anas rhynchotis",
                   maori_name: "Kuruwhengi",
-                  description: "Water bird with a large shovel-shaped bill."
+                  description: "Also known as the New Zealand Shoveler. Water bird with a large shovel-shaped bill."
                 },
                 {
                   name: "Banded Dotterel",
@@ -237,6 +237,11 @@ Species.create([
                   description: "Small seabird found in exposed coastal waters around New Zealand."
                 },
                 {
+                  name: "Common Starling",
+                  scientific_name: "Sturnus vulgaris",
+                  description: "Dark bird with irridescent purple and green feathers."
+                },
+                {
                   name: "Domestic Duck",
                   scientific_name: "Anas platyrhynchos domesticus",
                   description: "White duck found throughout New Zealand. Commonly kept as pets, or at wildlife parks."
@@ -290,6 +295,12 @@ Species.create([
                   name: "King Shag",
                   scientific_name: "Phalacrocorax carunculatus syn Leucocarbo carunculatus",
                   description: "Endemic to New Zealand. Only found in the outer Marlborough Sounds."
+                },
+                {
+                  name: "Little Black Shag",
+                  scientific_name: "Phalacrocorax sulcirostris",
+                  maori_name: "Kawau tui",
+                  description: "Small black shag with glossy plummage."
                 },
                 {
                   name: "Little Blue Penguin",
@@ -488,6 +499,11 @@ Species.create([
                   description: "A yellow footed shag endemic to New Zealand"
                 },
                 {
+                  name: "Spur-winged Plover",
+                  scientific_name: "Vanellus miles",
+                  description: "Large stocky black, grey and white wading bird with a yellow bill."
+                },
+                {
                   name: "Stitchbird",
                   scientific_name: "Notiomystis cincta",
                   maori_name: "Hihi",
@@ -518,6 +534,12 @@ Species.create([
                   name: "Weka",
                   scientific_name: "Gallirallus australis",
                   description: "New Zealand woodhen"
+                },
+                {
+                  name: "Welcome Swallow",
+                  scientific_name: "Hirundo neoxena",
+                  maori_name: "Warou",
+                  description: "Small fast-flying birds, with an darting flight pattern."
                 },
                 {
                   name: "White-faced Heron",
@@ -560,6 +582,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Australasian Shoveler").id,
                             location_id: Location.find_by_name("Manawatu Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Australasian Shoveler").id,
+                            location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
                           },
                           {
                             species_id: Species.find_by_name("Banded Dotterel").id,
@@ -654,6 +680,10 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Mana Island").id
                           },
                           {
+                            species_id: Species.find_by_name("Common Starling").id,
+                            location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
+                          },
+                          {
                             species_id: Species.find_by_name("Domestic Duck").id,
                             location_id: Location.find_by_name("Staglands Wildlife Reserve").id
                           },
@@ -714,6 +744,10 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Marlborough Sounds").id
                           },
                           {
+                            species_id: Species.find_by_name("Little Black Shag").id,
+                            location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
+                          },
+                          {
                             species_id: Species.find_by_name("Little Blue Penguin").id,
                             location_id: Location.find_by_name("Mana Island").id
                           },
@@ -744,6 +778,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Mallard Duck").id,
                             location_id: Location.find_by_name("Nga Manu Nature Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Mallard Duck").id,
+                            location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
                           },
                           {
                             species_id: Species.find_by_name("Mallard Duck").id,
@@ -914,6 +952,10 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Motuara Island")
                           },
                           {
+                            species_id: Species.find_by_name("Pied Shag").id,
+                            location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
+                          },
+                          {
                             species_id: Species.find_by_name("Pied Stilt").id,
                             location_id: Location.find_by_name("Manawatu Estuary").id
                           },
@@ -1038,6 +1080,10 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Motuara Island").id
                           },
                           {
+                            species_id: Species.find_by_name("Spur-winged Plover").id,
+                            location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
+                          },
+                          {
                             species_id: Species.find_by_name("Stitchbird").id,
                             location_id: Location.find_by_name("Zealandia Ecosanctuary").id
                           },
@@ -1100,6 +1146,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Weka").id,
                             location_id: Location.find_by_name("Kapiti Island Nature Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Welcome Swallow").id,
+                            location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
                           },
                           {
                             species_id: Species.find_by_name("White-faced Heron").id,
