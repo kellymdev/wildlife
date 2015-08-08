@@ -325,6 +325,12 @@ Species.create([
                   description: "The smallest species of Kiwi."
                 },
                 {
+                  name: "Long-tailed Cuckoo",
+                  scientific_name: "Eudynamys taitensis",
+                  maori_name: "Koekoea",
+                  description: "Brown cuckoo with a distinctive long tail."
+                },
+                {
                   name: "Mallard Duck",
                   scientific_name: "Anas platyrhynchos",
                   description: "Common species of duck, widespread throughout New Zealand."
@@ -405,6 +411,11 @@ Species.create([
                   description: "A medium-sized black-coloured bird with a distinctive red 'saddle' across the back."
                 },
                 {
+                  name: "North Island Weka",
+                  scientific_name: "Gallirallus australis greyi",
+                  description: "New Zealand woodhen"
+                },
+                {
                   name: "Pacific Golden Plover",
                   scientific_name: "Pluvialis fulva",
                   description: "Ususally seen in small flocks feeding on mudflats at estuaries. Only seen in New Zealand in the summer months."
@@ -479,6 +490,12 @@ Species.create([
                   description: "Greeny-blue bird with a creamy yellow chest."
                 },
                 {
+                  name: "Shining Cuckoo",
+                  scientific_name: "Chrysococcyx lucidus",
+                  maori_name: "Pipiwharauroa",
+                  description: "Small cuckoo with a dark green iridescent back, and white and green bands on the chest. Shining Cuckoos lay their eggs in the nests of Grey Warblers, and the chicks are raised by the Grey Warbler."
+                },
+                {
                   name: "Silvereye",
                   scientific_name: "Zosterops lateralis",
                   maori_name: "Tauhou",
@@ -541,11 +558,6 @@ Species.create([
                   description: "Black coastal bird with a long orange bill."
                 },
                 {
-                  name: "Weka",
-                  scientific_name: "Gallirallus australis",
-                  description: "New Zealand woodhen"
-                },
-                {
                   name: "Welcome Swallow",
                   scientific_name: "Hirundo neoxena",
                   maori_name: "Warou",
@@ -561,6 +573,12 @@ Species.create([
                   name: "White-fronted Tern",
                   scientific_name: "Sterna striata",
                   description: "Commonly found along the New Zealand coastline."
+                },
+                {
+                  name: "Whitehead",
+                  scientific_name: "Mohoua albicilla",
+                  maori_name: "Popokatea",
+                  description: "Small compact bird with a white head and light-grey body."
                 },
                 {
                   name: "Wrybill",
@@ -628,6 +646,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Black Shag").id,
                             location_id: Location.find_by_name("Waikanae Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Black Shag").id,
+                            location_id: Location.find_by_name("Zealandia Ecosanctuary").id
                           },
                           {
                             species_id: Species.find_by_name("Black Swan").id,
@@ -786,6 +808,10 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
                           },
                           {
+                            species_id: Species.find_by_name("Little Black Shag").id,
+                            location_id: Location.find_by_name("Zealandia Ecosanctuary").id
+                          },
+                          {
                             species_id: Species.find_by_name("Little Blue Penguin").id,
                             location_id: Location.find_by_name("Mana Island").id
                           },
@@ -798,6 +824,10 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Motuara Island").id
                           },
                           {
+                            species_id: Species.find_by_name("Little Shag").id,
+                            location_id: Location.find_by_name("Zealandia Ecosanctuary").id
+                          },
+                          {
                             species_id: Species.find_by_name("Little Spotted Kiwi").id,
                             location_id: Location.find_by_name("Kapiti Island Nature Reserve").id
                           },
@@ -807,6 +837,10 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("Little Spotted Kiwi").id,
+                            location_id: Location.find_by_name("Zealandia Ecosanctuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Long-tailed Cuckoo").id,
                             location_id: Location.find_by_name("Zealandia Ecosanctuary").id
                           },
                           {
@@ -872,6 +906,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("New Zealand Falcon").id,
                             location_id: Location.find_by_name("Staglands Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("New Zealand Falcon").id,
+                            location_id: Location.find_by_name("Zealandia Ecosanctuary").id
                           },
                           {
                             species_id: Species.find_by_name("New Zealand Fantail").id,
@@ -974,6 +1012,10 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Zealandia Ecosanctuary").id
                           },
                           {
+                            species_id: Species.find_by_name("North Island Weka").id,
+                            location_id: Location.find_by_name("Kapiti Island Nature Reserve").id
+                          },
+                          {
                             species_id: Species.find_by_name("Pacific Golden Plover").id,
                             location_id: Location.find_by_name("Manawatu Estuary").id
                           },
@@ -1004,6 +1046,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Pied Shag").id,
                             location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Pied Shag").id,
+                            location_id: Location.find_by_name("Zealandia Ecosanctuary").id
                           },
                           {
                             species_id: Species.find_by_name("Pied Stilt").id,
@@ -1090,8 +1136,20 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
                           },
                           {
+                            species_id: Species.find_by_name("Sacred Kingfisher").id,
+                            location_id: Location.find_by_name("Zealandia Ecosanctuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Shining Cuckoo").id,
+                            location_id: Location.find_by_name("Zealandia Ecosanctuary").id
+                          },
+                          {
                             species_id: Species.find_by_name("Silvereye").id,
                             location_id: Location.find_by_name("Otari-Wiltons Bush").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Silvereye").id,
+                            location_id: Location.find_by_name("Zealandia Ecosanctuary").id
                           },
                           {
                             species_id: Species.find_by_name("Southern Black-backed Gull").id,
@@ -1198,12 +1256,12 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Waikanae Estuary").id
                           },
                           {
-                            species_id: Species.find_by_name("Weka").id,
-                            location_id: Location.find_by_name("Kapiti Island Nature Reserve").id
+                            species_id: Species.find_by_name("Welcome Swallow").id,
+                            location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
                           },
                           {
                             species_id: Species.find_by_name("Welcome Swallow").id,
-                            location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
+                            location_id: Location.find_by_name("Zealandia Ecosanctuary").id
                           },
                           {
                             species_id: Species.find_by_name("White-faced Heron").id,
@@ -1220,6 +1278,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("White-fronted Tern").id,
                             location_id: Location.find_by_name("Waikanae Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Whitehead").id,
+                            location_id: Location.find_by_name("Zealandia Ecosanctuary").id
                           },
                           {
                             species_id: Species.find_by_name("Wrybill").id,
