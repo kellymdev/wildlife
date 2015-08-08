@@ -205,6 +205,11 @@ Species.create([
                   description: "Small brown native duck."
                 },
                 {
+                  name: "California Quail",
+                  scientific_name: "Callipepla californica",
+                  description: "Small stocky grey-brown birds."
+                },
+                {
                   name: "Canada Goose",
                   scientific_name: "Branta canadensis",
                   description: "Large light-brown goose."
@@ -588,6 +593,10 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
                           },
                           {
+                            species_id: Species.find_by_name("Australasian Shoveler").id,
+                            location_id: Location.find_by_name("Staglands Wildlife Reserve").id
+                          },
+                          {
                             species_id: Species.find_by_name("Banded Dotterel").id,
                             location_id: Location.find_by_name("Manawatu Estuary").id
                           },
@@ -648,8 +657,20 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Zealandia Ecosanctuary").id
                           },
                           {
+                            species_id: Species.find_by_name("California Quail").id,
+                            location_id: Location.find_by_name("Staglands Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("California Quail").id,
+                            location_id: Location.find_by_name("Zealandia Ecosanctuary").id
+                          },
+                          {
                             species_id: Species.find_by_name("Canada Goose").id,
                             location_id: Location.find_by_name("Manawatu Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Canada Goose").id,
+                            location_id: Location.find_by_name("Staglands Wildlife Reserve").id
                           },
                           {
                             species_id: Species.find_by_name("Caspian Tern").id,
@@ -708,8 +729,16 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Manawatu Estuary").id
                           },
                           {
+                            species_id: Species.find_by_name("Grey Duck").id,
+                            location_id: Location.find_by_name("Staglands Wildlife Reserve").id
+                          },
+                          {
                             species_id: Species.find_by_name("Grey Teal").id,
                             location_id: Location.find_by_name("Manawatu Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Grey Teal").id,
+                            location_id: Location.find_by_name("Staglands Wildlife Reserve").id
                           },
                           {
                             species_id: Species.find_by_name("Grey Warbler").id,
@@ -882,6 +911,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("New Zealand Scaup").id,
                             location_id: Location.find_by_name("Nga Manu Nature Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("New Zealand Scaup").id,
+                            location_id: Location.find_by_name("Staglands Wildlife Reserve").id
                           },
                           {
                             species_id: Species.find_by_name("New Zealand Scaup").id,
