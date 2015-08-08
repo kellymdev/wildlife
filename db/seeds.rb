@@ -116,10 +116,10 @@ Location.create([
                   },
                   {
                     name: "Waikanae Estuary",
-                    description: "A coastal lagooon and wetland area. Home to several species of sea bird.",
+                    description: "A coastal lagooon and wetland area. Home to several species of sea bird. Accessed from from Manly St North, Paraparaumu Beach, or from the end of Tutere Street, Waikanae Beach.",
                     region_id: Region.find_by_name("Kapiti").id,
-                    lat: -40.872699,
-                    lng: 175.009446
+                    lat: -40.878981,
+                    lng: 175.000593
                   },
                   {
                     name: "Wellington Waterfront",
