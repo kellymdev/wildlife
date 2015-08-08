@@ -53,14 +53,14 @@ Location.create([
                   },
                   {
                     name: "Manawatu Estuary",
-                    description: "Approximately 2 hours drive north of Wellington, Manawatu Estuary (at Foxton Beach) has one of the widest ranges of wading and shore birds in New Zealand. A total of 95 species have been identified there. Parking, information panels and access to the estuary are located on Holben Parade. There is also a viewing platform on Dawick Street. Manawatu Estuary is an internationally significant wetland (Ramsar site).",
+                    description: "Approximately 2 hours drive north of Wellington. Manawatu Estuary (at Foxton Beach) is an internationally significant wetland (Ramsar site), and has one of the widest ranges of wading and shore birds in New Zealand. The estuary can be accessed from Holben Parade. There is also a viewing platform on Dawick Street.",
                     region_id: Region.find_by_name("Manawatu").id,
                     lat: -40.465553,
                     lng: 175.224206
                   },
                   {
                     name: "Marlborough Sounds",
-                    description: "Coastal waterways at the top of the South Island. There are several New Zealand Fur Seal colonies in the Marlborough Sounds, where they like to hang out around the salmon farms.",
+                    description: "Coastal waterways at the top of the South Island. There are several New Zealand Fur Seal colonies in the Marlborough Sounds.",
                     region_id: Region.find_by_name("Marlborough").id,
                     lat: -41.288518,
                     lng: 174.007811
@@ -88,7 +88,7 @@ Location.create([
                   },
                   {
                     name: "Otari-Wiltons Bush",
-                    description: "The only public botanic garden in New Zealand that is dedicated solely to native plants. Commonly seen birds species include Tui, Kereru, Silvereye, Kingfisher, Grey Warbler, Bellbirds and Morepork.",
+                    description: "The only public botanic garden in New Zealand that is dedicated solely to native plants. Commonly seen bird species include Tui, Kereru, Silvereye, Kingfisher, Grey Warbler, Bellbirds and Morepork.",
                     region_id: Region.find_by_name("Wellington").id,
                     lat: -41.265532,
                     lng: 174.751153
@@ -123,7 +123,7 @@ Location.create([
                   },
                   {
                     name: "Waikanae Estuary",
-                    description: "A coastal lagooon and wetland area. Home to several species of sea bird. Accessed from from Manly St North, Paraparaumu Beach, or from the end of Tutere Street, Waikanae Beach.",
+                    description: "A coastal lagooon and wetland area. Home to several species of sea bird. Accessed from Manly St North, Paraparaumu Beach, or from the end of Tutere Street, Waikanae Beach.",
                     region_id: Region.find_by_name("Kapiti").id,
                     lat: -40.878981,
                     lng: 175.000593
@@ -137,14 +137,14 @@ Location.create([
                   },
                   {
                     name: "Wellington Zoo",
-                    description: "Home to over 100 species including Sumatran Tigers, Cheetahs, Malayan Sun Bears, White-Cheeked Gibbons and an Australian Pelican. The New Zealand native species are listed below. Admission charges apply.",
+                    description: "Home to over 100 species including Sumatran Tigers, Cheetahs, Malayan Sun Bears, White-Cheeked Gibbons and an Australian Pelican. Admission charges apply.",
                     region_id: Region.find_by_name("Wellington").id,
                     lat: -41.319535,
                     lng: 174.784633
                   },
                   {
                     name: "Zealandia Ecosanctuary",
-                    description: "A predator-fenced open-air wildlife and bird sanctuary, 10 minutes drive from the Wellington CBD. As well as some of the more common native birds, Zealandia is also home to rarer species such as Saddlebacks, Hihi, Kaka, and Little Spotted Kiwi. Admission charges apply.",
+                    description: "A predator-fenced open-air wildlife and bird sanctuary, 10 minutes drive from the Wellington CBD. Admission charges apply.",
                     region_id: Region.find_by_name("Wellington").id,
                     lat: -41.300538,
                     lng: 174.744877
