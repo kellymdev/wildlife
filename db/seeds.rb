@@ -130,7 +130,7 @@ Location.create([
                   },
                   {
                     name: "Wellington Zoo",
-                    description: "Home to over 100 species including Sumatran Tigers, Cheetahs, Malayan Sun Bears, White-Cheeked Gibbons and an Australian Pelican. Admission charges apply.",
+                    description: "Home to over 100 species including Sumatran Tigers, Cheetahs, Malayan Sun Bears, White-Cheeked Gibbons and an Australian Pelican. The New Zealand native species are listed below. Admission charges apply.",
                     region_id: Region.find_by_name("Wellington").id,
                     lat: -41.319535,
                     lng: 174.784633
@@ -386,6 +386,11 @@ Species.create([
                   scientific_name: "Hemiphaga novaeseelandiae",
                   maori_name: "Kereru",
                   description: "Large native pigeon, endemic to New Zealand"
+                },
+                {
+                  name: "North Island Brown Kiwi",
+                  scientific_name: "Apteryx mantelli",
+                  description: "Large brown kiwi."
                 },
                 {
                   name: "North Island Robin",
@@ -769,6 +774,10 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Staglands Wildlife Reserve").id
                           },
                           {
+                            species_id: Species.find_by_name("Kea").id,
+                            location_id: Location.find_by_name("Wellington Zoo").id
+                          },
+                          {
                             species_id: Species.find_by_name("King Shag").id,
                             location_id: Location.find_by_name("Marlborough Sounds").id
                           },
@@ -906,6 +915,10 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("New Zealand Kaka").id,
+                            location_id: Location.find_by_name("Wellington Zoo").id
+                          },
+                          {
+                            species_id: Species.find_by_name("New Zealand Kaka").id,
                             location_id: Location.find_by_name("Zealandia Ecosanctuary").id
                           },
                           {
@@ -939,6 +952,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("New Zealand Wood Pigeon").id,
                             location_id: Location.find_by_name("Zealandia Ecosanctuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("North Island Brown Kiwi").id,
+                            location_id: Location.find_by_name("Wellington Zoo").id
                           },
                           {
                             species_id: Species.find_by_name("North Island Robin").id,
@@ -1135,6 +1152,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Tuatara").id,
                             location_id: Location.find_by_name("Nga Manu Nature Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Tuatara").id,
+                            location_id: Location.find_by_name("Wellington Zoo").id
                           },
                           {
                             species_id: Species.find_by_name("Tuatara").id,
