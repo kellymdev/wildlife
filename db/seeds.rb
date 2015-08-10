@@ -427,87 +427,87 @@ Species.create([
                   scientific_name: "Phalacrocorax sulcirostris",
                   maori_name: "Kawau tui",
                   description: "Native. Small black shag with glossy plumage.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Black body with a greenish sheen on the upper wings. Black or dark grey bill. Black legs and feet. Green eye.",
+                  id_female: "Similar to the male.",
+                  id_juvenile: "Darkish brown-black body. Yellow bill."
                 },
                 {
                   name: "Little Blue Penguin",
                   scientific_name: "Eudyptula minor",
                   maori_name: "Korora",
                   description: "Native. The world's smallest penguin. Found along the New Zealand coastline.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Slate blue back and head. White chest. Dark grey bill. Blue-grey or hazel eye. Off-white legs and feet with dark soles.",
+                  id_female: "Slightly smaller than the male.",
+                  id_juvenile: "Fledglings have a bright blue back, and are much smaller than adults."
                 },
                 {
                   name: "Little Shag",
                   scientific_name: "Phalacrocorax melanoleucos",
                   maori_name: "Kawau paka",
                   description: "Native. Small shag found in freshwater and marine environments.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Variable degrees of black and white on the body. Short stubby yellow bill. Yellow facial skin. Brown eye. Black legs and feet.",
+                  id_female: "Similar to the male.",
+                  id_juvenile: "Fledglings are either white-chested or entirely black. Dark bill."
                 },
                 {
                   name: "Little Spotted Kiwi",
                   scientific_name: "Apteryx owenii",
                   description: "Endemic (only found in New Zealand). The smallest species of Kiwi.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Brownish grey, mottled or banded with white. Long pale bill. Short pale legs.",
+                  id_female: "Similar to the male.",
+                  id_juvenile: "Similar to the parents."
                 },
                 {
                   name: "Long-tailed Cuckoo",
                   scientific_name: "Eudynamys taitensis",
                   maori_name: "Koekoea",
                   description: "Endemic (only found in New Zealand). Brown cuckoo with a distinctive long tail.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Rich brown back with black barring and spots. White chest and belly with brown streaks.",
+                  id_female: "Similar to the male.",
+                  id_juvenile: "Dark brown back with large cream spots. Pale brown chest with thinner streaks than in adults."
                 },
                 {
                   name: "Mallard Duck",
                   scientific_name: "Anas platyrhynchos",
                   description: "Introduced. Common species of duck, widespread throughout New Zealand.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Glossy green head. Chestnut coloured chest. Grey body. Metallic blue secondary flight feathers bordered by thin black and white bands. Black rump and undertail. Yellow-green bill. Orange legs and feet.",
+                  id_female: "Brown body. Feathers have a paler-brown edge. Dark eye-stripe. Brownish-grey bill. Orange legs and feet. Similar wing colouring to the male.",
+                  id_juvenile: "Ducklings are yellow and brown. Juveniles are similar to the female."
                 },
                 {
                   name: "Mandarin Duck",
                   scientific_name: "Aix galericulata",
                   description: "Introduced. Brightly coloured exotic duck.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Reddish face. Red bill. White cresent above the eye. Purple chest with two white bars. Reddish flanks with two large orange 'sails'.",
+                  id_female: "Brown in colour. White eye-ring and eye-stripe. Brown bill.",
+                  id_juvenile: "Black and yellow, similar in appearance to Mallard Ducklings."
                 },
                 {
                   name: "Morepork",
                   scientific_name: "Ninox novaeseelandiae",
                   maori_name: "Ruru",
                   description: "Native. Small brown owl found throughout New Zealand.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Dark brown with beige spots and bars. Yellow eyes. Small sharp hooked bill. Feathered legs. Yellow feet.",
+                  id_female: "Similar to the male.",
+                  id_juvenile: "Chicks have fluffy grey down."
                 },
                 {
                   name: "New Zealand Bellbird",
                   scientific_name: "Anthornis melanura",
                   maori_name: "Korimako",
                   description: "Endemic (only found in New Zealand). Green bird with a distinctive song.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Olive-green. Slightly paler underneath. Purplish head. Dark blue-black tail and wings. Red eye. Short curved bill.",
+                  id_female: "Browner colour. Narrow white-yellow stripe across cheek. Bluish gloss on top of head. Red eye.",
+                  id_juvenile: "Brown eyes. Yellow stripe across cheek. Similar colour to the female."
                 },
                 {
                   name: "New Zealand Dabchick",
                   scientific_name: "Poliocephalus rufopectus",
                   maori_name: "Weweia",
                   description: "Endemic (only found in New Zealand). Found in lakes and sheltered inlets.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Blackish head with silver feathers. Pale yellow eye. Black-brown back. Paler underparts. Olive-grey legs. Short black bill. Dark chestnut neck and chest during breeding season.",
+                  id_female: "Similar to the male.",
+                  id_juvenile: "White body with black-brown horizontal striped markings. Red bill with black markings."
                 },
                 {
                   name: "New Zealand Falcon",
