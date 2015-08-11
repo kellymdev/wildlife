@@ -36,7 +36,7 @@ describe("SpeciesView", function() {
   describe("displaySpeciesDetails", function() {
     describe("species without a maori name", function() {
       beforeEach(function() {
-        var speciesDetails = {"species":{"id":8,"name":"Caspian Tern","scientific_name":"Hydroprogne caspia","maori_name":null,"description":"Large gull-like bird, found in coastal waters, lakes and rivers."},"locations":[{"id":9,"name":"Pauatahanui Wildlife Reserve"}]};
+        var speciesDetails = {"species":{"id":8,"name":"Caspian Tern","scientific_name":"Hydroprogne caspia","maori_name":null,"description":"Large gull-like bird, found in coastal waters, lakes and rivers.","id_male":"Silver-grey back with white chest. Large red bill. Black head cap when breeding. Black and white flecked head cap when not breeding. Black legs.","id_female":"Similar to the male.","id_juvenile":"Browner cap. Brown mottling on the back. Orange bill. Dull orange or black legs and feet."},"locations":[{"id":9,"name":"Pauatahanui Wildlife Reserve"}]};
         view.displaySpeciesDetails(speciesDetails);
       });
 
@@ -54,6 +54,22 @@ describe("SpeciesView", function() {
 
       it("displays the description for the species", function() {
         expect($('.speciesDetails')).toContainText('Large gull-like bird, found in coastal waters, lakes and rivers.');
+      });
+
+      it("appends an identification div to the page", function() {
+        expect($('#content .identification')).toBeInDOM();
+      });
+
+      it("displays the identification characteristics for the male", function() {
+        expect($('.identification')).toContainText("Silver-grey back with white chest. Large red bill. Black head cap when breeding. Black and white flecked head cap when not breeding. Black legs.");
+      });
+
+      it("displays the identification characteristics for the female", function() {
+        expect($('.identification')).toContainText("Similar to the male.");
+      });
+
+      it("displays the identification characteristics for the juvenile", function() {
+        expect($('.identification')).toContainText("Browner cap. Brown mottling on the back. Orange bill. Dull orange or black legs and feet.");
       });
 
       it("appends a locationsList div to the page", function() {
