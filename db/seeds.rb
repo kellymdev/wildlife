@@ -514,18 +514,18 @@ Species.create([
                   scientific_name: "Falco novaeseelandiae",
                   maori_name: "Karearea",
                   description: "Endemic (only found in New Zealand). A magpie-sized raptor that feeds on live prey.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Dark brown back. Streaked cream chest. Dark eye. Dark vertical stripe on the face. Yellow cere and eye-ring. Long yellow legs.",
+                  id_female: "Larger than the male, but similar colouring.",
+                  id_juvenile: "Dark brown, without any streaking on the chest. Blue-grey legs, eye-ring and cere."
                 },
                 {
                   name: "New Zealand Fantail",
                   scientific_name: "Rhipidura fuliginosa",
                   maori_name: "Piwakawaka",
                   description: "Native. Fantails flit between trees in the forest looking for insects. They have a distinct 'cheep cheep' call, and are usually very talkative.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Brown back and rump. Cinnamon chest and belly. Black and white bands across the upper chest. Grey head. White eyebrows. Yellow underbody. Black and white tail.",
+                  id_female: "Similar to the male.",
+                  id_juvenile: "Browner body. No eyebrows or chest bands."
                 },
                 {
                   name: "New Zealand Fur Seal",
@@ -540,340 +540,341 @@ Species.create([
                   name: "New Zealand Kaka",
                   scientific_name: "Nestor meridionalis",
                   description: "Endemic (only found in New Zealand). A large native parrot.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Olive-brown body. Bright-grey crown. Red-orange under wings. Crimson belly and under tail.",
+                  id_female: "Similar colouring to the male, but with a smaller head.",
+                  id_juvenile: "Similar colouring to the adults. Young chicks have grey downy feathers."
                 },
                 {
                   name: "New Zealand Scaup",
                   scientific_name: "Aythya novaeseelandiae",
                   maori_name: "Papango",
                   description: "Endemic (only found in New Zealand). Small native duck.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Dark black-brown body with iridescent blue-green sheen on the head and wings. Yellow eyes. Blue-grey bill.",
+                  id_female: "Brownish body. Brown eyes. Grey bill. Ring of white feathers at the base of the bill.",
+                  id_juvenile: "Similar to the female until 12 weeks old, when the male eye colour changes to yellow."
                 },
                 {
                   name: "New Zealand Wood Pigeon",
                   scientific_name: "Hemiphaga novaeseelandiae",
                   maori_name: "Kereru",
                   description: "Endemic (only found in New Zealand). Large native pigeon.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Metallic green-purple head, back, throat and upper chest. White belly. Red or red-orange bill. Crimson eye and feet.",
+                  id_female: "Similar to the male.",
+                  id_juvenile: "Duller body colour. May have a smudgy white-grey chest."
                 },
                 {
                   name: "North Island Brown Kiwi",
                   scientific_name: "Apteryx mantelli",
                   description: "Endemic (only found in New Zealand). Large brown kiwi.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Dark grey-brown body, streaked with reddish-brown and black. Long pale bill. Short dark legs and toes.",
+                  id_female: "Similar to the male.",
+                  id_juvenile: "Similar colouring to the adults."
                 },
                 {
                   name: "North Island Robin",
                   scientific_name: "Petroica longipes",
                   maori_name: "Toutouwai",
                   description: "Endemic (only found in New Zealand). Often seen on the ground searching for insects in the leaf litter.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Dark grey to almost black. White spot above bill. Pale grey lower chest. Long thin legs.",
+                  id_female: "Similar to the male, but lighter grey.",
+                  id_juvenile: "Similar to the female."
                 },
                 {
                   name: "North Island Saddleback",
                   scientific_name: "Philesturnus rufusater",
                   maori_name: "Tieke",
                   description: "Endemic (only found in New Zealand). A medium-sized black-coloured bird with a distinctive red 'saddle' across the back.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Glossy black head and body. Bright chestnut 'saddle' across back and rump. Thin gold band on the leading edge of the 'saddle'. Black bill. Bright red wattles at the base of the bill.",
+                  id_female: "Similar to the male, but males usually have larger wattles.",
+                  id_juvenile: "Similar to the adults, but less sheen to the feathers. Brown tips on the black body feathers. No gold band on the saddle. Small wattles."
                 },
                 {
                   name: "North Island Weka",
                   scientific_name: "Gallirallus australis greyi",
                   description: "Endemic (only found in New Zealand). New Zealand woodhen.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Brown body, streaked with black. Grey chest. Grey bill. Brown legs. Red eyes.",
+                  id_female: "Similar to the male.",
+                  id_juvenile: "Brown body, without streaks."
                 },
                 {
                   name: "Pacific Golden Plover",
                   scientific_name: "Pluvialis fulva",
                   description: "Arctic migrant. Usually seen in small flocks feeding on mudflats at estuaries. Only seen in New Zealand in the summer months.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Speckled brown, apricot and white. Dark speckling on the chest. Black face and underparts in breeding season, bordered by white with a speckled gold, black and white upper body. Long dark grey legs. Large dark eyes.",
+                  id_female: "Similar to the male.",
+                  id_juvenile: "More dark speckling on the underparts. Yellower head and chest."
                 },
                 {
                   name: "Paradise Shelduck",
                   scientific_name: "Tadorna variegata",
                   maori_name: "Putangitangi",
                   description: "Endemic (only found in New Zealand). Large duck, almost always seen in pairs.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Black head with a greenish gloss. Dark grey or black body. Chestnut under tail. Black primary wing feathers, green secondary wing feathers and white upper wing surface. Dark grey-black bill, legs and feet.",
+                  id_female: "White head. Dark or light chestnut body. Chestnut under tail. Similar wing colouring to the male. Dark grey-black bill, legs and feet.",
+                  id_juvenile: "Ducklings are brown and white. Near-fledged ducklings resemble the male. Fledgling females may have variable amounts of black on the head."
                 },
                 {
                   name: "Pied Oystercatcher",
                   scientific_name: "Haematopus finschi",
                   maori_name: "Torea",
                   description: "Endemic (only found in New Zealand). Black and white coastal bird with an orange bill.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Black body with white tail and underparts. White band on wing. Long red bill. Thick pink legs. Crimson eye.",
+                  id_female: "Similar to the male.",
+                  id_juvenile: "Mottled brown-black body with white underparts. Dusky red bill. Dull pink legs."
                 },
                 {
                   name: "Pied Shag",
                   scientific_name: "Phalacrocorax varius",
                   maori_name: "Karuhiruhi",
                   description: "Native. Large black and white shag.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Black crown, back of neck, mantle, rump, wings, thighs and tail. White face, throat and underparts. Long hooked grey bill. Green eyes. Black legs and feet. Yellow skin in front of the eye and blue eye-ring during breeding season.",
+                  id_female: "Similar to the male.",
+                  id_juvenile: "Dark and pale-brown upperparts. White underparts with brown mottling. Pale yellow skin in front of the eye. Grey eye-ring."
                 },
                 {
                   name: "Pied Stilt",
                   scientific_name: "Himantopus himantopus",
                   maori_name: "Poaka",
                   description: "Native. Black and white wading bird.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
-                },
-                {
-                  name: "Pigeon",
-                  scientific_name: "Columba livia",
-                  description: "Introduced. Common in parks in the large cities in New Zealand.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Black on the back of the head and neck. Black wings and back. Mainly white body. Long pink legs. Long fine black bill.",
+                  id_female: "Similar to the male.",
+                  id_juvenile: "Mottled fawn or brown head, wings and back. White or off-white underparts."
                 },
                 {
                   name: "Pukeko",
                   scientific_name: "Porphyrio porphyrio",
                   description: "Native. Also known as the Purple Swamphen. Often seen feeding in grassy areas beside roads.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Deep indigo-blue. Black back and wings with a greenish gloss. White under tail. Bright red bill. Orange-red legs. Red eyes.",
+                  id_female: "Smaller than the male, but similar colouring.",
+                  id_juvenile: "Similar to the adults, but duller colouring. Black eyes and bill."
                 },
                 {
                   name: "Red-billed Gull",
                   scientific_name: "Chroicocephalus scopulinus",
                   maori_name: "Tarapunga or Akiaki",
                   description: "Native. Commonly seen at beaches throughout New Zealand.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Mainly white body. Pale grey back and wings. Black and white wing tips. Scarlet bill, eye-ring, legs and feet. White eyes.",
+                  id_female: "Slightly smaller than the male, with a shorter bill.",
+                  id_juvenile: "Chicks are mottled black/brown and white. Juveniles have brownish wing-tips. Dark brown eye, bill and legs."
                 },
                 {
                   name: "Red-crowned Parakeet",
                   scientific_name: "Cyanoramphus novaezelandiae",
                   maori_name: "Kakariki",
                   description: "Endemic (only found in New Zealand). Bright green parakeet with a red crown, easily camouflaged in the bush.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Bright emerald-green body. Crimson forehead and crown. Crimson patch behind the eyes, and on flank. Cyan-blue on the leading edge of the wing feathers. Long tail.",
+                  id_female: "Similar to the male, but smaller in size.",
+                  id_juvenile: "Similar in colour to the adults, but the red is duller."
                 },
                 {
                   name: "Red Knot",
                   scientific_name: "Calidrus canutus",
+                  maori_name: "Huahou",
                   description: "Arctic migrant. Stocky migrant wading bird.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Grey speckled back and head. White underparts. Black bill. Short dark grey legs. Reddish chest, belly and face in breeding season.",
+                  id_female: "Similar to the male.",
+                  id_juvenile: "More buff in colour. Yellow legs."
                 },
                 {
                   name: "Reef Heron",
                   scientific_name: "Egretta sacra",
                   maori_name: "Matuku moana",
                   description: "Native. Medium-sized dark grey wading bird.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Slate grey body. Long grey-yellow bill. Greenish-yellow legs. Long plumes on the back during breeding season.",
+                  id_female: "Similar to the male.",
+                  id_juvenile: "Brownish in colour."
+                },
+                {
+                  name: "Rock Pigeon",
+                  scientific_name: "Columba livia",
+                  description: "Introduced. Common in parks in the large cities in New Zealand.",
+                  id_male: "Blue-grey body. Glossy green-purple neck, mantle and chest. Black wing bars. White rump. Grey bill. Pink feet. Red eyes.",
+                  id_female: "Similar to the male.",
+                  id_juvenile: "Smaller and slimmer than adults. Duller body without gloss. Grey or pink-grey bill and feet. Brownish eyes."
                 },
                 {
                   name: "Royal Spoonbill",
                   scientific_name: "Platalea regia",
                   maori_name: "Kotuku ngutupapa",
                   description: "Native. White wading bird with a wide black bill.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "White body. Long black spoon-shaped bill. Black legs and feet. White crest on the back of the head, and a creamy-white chest during breeding season.",
+                  id_female: "Slightly smaller than males. Shorter bill and legs.",
+                  id_juvenile: "Similar colour to the non-breeding adults but with dark tips to the flight feathers. Young chicks have a pink bill."
                 },
                 {
                   name: "Sacred Kingfisher",
                   scientific_name: "Todiramphus sanctus",
                   maori_name: "Kotare",
                   description: "Native. Greeny-blue bird with a creamy yellow chest.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Green-blue on the head and upperparts. Buff to yellow underparts. Broad black eye-stripe. White collar. Black bill. Dark brown eyes. Grey or pink-brown legs and feet.",
+                  id_female: "Greener and duller in colour than the male.",
+                  id_juvenile: "Duller than the adults. Buff edges to the feathers on the back. Brown mottling on the chest and collar."
                 },
                 {
                   name: "Shining Cuckoo",
                   scientific_name: "Chrysococcyx lucidus",
                   maori_name: "Pipiwharauroa",
                   description: "Native. Small cuckoo with a dark green iridescent back, and white and green bands on the chest. Shining Cuckoos lay their eggs in the nests of Grey Warblers, and the chicks are raised by the Grey Warbler.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Metallic dark bronze-green head and back. White face and underparts with dark green barring.",
+                  id_female: "Similar to the male.",
+                  id_juvenile: "Slightly duller with less barring."
                 },
                 {
                   name: "Silvereye",
                   scientific_name: "Zosterops lateralis",
                   maori_name: "Tauhou",
                   description: "Native. Small forest bird with a distinctive white ring around its eye.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Olive-green head, lower back, wings and tail. Mid-grey on the neck and upper back. Whitish-cream throat and chest. Creamy-grey belly and undertail. White eye-ring. Dark reddish-brown eyes. Fine dark brown-black tapered bill. Pale brown legs and feet.",
+                  id_female: "Similar to the male.",
+                  id_juvenile: "Similar colouring to the adults, but no eye-ring."
                 },
                 {
                   name: "Southern Black-backed Gull",
                   scientific_name: "Larus dominicanus",
                   maori_name: "Karoro",
                   description: "Native. The only large gull found in New Zealand.",
-                  id_male: "",
+                  id_male: "White head, neck, underparts, rump and tail. Black back and upper wings. Narrow white trailing edge on the wings. Yellow bill with a red spot near the tip of the lower bill. Pale yellow eyes. Greenish-yellow legs.",
                   id_female: "",
-                  id_juvenile: ""
+                  id_juvenile: "Dark mottled brown. Black bill and legs. Chest and neck are flecked with white in the second year."
                 },
                 {
                   name: "South Island Robin",
                   scientific_name: "Petroica australis",
                   maori_name: "Toutouwai",
                   description: "Endemic (only found in New Zealand). Similar to the North Island Robin, but found in the South Island. Often seen on the ground searching for insects in the leaf litter.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Dark grey upper body and chest. Yellow-white lower chest and belly. White spot above bill.",
+                  id_female: "Similar colouring to the male, but more grey on the chest.",
+                  id_juvenile: "Similar to the female, but little to no white patch on the belly."
                 },
                 {
                   name: "South Island Saddleback",
                   scientific_name: "Philesturnus carunculatus",
                   maori_name: "Tieke",
                   description: "Endemic (only found in New Zealand). A medium-sized black-coloured bird with a distinctive chestnut 'saddle' across the back.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Glossy black head and body. Bright chestnut 'saddle' across back and rump. Thin gold band on the leading edge of the 'saddle'. Black bill. Bright orange-red wattles at the base of the bill.",
+                  id_female: "Similar to the male, but smaller wattles.",
+                  id_juvenile: "Chocolate brown body. Small wattles."
                 },
                 {
                   name: "Spotted Shag",
                   scientific_name: "Stictocarbo punctatus",
                   maori_name: "Parekareka",
                   description: "Endemic (only found in New Zealand). A yellow footed shag.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Grey-blue body. Pale grey-blue underparts. Small black spots on back and wings. Black rump, tail and thighs. White stripe from above the eye down the sides of the neck. Double crest on the head during the breeding season. Slender orange-brown bill. Yellow-orange feet. Facial skin between the eye and bill is green-blue during the breeding season. Blue eye-ring. Dark brown eyes.",
+                  id_female: "Similar to the male.",
+                  id_juvenile: "Paler and browner than the adults. No distinct markings on the head or neck."
                 },
                 {
                   name: "Spur-winged Plover",
                   scientific_name: "Vanellus miles",
                   description: "Native. Large stocky black, grey and white wading bird with a yellow bill.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Light grey-brown back. Black crown, back of neck, outer wings and tail band. White face, throat and underparts. Large yellow wattles. Yellow bill. Yellow eye-ring. Long reddish-brown legs.",
+                  id_female: "Similar to the male.",
+                  id_juvenile: "Mottled brown head and back with white underparts."
                 },
                 {
                   name: "Stitchbird",
                   scientific_name: "Notiomystis cincta",
                   maori_name: "Hihi",
                   description: "Endemic (only found in New Zealand). A medium-sized forest bird. One of the rarest species in New Zealand.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Black head, back and upper chest. White tufts behind the eyes. Golden-yellow band across chest and wings. White wingbars. Pale brown underparts.",
+                  id_female: "Greyish-brown body. White wingbars.",
+                  id_juvenile: "Similar to the female."
                 },
                 {
                   name: "Takahe",
                   scientific_name: "Porphyrio hochstetteri",
                   description: "Endemic (only found in New Zealand). Large blue flightless bird.",
-                  id_male: "",
+                  id_male: "Dark blue head, neck and chest. Olive-green back and wings. White undertail. Scarlet bill with a red frontal shield. Red legs and feet.",
                   id_female: "",
-                  id_juvenile: ""
+                  id_juvenile: "Duller in colour. Blackish-brown bill. Dull pink-brown legs."
                 },
                 {
                   name: "Tuatara",
                   scientific_name: "Sphenodon punctatus",
                   description: "Endemic (only found in New Zealand). Greenish-brown reptile with a spiny crest along the back.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Greenish-brown and grey. Spiny crest along the back.",
+                  id_female: "Similar to the male, but the crest is less pronounced.",
+                  id_juvenile: "Similar colouring to the adults."
                 },
                 {
                   name: "Tui",
                   scientific_name: "Prosthemadera novaeseelandiae",
                   description: "Endemic (only found in New Zealand). Nectar-feeding bird that loves rata and flax flowers.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Black body with an iridescent green, purple and bronze sheen. White throat tufts. Fine white feathers across the neck. White wingbar. Black legs. Curved black bill. Dark brown eyes.",
+                  id_female: "Similar to the male, but smaller in size.",
+                  id_juvenile: "Dull slate black. Glossy wings and tail. Greyish-white throat without white tufts."
                 },
                 {
                   name: "Variable Oystercatcher",
                   scientific_name: "Haematopus unicolor",
                   maori_name: "Torea pango",
                   description: "Endemic (only found in New Zealand). Black coastal bird with a long orange bill.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Black body. Underparts may be smudgy black to white. Long red bill. Red eyes. Orange eye-ring. Pink legs.",
+                  id_female: "Similar to the male.",
+                  id_juvenile: "Chicks have pale mid-grey upperparts with black markings and a black bill. First year birds have brown-black plumage, grey legs and a dark tip to the bill."
                 },
                 {
                   name: "Welcome Swallow",
                   scientific_name: "Hirundo neoxena",
                   maori_name: "Warou",
                   description: "Native. Small fast-flying birds, with a darting flight pattern.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Blue-black back and upper wings. Rusty red on the forehead, neck and chest. Pale buff underparts. Long pointed wings. Dark tail with white spots near the end of the feathers. Short black bill. Black eye-stripe.",
+                  id_female: "Similar colouring to the male, but shorter tail streamers and smaller tail spots.",
+                  id_juvenile: "Darker heads and duller colouring than the adults."
                 },
                 {
                   name: "White-faced Heron",
                   scientific_name: "Egretta novaehollandiae",
                   maori_name: "Matuku moana",
                   description: "Native. A blue-grey bird, with a white face. The most common Heron species in New Zealand.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Light blue-grey body. White face. Grey-black bill. Long pale yellow legs. Long feathers on the head, neck and back during the breeding season.",
+                  id_female: "Similar to the male.",
+                  id_juvenile: "Similar to the adults but little to no white on the face."
                 },
                 {
                   name: "White-fronted Tern",
                   scientific_name: "Sterna striata",
                   description: "Endemic (found only in New Zealand). Commonly found along the New Zealand coastline.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Pale grey body with white underparts. Black cap on the head, larger in the breeding season. White forehead. White tail. Long black bill. Black eyes. Black or reddish-black legs.",
+                  id_female: "Similar colouring to the male, but slightly smaller.",
+                  id_juvenile: "Light brown mottling across the head and back. White underparts."
                 },
                 {
                   name: "Whitehead",
                   scientific_name: "Mohoua albicilla",
                   maori_name: "Popokatea",
                   description: "Endemic (only found in New Zealand). Small compact bird with a white head and light-grey body.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "White head and underparts. Light brown-grey back, wings and tail. Black bill, legs and eyes.",
+                  id_female: "Similar to the male, but shaded brown crown and neck.",
+                  id_juvenile: "Similar to the female."
                 },
                 {
                   name: "White Heron",
                   scientific_name: "Ardea modesta",
                   maori_name: "Kotuku",
                   description: "Native. Large white heron with a long yellow bill. The only breeding colony in New Zealand is found near Okarito Lagoon, Westland.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "White body. Yellow eyes and bill. Black legs and feet. Long white feathers over the back, wings and tail during the breeding season. Black bill and green facial skin during the breeding season.",
+                  id_female: "Similar to the male.",
+                  id_juvenile: "Similar to the non-breeding adults."
                 },
                 {
                   name: "Wrybill",
                   scientific_name: "Anarhynchus frontalis",
                   maori_name: "Ngutu pare",
                   description: "Endemic (only found in New Zealand). A small plover that only breeds in the braided rivers of the South Island of New Zealand. It migrates to northern New Zealand for winter.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Pale grey upper parts. White underparts. White forehead tinged with black in the breeding season. Long black bill. Grey-black legs. Black band across the chest during the breeding season.",
+                  id_female: "Similar to the male.",
+                  id_juvenile: "Similar colouring to the adults, but without the chest band."
                 },
                 {
                   name: "Yellow-crowned Parakeet",
                   scientific_name: "Cyanoramphus auriceps",
                   maori_name: "Kakariki",
                   description: "Endemic (only found in New Zealand). Bright green parakeet with a yellow crown.",
-                  id_male: "",
-                  id_female: "",
-                  id_juvenile: ""
+                  id_male: "Bright emerald-green body. Golden yellow crown. Crimson band between the cere and the crown. Small red patch on flank. Cyan-blue on the leading edge of the wing feathers. Long tail. Pale blue-grey bill with a black tip. Black-brown feet and legs.",
+                  id_female: "Similar to the male.",
+                  id_juvenile: "Similar in colour to the adults, but duller."
                 }
               ])
 
@@ -1451,10 +1452,6 @@ SpeciesLocation.create([
                             location_id: Location.find_by_name("Wairio Block and Lake Wairarapa Eastern Shore").id
                           },
                           {
-                            species_id: Species.find_by_name("Pigeon").id,
-                            location_id: Location.find_by_name("Wellington Waterfront").id
-                          },
-                          {
                             species_id: Species.find_by_name("Pukeko").id,
                             location_id: Location.find_by_name("Manawatu Estuary").id
                           },
@@ -1525,6 +1522,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Reef Heron").id,
                             location_id: Location.find_by_name("Motuara Island").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Rock Pigeon").id,
+                            location_id: Location.find_by_name("Wellington Waterfront").id
                           },
                           {
                             species_id: Species.find_by_name("Royal Spoonbill").id,
@@ -1633,6 +1634,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Spur-winged Plover").id,
                             location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Stitchbird").id,
+                            location_id: Location.find_by_name("Kapiti Island Nature Reserve").id
                           },
                           {
                             species_id: Species.find_by_name("Stitchbird").id,
