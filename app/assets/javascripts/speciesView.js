@@ -29,6 +29,12 @@ SpeciesView.prototype.displaySpeciesDetails = function(details) {
   speciesHtml +=  '</h2>' +
                   '<p>Scientific name: ' + details.species.scientific_name + '</p>' +
                   '<p>' + details.species.description + '</p>' +
+                  '<div class="identification">' +
+                    '<h3>Identification</h3>' +
+                    '<p>Male: ' + details.species.id_male + '</p>' +
+                    '<p>Female: ' + details.species.id_female + '</p>' +
+                    '<p>Juvenile: ' + details.species.id_juvenile + '</p>' +
+                  '</div>' +
                   '<div class="locationList">' +
                     '<h3>Locations</h3>' +
                     '<ul>';

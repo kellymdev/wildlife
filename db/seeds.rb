@@ -178,7 +178,7 @@ Species.create([
                   scientific_name: "Capra aegagrus hircus",
                   description: "Native. A rare goat breed, originating from Arapawa Island in the Marlborough Sounds.",
                   id_male: "Flat, wide sweeping horns. Black striped facial markings. A variety of colours (white, tan, brown and black are common).",
-                  id_female: "Shorter horns that curve back over the head. Similar coat markings to the male.",
+                  id_female: "Shorter horns that curve backwards over the head. Similar coat markings to the male.",
                   id_juvenile: "Similar colouring to the adults, but with horn buds rather than full horns."
                 },
                 {
@@ -186,16 +186,16 @@ Species.create([
                   scientific_name: "Botaurus poiciloptilus",
                   maori_name: "Matuku hurepo",
                   description: "Native. Large stocky bird with dark-brown and beige plumage.",
-                  id_male: "Mottled brown and beige.",
+                  id_male: "Mottled brown and beige body.",
                   id_female: "Similar colouring to the male. The female is less vocal than the male.",
-                  id_juvenile: "Lighter brown which darkens as they age."
+                  id_juvenile: "Lighter brown which darkens with age."
                 },
                 {
                   name: "Australasian Gannet",
                   scientific_name: "Morus serrator",
                   maori_name: "Takapu",
                   description: "Native. Large white seabird with a distinctive orange head.",
-                  id_male: "White plumage with an orange/yellow head and neck, and a grey bill.",
+                  id_male: "White body. Orange/yellow head and neck. Grey bill.",
                   id_female: "The same colouring as the male.",
                   id_juvenile: "Mottled dark brown and white."
                 },
@@ -205,7 +205,7 @@ Species.create([
                   maori_name: "Kuruwhengi",
                   description: "Native. Also known as the New Zealand Shoveler. Water bird with a large shovel-shaped bill.",
                   id_male: "Blue-grey head and neck, with a white band at the base of the bill. Large black bill. Mottled brown and white chest. Chestnut flank.",
-                  id_female: "Mottled light brown. Brown bill.",
+                  id_female: "Mottled light brown body. Brown bill.",
                   id_juvenile: "Similar to female, but darker."
                 },
                 {
@@ -213,16 +213,16 @@ Species.create([
                   scientific_name: "Charadrius bicinctus",
                   maori_name: "Pohowera",
                   description: "Endemic (only found in New Zealand). A small brown and white plover.",
-                  id_male: "Brown back with a white chest. Broad chestnut band across the chest and a narrow black neck band when in breeding plumage (June to December).",
+                  id_male: "Brown back. White chest. Broad chestnut band across the chest and a narrow black neck band during the breeding season (June to December).",
                   id_female: "Similar to the male, but the banding is duller.",
-                  id_juvenile: "Mottled grey back with a white chest."
+                  id_juvenile: "Mottled grey back. White chest."
                 },
                 {
                   name: "Bar-tailed Godwit",
                   scientific_name: "Limosa lapponica",
                   maori_name: 'Kuaka',
                   description: "Arctic migrant. Often seen foraging on mud flats. During migration, they perform the longest non-stop flight of any sea bird.",
-                  id_male: "Brown back with dark streaks. Lower back, rump and tail have brown bars. Pale grey-brown on chest. Males in breeding plumage have a rufous head, neck and chest.",
+                  id_male: "Brown back with dark streaks. Brown bars on the lower back, rump and tail. Pale grey-brown chest. Chestnut red (rufous) head, neck and chest during the breeding season.",
                   id_female: "Larger size and a longer bill than the male. Similar colour to the males in non-breeding plumage.",
                   id_juvenile: "More mottled than the adults."
                 },
@@ -240,7 +240,7 @@ Species.create([
                   scientific_name: "Phalacrocorax carbo",
                   maori_name: "Kawau",
                   description: "Native. Black Shags roost in trees or along rocky coastlines.",
-                  id_male: "Black with white patch on cheeks. Grey bill. Green eye. Black feet. White thigh patch in breeding season. Facial skin becomes orange-red in breeding season.",
+                  id_male: "Black with white patch on cheeks. Grey bill. Green eye. Black feet. White thigh patch in breeding season. Orange-red facial skin in the breeding season.",
                   id_female: "Similar to the male.",
                   id_juvenile: "Black-brown in colour. Variable amounts of white on the chest."
                 },
@@ -249,9 +249,9 @@ Species.create([
                   scientific_name: "Cygnus atratus",
                   maori_name: "Kakianau",
                   description: "Native. Found throughout New Zealand on lakes, ponds and estuaries.",
-                  id_male: "Black colour. Red bill with a white tip.",
+                  id_male: "Black body. Red bill with a white tip.",
                   id_female: "Similar to the male, but smaller in size.",
-                  id_juvenile: "Grey colour. Black bill."
+                  id_juvenile: "Grey body. Black bill."
                 },
                 {
                   name: "Blue Duck",
@@ -292,7 +292,7 @@ Species.create([
                   scientific_name: "Hydroprogne caspia",
                   maori_name: "Taranui",
                   description: "Native. Large gull-like bird, found in coastal waters, lakes and rivers.",
-                  id_male: "Silver-grey back with white chest. Large red bill. Black head cap when breeding. Black and white flecked head cap when not breeding. Black legs.",
+                  id_male: "Silver-grey back with white chest. Large red bill. Black head cap in the breeding season. Black and white flecked head cap when not in the breeding season. Black legs.",
                   id_female: "Similar to the male.",
                   id_juvenile: "Browner cap. Brown mottling on the back. Orange bill. Dull orange or black legs and feet."
                 },
@@ -300,7 +300,7 @@ Species.create([
                   name: "Cattle Egret",
                   scientific_name: "Ardea ibis",
                   description: "Migrant. Small stocky egret. Often found amongst sheep or cattle.",
-                  id_male: "White colour. Yellow bill. Grey legs and feet. Orange plumes on head, neck and chest during breeding season.",
+                  id_male: "White body. Yellow bill. Grey legs and feet. Orange plumes on head, neck and chest during breeding season.",
                   id_female: "Similar to the male.",
                   id_juvenile: "Similar colouring to the adults but with dark legs and bill."
                 },
@@ -309,8 +309,8 @@ Species.create([
                   scientific_name: "Fringilla coelebs",
                   maori_name: "Pahirini",
                   description: "Introduced. Widespread throughout New Zealand.",
-                  id_male: "Black forehead. Blue-grey crown and neck. Pinkish-brown face and chest. White belly. White shoulders and wing bars. Reddish-brown back. Greenish rump.",
-                  id_female: "Brownish grey. Greenish rump. White wing bars on a dark-grey wing.",
+                  id_male: "Black forehead. Blue-grey crown and neck. Pinkish-brown face and chest. White belly, shoulders and wing bars. Reddish-brown back. Greenish rump.",
+                  id_female: "Brownish grey body. Greenish rump. White wing bars on a dark-grey wing.",
                   id_juvenile: "Similar to the female."
                 },
                 {
@@ -318,8 +318,8 @@ Species.create([
                   scientific_name: "Tursiops truncatus",
                   description: "The most common dolphin species in New Zealand.",
                   id_male: "Grey in colour, with a lighter-grey belly.",
-                  id_female: "Smaller than the male.",
-                  id_juvenile: "Similar colouring to the parents but smaller."
+                  id_female: "Smaller than the male, but similar colouring.",
+                  id_juvenile: "Similar colouring to the adults but smaller."
                 },
                 {
                   name: "Common Diving Petrel",
@@ -327,7 +327,7 @@ Species.create([
                   description: "Native. Small seabird found in exposed coastal waters around New Zealand.",
                   id_male: "Glossy black back. Mottled grey neck and throat. White chest. Black bill. Blue legs and feet.",
                   id_female: "Similar to the male.",
-                  id_juvenile: "Chicks are light grey. Juveniles are similar colouring to their parents but with pale stripes down the shoulders."
+                  id_juvenile: "Chicks are light grey. Juveniles are similar colouring to the adults but with pale stripes down the shoulders."
                 },
                 {
                   name: "Common Starling",
@@ -343,7 +343,7 @@ Species.create([
                   description: "Introduced. White duck found throughout New Zealand. Commonly kept as pets, or at wildlife parks.",
                   id_male: "White body. Orange bill and feet.",
                   id_female: "Similar to the male.",
-                  id_juvenile: "Yellow. Orange bill and feet."
+                  id_juvenile: "Yellow body. Orange bill and feet."
                 },
                 {
                   name: "Fantail Doves (aka Garden Fantail or English Fantail)",
@@ -403,14 +403,14 @@ Species.create([
                   scientific_name: "Passer domesticus",
                   description: "Introduced. A common garden bird, found throughout New Zealand.",
                   id_male: "Chestnut brown with streaked black on back. Grey crown. Grey-brown rump. Greyish-white chest. Pinkish-brown legs. Black bib and bill in breeding season.",
-                  id_female: "Buff brown with darker streaks. Greyish-white chest. Pale pinkish-brown bill and legs.",
+                  id_female: "Buff brown back with darker streaks. Greyish-white chest. Pale pinkish-brown bill and legs.",
                   id_juvenile: "Similar to the female."
                 },
                 {
                   name: "Kea",
                   scientific_name: "Nestor notabilis",
                   description: "Endemic (only found in New Zealand). A green alpine parrot with orange feathers under its wings.",
-                  id_male: "Olive green colour. Red underwings and rump. Grey-black bill.",
+                  id_male: "Olive green colour. Red-orange underwings and rump. Grey-black bill.",
                   id_female: "About 20% smaller than the male. Shorter bill than the male.",
                   id_juvenile: "Pale crown. Yellow cere (at the top of the beak) and eyelids."
                 },
@@ -455,7 +455,7 @@ Species.create([
                   description: "Endemic (only found in New Zealand). The smallest species of Kiwi.",
                   id_male: "Brownish grey, mottled or banded with white. Long pale bill. Short pale legs.",
                   id_female: "Similar to the male.",
-                  id_juvenile: "Similar to the parents."
+                  id_juvenile: "Similar to the adults."
                 },
                 {
                   name: "Long-tailed Cuckoo",
@@ -478,7 +478,7 @@ Species.create([
                   name: "Mandarin Duck",
                   scientific_name: "Aix galericulata",
                   description: "Introduced. Brightly coloured exotic duck.",
-                  id_male: "Reddish face. Red bill. White cresent above the eye. Purple chest with two white bars. Reddish flanks with two large orange 'sails'.",
+                  id_male: "Reddish face. Red bill. White crescent above the eye. Purple chest with two white bars. Reddish flanks with two large orange 'sails'.",
                   id_female: "Brown in colour. White eye-ring and eye-stripe. Brown bill.",
                   id_juvenile: "Black and yellow, similar in appearance to Mallard Ducklings."
                 },
@@ -497,7 +497,7 @@ Species.create([
                   maori_name: "Korimako",
                   description: "Endemic (only found in New Zealand). Green bird with a distinctive song.",
                   id_male: "Olive-green. Slightly paler underneath. Purplish head. Dark blue-black tail and wings. Red eye. Short curved bill.",
-                  id_female: "Browner colour. Narrow white-yellow stripe across cheek. Bluish gloss on top of head. Red eye.",
+                  id_female: "Browner colour. Narrow yellow-white stripe across cheek. Bluish gloss on top of head. Red eye.",
                   id_juvenile: "Brown eyes. Yellow stripe across cheek. Similar colour to the female."
                 },
                 {
@@ -540,7 +540,7 @@ Species.create([
                   name: "New Zealand Kaka",
                   scientific_name: "Nestor meridionalis",
                   description: "Endemic (only found in New Zealand). A large native parrot.",
-                  id_male: "Olive-brown body. Bright-grey crown. Red-orange under wings. Crimson belly and under tail.",
+                  id_male: "Olive-brown body. Bright-grey crown. Crimson under wings. Crimson belly and undertail.",
                   id_female: "Similar colouring to the male, but with a smaller head.",
                   id_juvenile: "Similar colouring to the adults. Young chicks have grey downy feathers."
                 },
@@ -585,7 +585,7 @@ Species.create([
                   maori_name: "Tieke",
                   description: "Endemic (only found in New Zealand). A medium-sized black-coloured bird with a distinctive red 'saddle' across the back.",
                   id_male: "Glossy black head and body. Bright chestnut 'saddle' across back and rump. Thin gold band on the leading edge of the 'saddle'. Black bill. Bright red wattles at the base of the bill.",
-                  id_female: "Similar to the male, but males usually have larger wattles.",
+                  id_female: "Similar to the male, but with smaller wattles.",
                   id_juvenile: "Similar to the adults, but less sheen to the feathers. Brown tips on the black body feathers. No gold band on the saddle. Small wattles."
                 },
                 {
@@ -609,8 +609,8 @@ Species.create([
                   scientific_name: "Tadorna variegata",
                   maori_name: "Putangitangi",
                   description: "Endemic (only found in New Zealand). Large duck, almost always seen in pairs.",
-                  id_male: "Black head with a greenish gloss. Dark grey or black body. Chestnut under tail. Black primary wing feathers, green secondary wing feathers and white upper wing surface. Dark grey-black bill, legs and feet.",
-                  id_female: "White head. Dark or light chestnut body. Chestnut under tail. Similar wing colouring to the male. Dark grey-black bill, legs and feet.",
+                  id_male: "Black head with a greenish gloss. Dark grey or black body. Chestnut undertail. Black primary wing feathers, green secondary wing feathers and white upper wing surface. Dark grey-black bill, legs and feet.",
+                  id_female: "White head. Dark or light chestnut body. Chestnut undertail. Similar wing colouring to the male. Dark grey-black bill, legs and feet.",
                   id_juvenile: "Ducklings are brown and white. Near-fledged ducklings resemble the male. Fledgling females may have variable amounts of black on the head."
                 },
                 {
@@ -644,7 +644,7 @@ Species.create([
                   name: "Pukeko",
                   scientific_name: "Porphyrio porphyrio",
                   description: "Native. Also known as the Purple Swamphen. Often seen feeding in grassy areas beside roads.",
-                  id_male: "Deep indigo-blue. Black back and wings with a greenish gloss. White under tail. Bright red bill. Orange-red legs. Red eyes.",
+                  id_male: "Deep indigo-blue body. Black back and wings with a greenish gloss. White undertail. Bright red bill. Orange-red legs. Red eyes.",
                   id_female: "Smaller than the male, but similar colouring.",
                   id_juvenile: "Similar to the adults, but duller colouring. Black eyes and bill."
                 },
@@ -671,7 +671,7 @@ Species.create([
                   scientific_name: "Calidrus canutus",
                   maori_name: "Huahou",
                   description: "Arctic migrant. Stocky migrant wading bird.",
-                  id_male: "Grey speckled back and head. White underparts. Black bill. Short dark grey legs. Reddish chest, belly and face in breeding season.",
+                  id_male: "Speckled grey back and head. White underparts. Black bill. Short dark grey legs. Reddish chest, belly and face in breeding season.",
                   id_female: "Similar to the male.",
                   id_juvenile: "More buff in colour. Yellow legs."
                 },
@@ -706,7 +706,7 @@ Species.create([
                   scientific_name: "Todiramphus sanctus",
                   maori_name: "Kotare",
                   description: "Native. Greeny-blue bird with a creamy yellow chest.",
-                  id_male: "Green-blue on the head and upperparts. Buff to yellow underparts. Broad black eye-stripe. White collar. Black bill. Dark brown eyes. Grey or pink-brown legs and feet.",
+                  id_male: "Green-blue head and upperparts. Buff to yellow underparts. Broad black eye-stripe. White collar. Black bill. Dark brown eyes. Grey or pink-brown legs and feet.",
                   id_female: "Greener and duller in colour than the male.",
                   id_juvenile: "Duller than the adults. Buff edges to the feathers on the back. Brown mottling on the chest and collar."
                 },
@@ -724,7 +724,7 @@ Species.create([
                   scientific_name: "Zosterops lateralis",
                   maori_name: "Tauhou",
                   description: "Native. Small forest bird with a distinctive white ring around its eye.",
-                  id_male: "Olive-green head, lower back, wings and tail. Mid-grey on the neck and upper back. Whitish-cream throat and chest. Creamy-grey belly and undertail. White eye-ring. Dark reddish-brown eyes. Fine dark brown-black tapered bill. Pale brown legs and feet.",
+                  id_male: "Olive-green head, lower back, wings and tail. Mid-grey neck and upper back. Whitish-cream throat and chest. Creamy-grey belly and undertail. White eye-ring. Dark reddish-brown eyes. Fine dark brown-black tapered bill. Pale brown legs and feet.",
                   id_female: "Similar to the male.",
                   id_juvenile: "Similar colouring to the adults, but no eye-ring."
                 },
@@ -734,8 +734,8 @@ Species.create([
                   maori_name: "Karoro",
                   description: "Native. The only large gull found in New Zealand.",
                   id_male: "White head, neck, underparts, rump and tail. Black back and upper wings. Narrow white trailing edge on the wings. Yellow bill with a red spot near the tip of the lower bill. Pale yellow eyes. Greenish-yellow legs.",
-                  id_female: "",
-                  id_juvenile: "Dark mottled brown. Black bill and legs. Chest and neck are flecked with white in the second year."
+                  id_female: "Similar to the male.",
+                  id_juvenile: "Dark mottled brown body. Black bill and legs. White-flecked chest and neck in the second year."
                 },
                 {
                   name: "South Island Robin",
@@ -751,7 +751,7 @@ Species.create([
                   scientific_name: "Philesturnus carunculatus",
                   maori_name: "Tieke",
                   description: "Endemic (only found in New Zealand). A medium-sized black-coloured bird with a distinctive chestnut 'saddle' across the back.",
-                  id_male: "Glossy black head and body. Bright chestnut 'saddle' across back and rump. Thin gold band on the leading edge of the 'saddle'. Black bill. Bright orange-red wattles at the base of the bill.",
+                  id_male: "Glossy black head and body. Bright chestnut 'saddle' across back and rump. Black bill. Bright orange-red wattles at the base of the bill.",
                   id_female: "Similar to the male, but smaller wattles.",
                   id_juvenile: "Chocolate brown body. Small wattles."
                 },
@@ -760,7 +760,7 @@ Species.create([
                   scientific_name: "Stictocarbo punctatus",
                   maori_name: "Parekareka",
                   description: "Endemic (only found in New Zealand). A yellow footed shag.",
-                  id_male: "Grey-blue body. Pale grey-blue underparts. Small black spots on back and wings. Black rump, tail and thighs. White stripe from above the eye down the sides of the neck. Double crest on the head during the breeding season. Slender orange-brown bill. Yellow-orange feet. Facial skin between the eye and bill is green-blue during the breeding season. Blue eye-ring. Dark brown eyes.",
+                  id_male: "Grey-blue body. Pale grey-blue underparts. Small black spots on back and wings. Black rump, tail and thighs. White stripe from above the eye down the sides of the neck. Black double crest on the head during the breeding season. Slender orange-brown bill. Yellow-orange feet. Facial skin between the eye and bill is green-blue during the breeding season. Blue eye-ring. Dark brown eyes.",
                   id_female: "Similar to the male.",
                   id_juvenile: "Paler and browner than the adults. No distinct markings on the head or neck."
                 },
@@ -770,7 +770,7 @@ Species.create([
                   description: "Native. Large stocky black, grey and white wading bird with a yellow bill.",
                   id_male: "Light grey-brown back. Black crown, back of neck, outer wings and tail band. White face, throat and underparts. Large yellow wattles. Yellow bill. Yellow eye-ring. Long reddish-brown legs.",
                   id_female: "Similar to the male.",
-                  id_juvenile: "Mottled brown head and back with white underparts."
+                  id_juvenile: "Mottled brown head and back. White underparts."
                 },
                 {
                   name: "Stitchbird",
@@ -786,7 +786,7 @@ Species.create([
                   scientific_name: "Porphyrio hochstetteri",
                   description: "Endemic (only found in New Zealand). Large blue flightless bird.",
                   id_male: "Dark blue head, neck and chest. Olive-green back and wings. White undertail. Scarlet bill with a red frontal shield. Red legs and feet.",
-                  id_female: "",
+                  id_female: "Similar to the male.",
                   id_juvenile: "Duller in colour. Blackish-brown bill. Dull pink-brown legs."
                 },
                 {
@@ -812,7 +812,7 @@ Species.create([
                   description: "Endemic (only found in New Zealand). Black coastal bird with a long orange bill.",
                   id_male: "Black body. Underparts may be smudgy black to white. Long red bill. Red eyes. Orange eye-ring. Pink legs.",
                   id_female: "Similar to the male.",
-                  id_juvenile: "Chicks have pale mid-grey upperparts with black markings and a black bill. First year birds have brown-black plumage, grey legs and a dark tip to the bill."
+                  id_juvenile: "Chicks have pale mid-grey upperparts with black markings and a black bill. First year birds have a brown-black body, grey legs and a dark tip to the bill."
                 },
                 {
                   name: "Welcome Swallow",
@@ -846,7 +846,7 @@ Species.create([
                   maori_name: "Popokatea",
                   description: "Endemic (only found in New Zealand). Small compact bird with a white head and light-grey body.",
                   id_male: "White head and underparts. Light brown-grey back, wings and tail. Black bill, legs and eyes.",
-                  id_female: "Similar to the male, but shaded brown crown and neck.",
+                  id_female: "Similar to the male, but with a brown crown and neck.",
                   id_juvenile: "Similar to the female."
                 },
                 {
@@ -863,7 +863,7 @@ Species.create([
                   scientific_name: "Anarhynchus frontalis",
                   maori_name: "Ngutu pare",
                   description: "Endemic (only found in New Zealand). A small plover that only breeds in the braided rivers of the South Island of New Zealand. It migrates to northern New Zealand for winter.",
-                  id_male: "Pale grey upper parts. White underparts. White forehead tinged with black in the breeding season. Long black bill. Grey-black legs. Black band across the chest during the breeding season.",
+                  id_male: "Pale grey upperparts. White underparts. White forehead tinged with black in the breeding season. Long black bill. Grey-black legs. Black band across the chest during the breeding season.",
                   id_female: "Similar to the male.",
                   id_juvenile: "Similar colouring to the adults, but without the chest band."
                 },
@@ -872,7 +872,7 @@ Species.create([
                   scientific_name: "Cyanoramphus auriceps",
                   maori_name: "Kakariki",
                   description: "Endemic (only found in New Zealand). Bright green parakeet with a yellow crown.",
-                  id_male: "Bright emerald-green body. Golden yellow crown. Crimson band between the cere and the crown. Small red patch on flank. Cyan-blue on the leading edge of the wing feathers. Long tail. Pale blue-grey bill with a black tip. Black-brown feet and legs.",
+                  id_male: "Bright emerald-green body. Golden-yellow crown. Crimson band between the cere and the crown. Small red patch on flank. Cyan-blue on the leading edge of the wing feathers. Long tail. Pale blue-grey bill with a black tip. Black-brown feet and legs.",
                   id_female: "Similar to the male.",
                   id_juvenile: "Similar in colour to the adults, but duller."
                 }
