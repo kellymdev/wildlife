@@ -83,6 +83,14 @@ describe("SpeciesView", function() {
       it("appends a species-image div to the page", function() {
         expect($('#content .species-image')).toBeInDOM();
       });
+
+      it("displays the species image on the page", function() {
+        expect($('.species-image')).toContainHtml('<img src="test.jpg"/>');
+      });
+
+      it("displays the image caption on the page", function() {
+        expect($('.species-image')).toContainText("Caspian Tern. 2015.");
+      });
     });
 
     describe("species with a maori name", function() {
