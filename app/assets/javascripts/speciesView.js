@@ -18,6 +18,7 @@ SpeciesView.prototype.displaySpeciesList = function(list) {
 };
 
 SpeciesView.prototype.displaySpeciesDetails = function(details) {
+  console.log(details.species);
   $('#content').html("");
   var speciesHtml = '<div class="speciesDetails">' +
                       '<h2>' + details.species.name;
@@ -27,23 +28,33 @@ SpeciesView.prototype.displaySpeciesDetails = function(details) {
   }
 
   speciesHtml +=  '</h2>' +
-                  '<p>Scientific name: ' + details.species.scientific_name + '</p>' +
-                  '<p>' + details.species.description + '</p>' +
-                  '<div class="identification">' +
-                    '<h3>Identification</h3>' +
-                    '<p>Male: ' + details.species.id_male + '</p>' +
-                    '<p>Female: ' + details.species.id_female + '</p>' +
-                    '<p>Juvenile: ' + details.species.id_juvenile + '</p>' +
-                  '</div>' +
-                  '<div class="locationList">' +
-                    '<h3>Locations</h3>' +
-                    '<ul>';
+                  '<div class="species-info clearfix">' +
+                    '<div class="info-panel">' +
+                      '<p>Scientific name: ' + details.species.scientific_name + '</p>' +
+                      '<p>' + details.species.description + '</p>' +
+                      '<div class="identification">' +
+                        '<h3>Identification</h3>' +
+                        '<p>Male: ' + details.species.id_male + '</p>' +
+                        '<p>Female: ' + details.species.id_female + '</p>' +
+                        '<p>Juvenile: ' + details.species.id_juvenile + '</p>' +
+                      '</div>' +
+                      '<div class="locationList">' +
+                        '<h3>Locations</h3>' +
+                        '<ul>';
 
   details.locations.forEach(function(location) {
     speciesHtml += '<li id="' + location.id + '"><a href="/locations/' + location.id + '">' + location.name + '</a></li>';
   });
 
   speciesHtml +=  '</ul></div></div>';
+
+  if (details.species.image_url != null) {
+    speciesHtml +=  '<div class="species-image">' +
+                      '<img src="' + details.species.image_url + '"/>' +
+                    '</div>';
+  }
+
+  speciesHtml += '</div></div>';
   $('#content').append(speciesHtml);
 };
 

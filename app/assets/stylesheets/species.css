@@ -1,0 +1,13 @@
+.info-panel {
+  float: left;
+  width: 50%;
+}
+
+.species-image {
+  float: right;
+  width: 45%;
+}
+
+.species-image img {
+  max-width: 100%;
+}
