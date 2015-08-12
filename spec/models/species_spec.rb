@@ -15,6 +15,22 @@ RSpec.describe Species, type: :model do
     it "has a description" do
       expect(species).to validate_presence_of(:description)
     end
+
+    it "has an id_male field" do
+      expect(species).to validate_presence_of(:id_male)
+    end
+
+    it "has an id_female field" do
+      expect(species).to validate_presence_of(:id_female)
+    end
+
+    it "has an id_juvenile field" do
+      expect(species).to validate_presence_of(:id_juvenile)
+    end
+
+    it "has an image caption if the image url is populated" do
+      expect(species).to validate_presence_of(:image_caption)
+    end
   end
 
   describe "relationships" do
