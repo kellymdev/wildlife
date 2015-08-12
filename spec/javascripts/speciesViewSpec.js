@@ -36,7 +36,7 @@ describe("SpeciesView", function() {
   describe("displaySpeciesDetails", function() {
     describe("species without a maori name", function() {
       beforeEach(function() {
-        var speciesDetails = {"species":{"id":8,"name":"Caspian Tern","scientific_name":"Hydroprogne caspia","maori_name":null,"description":"Large gull-like bird, found in coastal waters, lakes and rivers.","id_male":"Silver-grey back with white chest. Large red bill. Black head cap when breeding. Black and white flecked head cap when not breeding. Black legs.","id_female":"Similar to the male.","id_juvenile":"Browner cap. Brown mottling on the back. Orange bill. Dull orange or black legs and feet."},"locations":[{"id":9,"name":"Pauatahanui Wildlife Reserve"}]};
+        var speciesDetails = {"species":{"id":8,"name":"Caspian Tern","scientific_name":"Hydroprogne caspia","maori_name":null,"description":"Large gull-like bird, found in coastal waters, lakes and rivers.","id_male":"Silver-grey back with white chest. Large red bill. Black head cap when breeding. Black and white flecked head cap when not breeding. Black legs.","id_female":"Similar to the male.","id_juvenile":"Browner cap. Brown mottling on the back. Orange bill. Dull orange or black legs and feet.","image_url":"test.jpg","image_caption":"Caspian Tern. 2015."},"locations":[{"id":9,"name":"Pauatahanui Wildlife Reserve"}]};
         view.displaySpeciesDetails(speciesDetails);
       });
 
@@ -78,6 +78,10 @@ describe("SpeciesView", function() {
 
       it("displays a list of locations for the species", function() {
         expect($('.locationList')).toContainText('Pauatahanui Wildlife Reserve');
+      });
+
+      it("appends a species-image div to the page", function() {
+        expect($('#content .species-image')).toBeInDOM();
       });
     });
 
