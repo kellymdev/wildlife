@@ -199,7 +199,9 @@ Species.create([
                   description: "Native. Large white seabird with a distinctive orange head.",
                   id_male: "White body. Orange/yellow head and neck. Grey bill.",
                   id_female: "The same colouring as the male.",
-                  id_juvenile: "Mottled dark brown and white."
+                  id_juvenile: "Mottled dark brown and white.",
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/Gannet.jpg",
+                  image_caption: "Australasian Gannet in Queen Charlotte Sound. 2014. (c) Kelly Munro."
                 },
                 {
                   name: "Australasian Shoveler",
@@ -321,7 +323,9 @@ Species.create([
                   description: "The most common dolphin species in New Zealand.",
                   id_male: "Grey in colour, with a lighter-grey belly.",
                   id_female: "Smaller than the male, but similar colouring.",
-                  id_juvenile: "Similar colouring to the adults but smaller."
+                  id_juvenile: "Similar colouring to the adults but smaller.",
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/BottlenoseDolphins.jpg",
+                  image_caption: "Bottlenose Dolphin adult and juvenile in Queen Charlotte Sound. 2014. (c) Kelly Munro."
                 },
                 {
                   name: "Common Diving Petrel",
@@ -345,7 +349,9 @@ Species.create([
                   description: "Introduced. White duck found throughout New Zealand. Commonly kept as pets, or at wildlife parks.",
                   id_male: "White body. Orange bill and feet.",
                   id_female: "Similar to the male.",
-                  id_juvenile: "Yellow body. Orange bill and feet."
+                  id_juvenile: "Yellow body. Orange bill and feet.",
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/DomesticDuck.jpg",
+                  image_caption: "Domestic Duck at Staglands Wildlife Reserve. 2014. (c) Kelly Munro."
                 },
                 {
                   name: "Fantail Doves (aka Garden Fantail or English Fantail)",
@@ -353,7 +359,9 @@ Species.create([
                   description: "Introduced. White pigeon with a large fan shaped tail.",
                   id_male: "White body. Fan shaped tail with 30 - 40 feathers.",
                   id_female: "Similar to the male.",
-                  id_juvenile: "Similar to the adults."
+                  id_juvenile: "Similar to the adults.",
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/Doves.jpg",
+                  image_caption: "Fantail Doves at Staglands Wildlife Reserve. 2014. (c) Kelly Munro."
                 },
                 {
                   name: "Fernbird",
@@ -371,7 +379,9 @@ Species.create([
                   description: "Endemic (only found in New Zealand). Has a distinctive fluttering flight pattern.",
                   id_male: "Dark grey-brown head and back. White chest. Long dark bill. Pinkish-brown legs and feet.",
                   id_female: "Similar to the male.",
-                  id_juvenile: "Lighter grey-brown colour. Grey bill."
+                  id_juvenile: "Lighter grey-brown colour. Grey bill.",
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/FlutteringShearwater.jpg",
+                  image_caption: "Fluttering Shearwater in Queen Charlotte Sound. 2014. (c) Kelly Munro."
                 },
                 {
                   name: "Grey Duck",
@@ -406,7 +416,9 @@ Species.create([
                   description: "Introduced. A common garden bird, found throughout New Zealand.",
                   id_male: "Chestnut brown with streaked black on back. Grey crown. Grey-brown rump. Greyish-white chest. Pinkish-brown legs. Black bib and bill in breeding season.",
                   id_female: "Buff brown back with darker streaks. Greyish-white chest. Pale pinkish-brown bill and legs.",
-                  id_juvenile: "Similar to the female."
+                  id_juvenile: "Similar to the female.",
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/HouseSparrow.jpg",
+                  image_caption: "House Sparrow in Wellington. 2015. (c) Kelly Munro."
                 },
                 {
                   name: "Kea",
@@ -422,7 +434,9 @@ Species.create([
                   description: "Endemic to New Zealand. Only found in the outer Marlborough Sounds.",
                   id_male: "Black and white. Pink feet. White patches on wings. Yellow caruncles above the base of the bill during breeding season. Blue eye-ring.",
                   id_female: "Similar to the male.",
-                  id_juvenile: "Dull brown back rather than black."
+                  id_juvenile: "Dull brown back rather than black.",
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/KingShags.jpg",
+                  image_caption: "King Shag Colony on White Rock, Cook Strait. 2014. (c) Kelly Munro."
                 },
                 {
                   name: "Little Black Shag",
@@ -559,7 +573,9 @@ Species.create([
                   description: "Endemic (only found in New Zealand). Small native duck.",
                   id_male: "Dark black-brown body with iridescent blue-green sheen on the head and wings. Yellow eyes. Blue-grey bill.",
                   id_female: "Brownish body. Brown eyes. Grey bill. Ring of white feathers at the base of the bill.",
-                  id_juvenile: "Similar to the female until 12 weeks old, when the male eye colour changes to yellow."
+                  id_juvenile: "Similar to the female until 12 weeks old, when the male eye colour changes to yellow.",
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/Scaup.jpg",
+                  image_caption: "New Zealand Scaup at Zealandia. 2014. (c) Kelly Munro."
                 },
                 {
                   name: "New Zealand Wood Pigeon",
@@ -678,7 +694,9 @@ Species.create([
                   description: "Endemic (only found in New Zealand). Bright green parakeet with a red crown, easily camouflaged in the bush.",
                   id_male: "Bright emerald-green body. Crimson forehead and crown. Crimson patch behind the eyes, and on flank. Cyan-blue on the leading edge of the wing feathers. Long tail.",
                   id_female: "Similar to the male, but smaller in size.",
-                  id_juvenile: "Similar in colour to the adults, but the red is duller."
+                  id_juvenile: "Similar in colour to the adults, but the red is duller.",
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/Kakariki-Red.jpg",
+                  image_caption: "Red-crowned Parakeet (Kakariki) at Zealandia. 2015. (c) Kelly Munro."
                 },
                 {
                   name: "Red Knot",
@@ -704,7 +722,9 @@ Species.create([
                   description: "Introduced. Common in parks in the large cities in New Zealand.",
                   id_male: "Blue-grey body. Glossy green-purple neck, mantle and chest. Black wing bars. White rump. Grey bill. Pink feet. Red eyes.",
                   id_female: "Similar to the male.",
-                  id_juvenile: "Smaller and slimmer than adults. Duller body without gloss. Grey or pink-grey bill and feet. Brownish eyes."
+                  id_juvenile: "Smaller and slimmer than adults. Duller body without gloss. Grey or pink-grey bill and feet. Brownish eyes.",
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/Pigeon.jpg",
+                  image_caption: "Rock Pigeon in Auckland Domain. 2014. (c) Kelly Munro."
                 },
                 {
                   name: "Royal Spoonbill",
@@ -758,7 +778,9 @@ Species.create([
                   description: "Endemic (only found in New Zealand). Similar to the North Island Robin, but found in the South Island. Often seen on the ground searching for insects in the leaf litter.",
                   id_male: "Dark grey upper body and chest. Yellow-white lower chest and belly. White spot above bill.",
                   id_female: "Similar colouring to the male, but more grey on the chest.",
-                  id_juvenile: "Similar to the female, but little to no white patch on the belly."
+                  id_juvenile: "Similar to the female, but little to no white patch on the belly.",
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/SouthIslandRobin.jpg",
+                  image_caption: "South Island Robin on Motuara Island. 2014. (c) Kelly Munro."
                 },
                 {
                   name: "South Island Saddleback",
@@ -776,7 +798,9 @@ Species.create([
                   description: "Endemic (only found in New Zealand). A yellow footed shag.",
                   id_male: "Grey-blue body. Pale grey-blue underparts. Small black spots on back and wings. Black rump, tail and thighs. White stripe from above the eye down the sides of the neck. Black double crest on the head during the breeding season. Slender orange-brown bill. Yellow-orange feet. Facial skin between the eye and bill is green-blue during the breeding season. Blue eye-ring. Dark brown eyes.",
                   id_female: "Similar to the male.",
-                  id_juvenile: "Paler and browner than the adults. No distinct markings on the head or neck."
+                  id_juvenile: "Paler and browner than the adults. No distinct markings on the head or neck.",
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/SpottedShag.jpg",
+                  image_caption: "Spotted Shag in Queen Charlotte Sound. 2014. (c) Kelly Munro."
                 },
                 {
                   name: "Spur-winged Plover",
