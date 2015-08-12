@@ -179,7 +179,9 @@ Species.create([
                   description: "Native. A rare goat breed, originating from Arapawa Island in the Marlborough Sounds.",
                   id_male: "Flat, wide sweeping horns. Black striped facial markings. A variety of colours (white, tan, brown and black are common).",
                   id_female: "Shorter horns that curve backwards over the head. Similar coat markings to the male.",
-                  id_juvenile: "Similar colouring to the adults, but with horn buds rather than full horns."
+                  id_juvenile: "Similar colouring to the adults, but with horn buds rather than full horns.",
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/GoatKid.jpg",
+                  image_caption: "Arapawa Island Goat Kid at Staglands Wildlife Reserve. 2014. (c) Kelly Munro."
                 },
                 {
                   name: "Australasian Bittern",
@@ -472,7 +474,9 @@ Species.create([
                   description: "Introduced. Common species of duck, widespread throughout New Zealand.",
                   id_male: "Glossy green head. Chestnut coloured chest. Grey body. Metallic blue secondary flight feathers bordered by thin black and white bands. Black rump and undertail. Yellow-green bill. Orange legs and feet.",
                   id_female: "Brown body. Feathers have a paler-brown edge. Dark eye-stripe. Brownish-grey bill. Orange legs and feet. Similar wing colouring to the male.",
-                  id_juvenile: "Ducklings are yellow and brown. Juveniles are similar to the female."
+                  id_juvenile: "Ducklings are yellow and brown. Juveniles are similar to the female.",
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/MallardDucklings.jpg",
+                  image_caption: "Mallard Ducklings at Zealandia. 2014. (c) Kelly Munro."
                 },
                 {
                   name: "Mandarin Duck",
@@ -480,7 +484,9 @@ Species.create([
                   description: "Introduced. Brightly coloured exotic duck.",
                   id_male: "Reddish face. Red bill. White crescent above the eye. Purple chest with two white bars. Reddish flanks with two large orange 'sails'.",
                   id_female: "Brown in colour. White eye-ring and eye-stripe. Brown bill.",
-                  id_juvenile: "Black and yellow, similar in appearance to Mallard Ducklings."
+                  id_juvenile: "Black and yellow, similar in appearance to Mallard Ducklings.",
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/MandarinDuck.jpg",
+                  image_caption: "Mandarin Duck at Staglands Wildlife Reserve. 2014. (c) Kelly Munro."
                 },
                 {
                   name: "Morepork",
@@ -534,7 +540,9 @@ Species.create([
                   description: "Native. Large furry mammal found around the New Zealand coastline.",
                   id_male: "Dark grey-brown fur. Almost black when wet.",
                   id_female: "The same colouring as the male, but smaller body size (1/3 to 1/2 the size).",
-                  id_juvenile: "Similar colouring to the adults."
+                  id_juvenile: "Similar colouring to the adults.",
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/Seal.jpg",
+                  image_caption: "New Zealand Fur Seal in Queen Charlotte Sound. 2014. (c) Kelly Munro."
                 },
                 {
                   name: "New Zealand Kaka",
@@ -577,7 +585,9 @@ Species.create([
                   description: "Endemic (only found in New Zealand). Often seen on the ground searching for insects in the leaf litter.",
                   id_male: "Dark grey to almost black. White spot above bill. Pale grey lower chest. Long thin legs.",
                   id_female: "Similar to the male, but lighter grey.",
-                  id_juvenile: "Similar to the female."
+                  id_juvenile: "Similar to the female.",
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/BWRobin.jpg",
+                  image_caption: "North Island Robin at Zealandia. 2015. (c) Kelly Munro."
                 },
                 {
                   name: "North Island Saddleback",
@@ -611,7 +621,9 @@ Species.create([
                   description: "Endemic (only found in New Zealand). Large duck, almost always seen in pairs.",
                   id_male: "Black head with a greenish gloss. Dark grey or black body. Chestnut undertail. Black primary wing feathers, green secondary wing feathers and white upper wing surface. Dark grey-black bill, legs and feet.",
                   id_female: "White head. Dark or light chestnut body. Chestnut undertail. Similar wing colouring to the male. Dark grey-black bill, legs and feet.",
-                  id_juvenile: "Ducklings are brown and white. Near-fledged ducklings resemble the male. Fledgling females may have variable amounts of black on the head."
+                  id_juvenile: "Ducklings are brown and white. Near-fledged ducklings resemble the male. Fledgling females may have variable amounts of black on the head.",
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/ParadiseShelduck.jpg",
+                  image_caption: "Paradise Shelduck Female at Nga Manu Nature Reserve. 2015. (c) Kelly Munro."
                 },
                 {
                   name: "Pied Oystercatcher",
@@ -638,7 +650,9 @@ Species.create([
                   description: "Native. Black and white wading bird.",
                   id_male: "Black on the back of the head and neck. Black wings and back. Mainly white body. Long pink legs. Long fine black bill.",
                   id_female: "Similar to the male.",
-                  id_juvenile: "Mottled fawn or brown head, wings and back. White or off-white underparts."
+                  id_juvenile: "Mottled fawn or brown head, wings and back. White or off-white underparts.",
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/PiedStiltChick.jpg",
+                  image_caption: "Pied Stilt Chick at Pauatahanui Wildlife Reserve. 2015. (c) Kelly Munro."
                 },
                 {
                   name: "Pukeko",
@@ -787,7 +801,9 @@ Species.create([
                   description: "Endemic (only found in New Zealand). Large blue flightless bird.",
                   id_male: "Dark blue head, neck and chest. Olive-green back and wings. White undertail. Scarlet bill with a red frontal shield. Red legs and feet.",
                   id_female: "Similar to the male.",
-                  id_juvenile: "Duller in colour. Blackish-brown bill. Dull pink-brown legs."
+                  id_juvenile: "Duller in colour. Blackish-brown bill. Dull pink-brown legs.",
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/Takahe.jpg",
+                  image_caption: "Takahe adult feeding chick on Tiritirimatangi Island. 2015. (c) Kelly Munro."
                 },
                 {
                   name: "Tuatara",
@@ -803,7 +819,9 @@ Species.create([
                   description: "Endemic (only found in New Zealand). Nectar-feeding bird that loves rata and flax flowers.",
                   id_male: "Black body with an iridescent green, purple and bronze sheen. White throat tufts. Fine white feathers across the neck. White wingbar. Black legs. Curved black bill. Dark brown eyes.",
                   id_female: "Similar to the male, but smaller in size.",
-                  id_juvenile: "Dull slate black. Glossy wings and tail. Greyish-white throat without white tufts."
+                  id_juvenile: "Dull slate black. Glossy wings and tail. Greyish-white throat without white tufts.",
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/Tui.jpg",
+                  image_caption: "Tui feeding on flax flowers at Nga Manu Nature Reserve. 2015. (c) Kelly Munro."
                 },
                 {
                   name: "Variable Oystercatcher",
