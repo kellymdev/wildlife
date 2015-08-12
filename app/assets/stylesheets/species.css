@@ -11,3 +11,8 @@
 .species-image img {
   max-width: 100%;
 }
+
+.caption {
+  margin-top: 5px;
+  font-size: 0.9em;
+}

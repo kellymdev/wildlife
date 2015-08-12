@@ -51,6 +51,7 @@ SpeciesView.prototype.displaySpeciesDetails = function(details) {
   if (details.species.image_url != null) {
     speciesHtml +=  '<div class="species-image">' +
                       '<img src="' + details.species.image_url + '"/>' +
+                      '<p class="caption">' + details.species.image_caption + '</p>' +
                     '</div>';
   }
 
