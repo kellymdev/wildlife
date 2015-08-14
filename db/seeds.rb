@@ -200,7 +200,7 @@ Species.create([
                   id_male: "White body. Orange/yellow head and neck. Grey bill.",
                   id_female: "The same colouring as the male.",
                   id_juvenile: "Mottled dark brown and white.",
-                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/Gannet.jpg",
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/AustralasianGannet.jpg",
                   image_caption: "Australasian Gannet in Queen Charlotte Sound. 2014. (c) Kelly Munro."
                 },
                 {
@@ -281,7 +281,9 @@ Species.create([
                   description: "Introduced. Small stocky grey-brown birds.",
                   id_male: "Grey and brown. Forward curving black top-knot on the top of the head. Black throat, with a white edge. White 'eyebrows' on the forehead.",
                   id_female: "Slightly smaller, duller and browner than the male, with a much smaller top-knot.",
-                  id_juvenile: "Similar to the female, but lighter brown."
+                  id_juvenile: "Similar to the female, but lighter brown.",
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/Quail.jpg",
+                  image_caption: "California Quail at Zealandia. 2015. (c) Kelly Munro."
                 },
                 {
                   name: "Canada Goose",
@@ -536,7 +538,9 @@ Species.create([
                   description: "Endemic (only found in New Zealand). A magpie-sized raptor that feeds on live prey.",
                   id_male: "Dark brown back. Streaked cream chest. Dark eye. Dark vertical stripe on the face. Yellow cere and eye-ring. Long yellow legs.",
                   id_female: "Larger than the male, but similar colouring.",
-                  id_juvenile: "Dark brown, without any streaking on the chest. Blue-grey legs, eye-ring and cere."
+                  id_juvenile: "Dark brown, without any streaking on the chest. Blue-grey legs, eye-ring and cere.",
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/Falcon.jpg",
+                  image_caption: "New Zealand Falcon at Wingspan National Bird of Prey Centre, Rotorua. 2015. (c) Kelly Munro."
                 },
                 {
                   name: "New Zealand Fantail",
