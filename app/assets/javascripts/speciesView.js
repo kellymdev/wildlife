@@ -46,7 +46,20 @@ SpeciesView.prototype.displaySpeciesDetails = function(details) {
     speciesHtml += '<li id="' + location.id + '"><a href="/locations/' + location.id + '">' + location.name + '</a></li>';
   });
 
-  speciesHtml +=  '</ul></div></div>';
+  speciesHtml +=  '</ul></div>' +
+                  '<div class="comparisonForm">' +
+                    '<h3>Species Comparison</h3>' +
+                    '<form id="speciesComparisonForm" action="/species/compare/' + details.species.id + '" method="get">' +
+                    '<label for="query">Species to Compare with</label>' +
+                    '<select id="query">';
+
+  details.otherSpecies.forEach(function(animal) {
+    speciesHtml += '<option value="' + animal[0] + '">' + animal[1] + '</option>';
+  });
+
+  speciesHtml += '</select>' +
+                  '<button type="submit">Compare</button>' +
+                  '</form></div></div>';
 
   if (details.species.image_url != null) {
     speciesHtml +=  '<div class="species-image">' +

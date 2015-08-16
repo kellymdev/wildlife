@@ -2,7 +2,8 @@ form {
   max-width: 500px;
 }
 
-input[type="text"] {
+input[type="text"],
+select {
   margin-top: 5px;
   width: 100%;
   font-family: 'Maven Pro', sans-serif;

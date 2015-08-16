@@ -36,7 +36,7 @@ describe("SpeciesView", function() {
   describe("displaySpeciesDetails", function() {
     describe("species without a maori name", function() {
       beforeEach(function() {
-        var speciesDetails = {"species":{"id":8,"name":"Caspian Tern","scientific_name":"Hydroprogne caspia","maori_name":null,"description":"Large gull-like bird, found in coastal waters, lakes and rivers.","id_male":"Silver-grey back with white chest. Large red bill. Black head cap when breeding. Black and white flecked head cap when not breeding. Black legs.","id_female":"Similar to the male.","id_juvenile":"Browner cap. Brown mottling on the back. Orange bill. Dull orange or black legs and feet.","image_url":"test.jpg","image_caption":"Caspian Tern. 2015."},"locations":[{"id":9,"name":"Pauatahanui Wildlife Reserve"}]};
+        var speciesDetails = {"species":{"id":8,"name":"Caspian Tern","scientific_name":"Hydroprogne caspia","maori_name":null,"description":"Large gull-like bird, found in coastal waters, lakes and rivers.","id_male":"Silver-grey back with white chest. Large red bill. Black head cap when breeding. Black and white flecked head cap when not breeding. Black legs.","id_female":"Similar to the male.","id_juvenile":"Browner cap. Brown mottling on the back. Orange bill. Dull orange or black legs and feet.","image_url":"test.jpg","image_caption":"Caspian Tern. 2015."},"locations":[{"id":9,"name":"Pauatahanui Wildlife Reserve"}],"otherSpecies":[]};
         view.displaySpeciesDetails(speciesDetails);
       });
 
@@ -91,11 +91,19 @@ describe("SpeciesView", function() {
       it("displays the image caption on the page", function() {
         expect($('.species-image')).toContainText("Caspian Tern. 2015.");
       });
+
+      it("appends a comparisonForm div to the page", function() {
+        expect($('#content .comparisonForm')).toBeInDOM();
+      });
+
+      it("displays a species comparison form on the page", function() {
+        expect($('.comparisonForm')).toContainText("Species to Compare with");
+      });
     });
 
     describe("species with a maori name", function() {
       beforeEach(function() {
-        var speciesDetails = {"species":{"id":28,"name":"New Zealand Wood Pigeon","scientific_name":"Hemiphaga novaeseelandiae","maori_name":"Kereru","description":"Large native pigeon, endemic to New Zealand"},"locations":[{"id":3,"name":"Kapiti Island Nature Reserve"},{"id":8,"name":"Otari-Wiltons Bush"},{"id":16,"name":"Zealandia Ecosanctuary"}]};
+        var speciesDetails = {"species":{"id":28,"name":"New Zealand Wood Pigeon","scientific_name":"Hemiphaga novaeseelandiae","maori_name":"Kereru","description":"Large native pigeon, endemic to New Zealand"},"locations":[{"id":3,"name":"Kapiti Island Nature Reserve"},{"id":8,"name":"Otari-Wiltons Bush"},{"id":16,"name":"Zealandia Ecosanctuary"}],"otherSpecies":[]};
         view.displaySpeciesDetails(speciesDetails);
       });
 
