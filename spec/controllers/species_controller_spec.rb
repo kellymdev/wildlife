@@ -30,10 +30,23 @@ RSpec.describe SpeciesController, type: :controller do
 
     it "returns species details and a list of locations for the requested species as json" do
       expected_data = {
-                        "species" => @species,
-                        "locations" => @species.locations.all
+                        species: @species,
+                        locations: @species.locations.all,
+                        otherSpecies: []
                       }
       expect(response.body).to eq(expected_data.to_json)
+    end
+
+    it "returns a list of otherSpecies, excluding the requested species as json" do
+      @species2 = create(:species, name: "Tui")
+      expected_data = {
+                        species: @species,
+                        locations: @species.locations.all,
+                        otherSpecies: {
+                                        id: @species2.id,
+                                        name: @species2.name
+                                      }
+                      }
     end
   end
 
