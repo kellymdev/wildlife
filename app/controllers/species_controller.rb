@@ -8,9 +8,11 @@ class SpeciesController < ApplicationController
   def show
     animal = Species.find_by(id: params[:id])
     locations = animal.locations.all
+    other_species = Species.where.not(id: params[:id]).pluck(:id, :name)
     render json:  {
                     species: animal,
-                    locations: locations
+                    locations: locations,
+                    otherSpecies: other_species
                   }
   end
 
