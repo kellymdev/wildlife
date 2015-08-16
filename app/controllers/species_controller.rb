@@ -29,4 +29,14 @@ class SpeciesController < ApplicationController
                   }
   end
 
+  def compare
+    species_one = Species.find_by(id: params[:id])
+    species_two = Species.find_by(id: params[:query])
+
+    render json:  {
+                    species_one: species_one,
+                    species_two: species_two
+                  }
+  end
+
 end
