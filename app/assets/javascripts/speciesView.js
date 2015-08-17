@@ -18,7 +18,6 @@ SpeciesView.prototype.displaySpeciesList = function(list) {
 };
 
 SpeciesView.prototype.displaySpeciesDetails = function(details) {
-  console.log(details.species);
   $('#content').html("");
   var speciesHtml = '<div class="speciesDetails">' +
                       '<h2>' + details.species.name;
@@ -124,6 +123,66 @@ SpeciesView.prototype.displaySpeciesSearchResults = function(searchResults) {
   }
 
   $('#content').append(resultHtml);
+};
+
+SpeciesView.prototype.displaySpeciesComparison = function(speciesData) {
+  $('#content').html("");
+
+  console.log(speciesData);
+
+  comparisonHtml = '<div class="comparisonResults">' +
+                      '<h2>Species Comparison</h2>' +
+                      '<table class="comparisonTable">' +
+                        '<tr>' +
+                          '<th></th>' +
+                          '<th>' + speciesData.species_one.name + '</th>' +
+                          '<th>' + speciesData.species_two.name + '</th>' +
+                        '</tr>' +
+                        '<tr>' +
+                          '<td>Maori Name</td>';
+
+  if (speciesData.species_one.maori_name !== null) {
+    comparisonHtml += '<td>' + speciesData.species_one.maori_name + '</td>';
+  } else {
+    comparisonHtml += '<td></td>';
+  }
+
+  if (speciesData.species_two.maori_name !== null) {
+    comparisonHtml += '<td>' + speciesData.species_two.maori_name + '</td>';
+  } else {
+    comparisonHtml += '<td></td>';
+  }
+
+  comparisonHtml += '</tr>' +
+                    '<tr>' +
+                      '<td>Scientific Name</td>' +
+                      '<td>' + speciesData.species_one.scientific_name + '</td>' +
+                      '<td>' + speciesData.species_two.scientific_name + '</td>' +
+                    '</tr>' +
+                    '<tr>' +
+                      '<td>Description</td>' +
+                      '<td>' + speciesData.species_one.description + '</td>' +
+                      '<td>' + speciesData.species_two.description + '</td>' +
+                    '</tr>' +
+                    '<tr>' +
+                      '<td>Identification - Male</td>' +
+                      '<td>' + speciesData.species_one.id_male + '</td>' +
+                      '<td>' + speciesData.species_two.id_male + '</td>' +
+                    '</tr>' +
+                    '<tr>' +
+                      '<td>Identification - Female</td>' +
+                      '<td>' + speciesData.species_one.id_female + '</td>' +
+                      '<td>' + speciesData.species_two.id_female + '</td>' +
+                    '</tr>' +
+                    '<tr>' +
+                      '<td>Identification - Juvenile</td>' +
+                      '<td>' + speciesData.species_one.id_juvenile + '</td>' +
+                      '<td>' + speciesData.species_two.id_juvenile + '</td>' +
+                    '</tr>' +
+                  '</table>' +
+                '</div>';
+
+  $('#content').append(comparisonHtml);
 };
 
 SpeciesView.prototype.displayErrorMessage = function() {
