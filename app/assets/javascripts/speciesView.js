@@ -2,7 +2,7 @@ function SpeciesView() {
 }
 
 SpeciesView.prototype.displaySpeciesList = function(list) {
-  $('#content').html("");
+  ViewHelper.prototype.clearPageContent();
   var speciesListHtml = '<div class="speciesList">' +
                           '<h2>Species</h2>';
   list.forEach(function(listItem) {
@@ -18,7 +18,7 @@ SpeciesView.prototype.displaySpeciesList = function(list) {
 };
 
 SpeciesView.prototype.displaySpeciesDetails = function(details) {
-  $('#content').html("");
+  ViewHelper.prototype.clearPageContent();
   var speciesHtml = '<div class="speciesDetails">' +
                       '<h2>' + details.species.name;
 
@@ -69,10 +69,11 @@ SpeciesView.prototype.displaySpeciesDetails = function(details) {
 
   speciesHtml += '</div></div>';
   $('#content').append(speciesHtml);
+  ViewHelper.prototype.scrollPage();
 };
 
 SpeciesView.prototype.displaySpeciesSearchForm = function() {
-  $('#content').html("");
+  ViewHelper.prototype.clearPageContent();
   var searchHtml = '<div class="speciesSearch">' +
                       '<h2>Species Search</h2>' +
                       '<form id="speciesSearchForm" action="/species/search/" method="get">' +
@@ -85,7 +86,7 @@ SpeciesView.prototype.displaySpeciesSearchForm = function() {
 };
 
 SpeciesView.prototype.displaySpeciesSearchResults = function(searchResults) {
-  $('#content').html("");
+  ViewHelper.prototype.clearPageContent();
   var resultHtml = '<div class="speciesResults">' +
                       '<h2>Species Search Results</h2>';
 
@@ -123,12 +124,11 @@ SpeciesView.prototype.displaySpeciesSearchResults = function(searchResults) {
   }
 
   $('#content').append(resultHtml);
+  ViewHelper.prototype.scrollPage();
 };
 
 SpeciesView.prototype.displaySpeciesComparison = function(speciesData) {
-  $('#content').html("");
-
-  console.log(speciesData);
+  ViewHelper.prototype.clearPageContent();
 
   comparisonHtml = '<div class="comparisonResults">' +
                       '<h2>Species Comparison</h2>' +
@@ -183,9 +183,11 @@ SpeciesView.prototype.displaySpeciesComparison = function(speciesData) {
                 '</div>';
 
   $('#content').append(comparisonHtml);
+  ViewHelper.prototype.scrollPage();
 };
 
 SpeciesView.prototype.displayErrorMessage = function() {
   var errorHtml = '<p class="error">Sorry, we couldn\'t find that species. Please try again.</p>';
   $('#content').append(errorHtml);
+  ViewHelper.prototype.scrollPage();
 };
