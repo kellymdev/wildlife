@@ -97,7 +97,7 @@ describe("SpeciesView", function() {
       });
 
       it("displays a species comparison form on the page", function() {
-        expect($('.comparisonForm')).toContainText("Species to Compare with");
+        expect($('.comparisonForm')).toContainText("Compare with");
       });
     });
 

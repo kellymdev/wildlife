@@ -69,6 +69,12 @@ $(document).ready(function() {
     speciesController.speciesComparisonRequest(comparisonUrl, request);
   });
 
+  $('#content').on('click', '.comparisonTable a', function(e) {
+    e.preventDefault();
+    var speciesUrl = $(this).attr('href');
+    speciesController.speciesDetailsRequest(speciesUrl);
+  });
+
   $('#content').on('click', '.locationNameResults a', function(e) {
     e.preventDefault();
     var locationUrl = $(this).attr('href');
