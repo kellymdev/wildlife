@@ -35,3 +35,15 @@ SpeciesModel.prototype.requestSpeciesSearch = function(searchQuery, successFunct
     errorFunction();
   });
 };
+
+SpeciesModel.prototype.requestSpeciesComparison = function(comparisonUrl, comparisonQuery, successFunction, errorFunction) {
+  $.ajax({
+    type: 'get',
+    url: comparisonUrl,
+    data: { "query": comparisonQuery }
+  }).done(function(jsonResponse) {
+    successFunction(jsonResponse);
+  }).fail(function() {
+    errorFunction();
+  });
+}

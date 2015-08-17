@@ -18,3 +18,7 @@ SpeciesController.prototype.speciesSearchFormRequest = function() {
 SpeciesController.prototype.speciesSearchRequest = function(searchQuery) {
   this.speciesModel.requestSpeciesSearch(searchQuery, this.speciesView.displaySpeciesSearchResults, this.speciesView.displayErrorMessage);
 };
+
+SpeciesController.prototype.speciesComparisonRequest = function(comparisonUrl, request) {
+  this.speciesModel.requestSpeciesComparison(comparisonUrl, request, this.speciesView.displaySpeciesComparison, this.speciesView.displayErrorMessage);
+};

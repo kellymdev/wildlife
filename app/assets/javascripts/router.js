@@ -60,6 +60,15 @@ $(document).ready(function() {
     speciesController.speciesSearchRequest(request);
   });
 
+  $('#content').on('submit', '#speciesComparisonForm', function(e) {
+    e.preventDefault();
+    var comparisonUrl = $(this).attr('action');
+    var request = $('#query').val();
+    console.log(request);
+    console.log(comparisonUrl);
+    speciesController.speciesComparisonRequest(comparisonUrl, request);
+  });
+
   $('#content').on('click', '.locationNameResults a', function(e) {
     e.preventDefault();
     var locationUrl = $(this).attr('href');

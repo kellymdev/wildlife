@@ -205,6 +205,51 @@ describe("SpeciesView", function() {
     });
   });
 
+  describe("displaySpeciesComparison", function() {
+    beforeEach(function() {
+      var comparisonData = {"species_one":{"id":1,"name":"Arapawa Island Goat","scientific_name":"Capra aegagrus hircus","maori_name":null,"description":"Native. A rare goat breed, originating from Arapawa Island in the Marlborough Sounds.","created_at":"2015-08-14T02:52:26.806Z","updated_at":"2015-08-14T02:52:26.806Z","id_male":"Flat, wide sweeping horns. Black striped facial markings. A variety of colours (white, tan, brown and black are common).","id_female":"Shorter horns that curve backwards over the head. Similar coat markings to the male.","id_juvenile":"Similar colouring to the adults, but with horn buds rather than full horns.","image_url":"https://s3-ap-southeast-2.amazonaws.com/wildlifesite/GoatKid.jpg","image_caption":"Arapawa Island Goat Kid at Staglands Wildlife Reserve. 2014. (c) Kelly Munro."},"species_two":{"id":2,"name":"Australasian Bittern","scientific_name":"Botaurus poiciloptilus","maori_name":"Matuku hurepo","description":"Native. Large stocky bird with dark-brown and beige plumage.","created_at":"2015-08-14T02:52:26.810Z","updated_at":"2015-08-14T02:52:26.810Z","id_male":"Mottled brown and beige body.","id_female":"Similar colouring to the male. The female is less vocal than the male.","id_juvenile":"Lighter brown which darkens with age.","image_url":null,"image_caption":null}};
+      view.displaySpeciesComparison(comparisonData);
+    });
+
+    it("appends a comparisonResults div to the page", function() {
+      expect($('#content .comparisonResults')).toBeInDOM();
+    });
+
+    it("displays the common name for both species", function() {
+      expect('.comparisonResults').toContainText('Arapawa Island Goat');
+      expect('.comparisonResults').toContainText('Australasian Bittern');
+    });
+
+    it("displays the maori name if the species has one", function() {
+      expect('.comparisonResults').toContainText('Matuku hurepo');
+    });
+
+    it("displays the scientific name for both species", function() {
+      expect('.comparisonResults').toContainText('Capra aegagrus hircus');
+      expect('.comparisonResults').toContainText('Botaurus poiciloptilus');
+    });
+
+    it("displays the description for both species", function() {
+      expect('.comparisonResults').toContainText('Native. A rare goat breed, originating from Arapawa Island in the Marlborough Sounds.');
+      expect('.comparisonResults').toContainText('Native. Large stocky bird with dark-brown and beige plumage.');
+    });
+
+    it("displays the identification characteristics for males of both species", function() {
+      expect('.comparisonResults').toContainText('Flat, wide sweeping horns. Black striped facial markings. A variety of colours (white, tan, brown and black are common).');
+      expect('.comparisonResults').toContainText('Mottled brown and beige body.');
+    });
+
+    it("displays the identification characteristics for females of both species", function() {
+      expect('.comparisonResults').toContainText('Shorter horns that curve backwards over the head. Similar coat markings to the male.');
+      expect('.comparisonResults').toContainText('Similar colouring to the male. The female is less vocal than the male.');
+    });
+
+    it("displays the identification characteristics for juveniles of both species", function() {
+      expect('.comparisonResults').toContainText('Similar colouring to the adults, but with horn buds rather than full horns.');
+      expect('.comparisonResults').toContainText('Lighter brown which darkens with age.');
+    });
+  });
+
   describe("displayErrorMessage", function() {
     beforeEach(function() {
       view.displayErrorMessage();
