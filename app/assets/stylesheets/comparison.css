@@ -1,0 +1,20 @@
+.comparisonTable {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.comparisonTable th {
+  text-align: left;
+  background-color: #C9E8DA;
+}
+
+.comparisonTable table,
+.comparisonTable th,
+.comparisonTable td {
+  padding: 10px;
+  border: 1px solid #4e8077;
+}
+
+.comparisonTable .field-label {
+  color: #69978D;
+}

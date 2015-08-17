@@ -49,7 +49,7 @@ SpeciesView.prototype.displaySpeciesDetails = function(details) {
                   '<div class="comparisonForm">' +
                     '<h3>Species Comparison</h3>' +
                     '<form id="speciesComparisonForm" action="/species/compare/' + details.species.id + '" method="get">' +
-                    '<label for="query">Species to Compare with</label>' +
+                    '<label for="query">Compare with</label>' +
                     '<select id="query">';
 
   details.otherSpecies.forEach(function(animal) {
@@ -135,11 +135,11 @@ SpeciesView.prototype.displaySpeciesComparison = function(speciesData) {
                       '<table class="comparisonTable">' +
                         '<tr>' +
                           '<th></th>' +
-                          '<th>' + speciesData.species_one.name + '</th>' +
-                          '<th>' + speciesData.species_two.name + '</th>' +
+                          '<th><a href="/species/' + speciesData.species_one.id + '">' + speciesData.species_one.name + '</a></th>' +
+                          '<th><a href="/species/' + speciesData.species_two.id + '">' + speciesData.species_two.name + '</a></th>' +
                         '</tr>' +
                         '<tr>' +
-                          '<td>Maori Name</td>';
+                          '<td class="field-label">Maori Name</td>';
 
   if (speciesData.species_one.maori_name !== null) {
     comparisonHtml += '<td>' + speciesData.species_one.maori_name + '</td>';
@@ -155,27 +155,27 @@ SpeciesView.prototype.displaySpeciesComparison = function(speciesData) {
 
   comparisonHtml += '</tr>' +
                     '<tr>' +
-                      '<td>Scientific Name</td>' +
+                      '<td class="field-label">Scientific Name</td>' +
                       '<td>' + speciesData.species_one.scientific_name + '</td>' +
                       '<td>' + speciesData.species_two.scientific_name + '</td>' +
                     '</tr>' +
                     '<tr>' +
-                      '<td>Description</td>' +
+                      '<td class="field-label">Description</td>' +
                       '<td>' + speciesData.species_one.description + '</td>' +
                       '<td>' + speciesData.species_two.description + '</td>' +
                     '</tr>' +
                     '<tr>' +
-                      '<td>Identification - Male</td>' +
+                      '<td class="field-label">Identification - Male</td>' +
                       '<td>' + speciesData.species_one.id_male + '</td>' +
                       '<td>' + speciesData.species_two.id_male + '</td>' +
                     '</tr>' +
                     '<tr>' +
-                      '<td>Identification - Female</td>' +
+                      '<td class="field-label">Identification - Female</td>' +
                       '<td>' + speciesData.species_one.id_female + '</td>' +
                       '<td>' + speciesData.species_two.id_female + '</td>' +
                     '</tr>' +
                     '<tr>' +
-                      '<td>Identification - Juvenile</td>' +
+                      '<td class="field-label">Identification - Juvenile</td>' +
                       '<td>' + speciesData.species_one.id_juvenile + '</td>' +
                       '<td>' + speciesData.species_two.id_juvenile + '</td>' +
                     '</tr>' +
