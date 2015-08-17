@@ -2,7 +2,7 @@ function LocationView() {
 }
 
 LocationView.prototype.displayLocationList = function(list) {
-  $('#content').html("");
+  ViewHelper.prototype.clearPageContent();
   var listHtml = '<div class="locationList">' +
                     '<h2>Locations</h2>';
   list.forEach(function(listItem) {
@@ -14,7 +14,7 @@ LocationView.prototype.displayLocationList = function(list) {
 };
 
 LocationView.prototype.displayLocationDetails = function(details) {
-  $('#content').html("");
+  ViewHelper.prototype.clearPageContent();
   var locationHtml = '<div class="locationDetails">' +
                         '<h2>' + details.location.name + '</h2>' +
                         '<div class="location clearfix">' +
@@ -38,6 +38,7 @@ LocationView.prototype.displayLocationDetails = function(details) {
                   '</div>' +
                   '</div>';
   $('#content').append(locationHtml);
+  ViewHelper.prototype.scrollPage();
 
   var mapLatLng = new google.maps.LatLng(details.location.lat, details.location.lng);
   var mapCanvas = document.getElementById('map-canvas');
@@ -55,7 +56,7 @@ LocationView.prototype.displayLocationDetails = function(details) {
 };
 
 LocationView.prototype.displayLocationSearchForm = function() {
-  $('#content').html("");
+  ViewHelper.prototype.clearPageContent();
   var searchHtml = '<div class="locationSearch">' +
                       '<h2>Location Search</h2>' +
                       '<form id="locationSearchForm" action="/locations/search/" method="get">' +
@@ -68,7 +69,7 @@ LocationView.prototype.displayLocationSearchForm = function() {
 };
 
 LocationView.prototype.displayLocationSearchResults = function(searchResults) {
-  $('#content').html("");
+  ViewHelper.prototype.clearPageContent();
   var resultHtml = '<div class="locationResults">' +
                       '<h2>Location Search Results</h2>';
 
@@ -98,9 +99,11 @@ LocationView.prototype.displayLocationSearchResults = function(searchResults) {
 
   resultHtml += '</div>';
   $('#content').append(resultHtml);
+  ViewHelper.prototype.scrollPage();
 };
 
 LocationView.prototype.displayErrorMessage = function() {
   var errorHtml = '<p class="error">Sorry, we couldn\'t find that location. Please try again.</p>';
   $('#content').append(errorHtml);
+  ViewHelper.prototype.scrollPage();
 };

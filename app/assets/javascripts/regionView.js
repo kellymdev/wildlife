@@ -2,7 +2,7 @@ function RegionView() {
 }
 
 RegionView.prototype.displayRegionList = function(list) {
-  $('#content').html("");
+  ViewHelper.prototype.clearPageContent();
   var listHtml = '<div class="regionList">' +
                   '<h2>Regions</h2>';
   list.forEach(function(listItem) {
@@ -13,7 +13,7 @@ RegionView.prototype.displayRegionList = function(list) {
 };
 
 RegionView.prototype.displayRegionDetails = function(details) {
-  $('#content').html("");
+  ViewHelper.prototype.clearPageContent();
   var regionHtml = '<div class="regionDetails">' +
                     '<h2>Locations in ' + details.region.name + '</h2>';
 
@@ -22,6 +22,7 @@ RegionView.prototype.displayRegionDetails = function(details) {
   });
   regionHtml += '</div>';
   $('#content').append(regionHtml);
+  ViewHelper.prototype.scrollPage();
 };
 
 RegionView.prototype.displayErrorMessage = function() {
