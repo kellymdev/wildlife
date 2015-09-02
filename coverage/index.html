@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-08-17T13:33:03+12:00">2015-08-17T13:33:03+12:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-09-03T09:57:22+12:00">2015-09-03T09:57:22+12:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -540,7 +540,7 @@
         <li class="covered" data-hits="2" data-linenumber="5">
           <span class="hits">2</span>
           
-          <code class="ruby">    render json: locations</code>
+          <code class="ruby">    render json: locations.as_json(except: [:created_at, :updated_at])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
@@ -564,7 +564,7 @@
         <li class="covered" data-hits="2" data-linenumber="9">
           <span class="hits">2</span>
           
-          <code class="ruby">    location = Location.find_by(id: params[:id])</code>
+          <code class="ruby">    location = Location.find_by(&quot;id = ?&quot;, params[:id])</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="10">
@@ -588,7 +588,7 @@
         <li class="never" data-hits="" data-linenumber="13">
           
           
-          <code class="ruby">                    location: location,</code>
+          <code class="ruby">                    location: location.as_json(except: [:created_at, :updated_at]),</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
@@ -600,7 +600,7 @@
         <li class="never" data-hits="" data-linenumber="15">
           
           
-          <code class="ruby">                    species: species</code>
+          <code class="ruby">                    species: species.as_json(except: [:created_at, :updated_at])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
@@ -660,13 +660,13 @@
         <li class="never" data-hits="" data-linenumber="25">
           
           
-          <code class="ruby">                    locations: locations,</code>
+          <code class="ruby">                    locations: locations.as_json(except: [:created_at, :updated_at]),</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="26">
           
           
-          <code class="ruby">                    regions: regions</code>
+          <code class="ruby">                    regions: regions.as_json(except: [:created_at, :updated_at])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="27">
@@ -792,7 +792,7 @@
         <li class="covered" data-hits="2" data-linenumber="5">
           <span class="hits">2</span>
           
-          <code class="ruby">    render json: regions</code>
+          <code class="ruby">    render json: regions.as_json(except: [:created_at, :updated_at])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
@@ -816,7 +816,7 @@
         <li class="covered" data-hits="3" data-linenumber="9">
           <span class="hits">3</span>
           
-          <code class="ruby">    region = Region.find_by(id: params[:id])</code>
+          <code class="ruby">    region = Region.find_by(&quot;id = ?&quot;, params[:id])</code>
         </li>
       
         <li class="covered" data-hits="3" data-linenumber="10">
@@ -840,13 +840,13 @@
         <li class="never" data-hits="" data-linenumber="13">
           
           
-          <code class="ruby">                    region: region,</code>
+          <code class="ruby">                    region: region.as_json(except: [:created_at, :updated_at]),</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
           
           
-          <code class="ruby">                    locations: locations</code>
+          <code class="ruby">                    locations: locations.as_json(except: [:created_at, :updated_at])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
@@ -942,19 +942,19 @@
         <li class="covered" data-hits="4" data-linenumber="9">
           <span class="hits">4</span>
           
-          <code class="ruby">    animal = Species.find_by(id: params[:id])</code>
+          <code class="ruby">    animal = Species.find_by(&quot;id = ?&quot;, params[:id])</code>
         </li>
       
         <li class="covered" data-hits="4" data-linenumber="10">
           <span class="hits">4</span>
           
-          <code class="ruby">    locations = animal.locations.all</code>
+          <code class="ruby">    locations = animal.locations.all.as_json(except: [:created_at, :updated_at])</code>
         </li>
       
         <li class="covered" data-hits="4" data-linenumber="11">
           <span class="hits">4</span>
           
-          <code class="ruby">    other_species = Species.where.not(id: params[:id]).pluck(:id, :name)</code>
+          <code class="ruby">    other_species = Species.where.not(&quot;id = ?&quot;, params[:id]).pluck(:id, :name)</code>
         </li>
       
         <li class="covered" data-hits="4" data-linenumber="12">
@@ -966,7 +966,7 @@
         <li class="never" data-hits="" data-linenumber="13">
           
           
-          <code class="ruby">                    species: animal,</code>
+          <code class="ruby">                    species: animal.as_json(except: [:created_at, :updated_at]),</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
@@ -1044,19 +1044,19 @@
         <li class="never" data-hits="" data-linenumber="26">
           
           
-          <code class="ruby">                    commonName: species,</code>
+          <code class="ruby">                    commonName: species.as_json(except: [:created_at, :updated_at]),</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="27">
           
           
-          <code class="ruby">                    scientificName: scientific_names,</code>
+          <code class="ruby">                    scientificName: scientific_names.as_json(except: [:created_at, :updated_at]),</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="28">
           
           
-          <code class="ruby">                    maoriName: maori_names</code>
+          <code class="ruby">                    maoriName: maori_names.as_json(except: [:created_at, :updated_at])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="29">
@@ -1086,13 +1086,13 @@
         <li class="covered" data-hits="3" data-linenumber="33">
           <span class="hits">3</span>
           
-          <code class="ruby">    species_one = Species.find_by(id: params[:id])</code>
+          <code class="ruby">    species_one = Species.find_by(&quot;id = ?&quot;, params[:id])</code>
         </li>
       
         <li class="covered" data-hits="3" data-linenumber="34">
           <span class="hits">3</span>
           
-          <code class="ruby">    species_two = Species.find_by(id: params[:query])</code>
+          <code class="ruby">    species_two = Species.find_by(&quot;id = ?&quot;, params[:query])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="35">
@@ -1110,13 +1110,13 @@
         <li class="never" data-hits="" data-linenumber="37">
           
           
-          <code class="ruby">                    species_one: species_one,</code>
+          <code class="ruby">                    species_one: species_one.as_json(except: [:created_at, :updated_at]),</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="38">
           
           
-          <code class="ruby">                    species_two: species_two</code>
+          <code class="ruby">                    species_two: species_two.as_json(except: [:created_at, :updated_at])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="39">

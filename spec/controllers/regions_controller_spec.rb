@@ -12,7 +12,7 @@ RSpec.describe RegionsController, type: :controller do
     end
 
     it "returns a list of regions as json" do
-      expect(response.body).to eq(Region.all.to_json)
+      expect(response.body).to eq(Region.all.as_json(except: [:created_at, :updated_at]).to_json)
     end
   end
 
@@ -28,11 +28,11 @@ RSpec.describe RegionsController, type: :controller do
     end
 
     it "returns details for the region as json" do
-      expect(response.body).to include(@region.to_json)
+      expect(response.body).to include(@region.as_json(except: [:created_at, :updated_at]).to_json)
     end
 
     it "returns a list of locations in that region as json" do
-      expect(response.body).to include(@region.locations.to_json)
+      expect(response.body).to include(@region.locations.as_json(except: [:created_at, :updated_at]).to_json)
     end
   end
 
