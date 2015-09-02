@@ -2,7 +2,7 @@ class RegionsController < ApplicationController
 
   def index
     regions = Region.all
-    render json: regions
+    render json: regions.as_json(except: [:created_at, :updated_at])
   end
 
   def show
@@ -10,8 +10,8 @@ class RegionsController < ApplicationController
     locations = region.locations
 
     render json:  {
-                    region: region,
-                    locations: locations
+                    region: region.as_json(except: [:created_at, :updated_at]),
+                    locations: locations.as_json(except: [:created_at, :updated_at])
                   }
   end
 

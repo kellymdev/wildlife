@@ -30,8 +30,8 @@ RSpec.describe SpeciesController, type: :controller do
 
     it "returns species details and a list of locations for the requested species as json" do
       expected_data = {
-                        species: @species,
-                        locations: @species.locations.all,
+                        species: @species.as_json(except: [:created_at, :updated_at]),
+                        locations: @species.locations.all.as_json(except: [:created_at, :updated_at]),
                         otherSpecies: []
                       }
       expect(response.body).to eq(expected_data.to_json)
@@ -41,8 +41,8 @@ RSpec.describe SpeciesController, type: :controller do
       @species2 = create(:species, name: "Tui")
       get :show, id: @species.id
       expected_data = {
-                        species: @species,
-                        locations: @species.locations.all,
+                        species: @species.as_json(except: [:created_at, :updated_at]),
+                        locations: @species.locations.all.as_json(except: [:created_at, :updated_at]),
                         otherSpecies: [
                                         [@species2.id,
                                         @species2.name]
@@ -64,7 +64,7 @@ RSpec.describe SpeciesController, type: :controller do
       end
 
       it "returns a list of species with names matching the search term as json" do
-        expect(response.body).to include((Species.where("lower(name) LIKE ?", "%fantail%")).to_json)
+        expect(response.body).to include((Species.where("lower(name) LIKE ?", "%fantail%").as_json(except: [:created_at, :updated_at])).to_json)
       end
     end
 
@@ -75,7 +75,7 @@ RSpec.describe SpeciesController, type: :controller do
       end
 
       it "returns a list of species with scientific names matching the search term as json" do
-        expect(response.body).to include((Species.where("lower(scientific_name) LIKE ?", "%rhipidura%")).to_json)
+        expect(response.body).to include((Species.where("lower(scientific_name) LIKE ?", "%rhipidura%").as_json(except: [:created_at, :updated_at])).to_json)
       end
     end
 
@@ -86,7 +86,7 @@ RSpec.describe SpeciesController, type: :controller do
       end
 
       it "returns a list of species with maori names matching the search term as json" do
-        expect(response.body).to include((Species.where("lower(maori_name) LIKE ?", "%piwakawaka%")).to_json)
+        expect(response.body).to include((Species.where("lower(maori_name) LIKE ?", "%piwakawaka%").as_json(except: [:created_at, :updated_at])).to_json)
       end
     end
   end
@@ -103,11 +103,11 @@ RSpec.describe SpeciesController, type: :controller do
     end
 
     it "returns details for species one as json" do
-      expect(response.body).to include(@species_one.to_json)
+      expect(response.body).to include(@species_one.as_json(except: [:created_at, :updated_at]).to_json)
     end
 
     it "returns details for species two as json" do
-      expect(response.body).to include(@species_two.to_json)
+      expect(response.body).to include(@species_two.as_json(except: [:created_at, :updated_at]).to_json)
     end
   end
 

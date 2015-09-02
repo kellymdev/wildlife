@@ -2,7 +2,7 @@ class LocationsController < ApplicationController
 
   def index
     locations = Location.all
-    render json: locations
+    render json: locations.as_json(except: [:created_at, :updated_at])
   end
 
   def show
@@ -10,9 +10,9 @@ class LocationsController < ApplicationController
     region = location.region.name
     species = location.species.all
     render json:  {
-                    location: location,
+                    location: location.as_json(except: [:created_at, :updated_at]),
                     region: region,
-                    species: species
+                    species: species.as_json(except: [:created_at, :updated_at])
                   }
   end
 
@@ -22,8 +22,8 @@ class LocationsController < ApplicationController
     regions = Region.where("lower(name) LIKE ?", term)
 
     render json:  {
-                    locations: locations,
-                    regions: regions
+                    locations: locations.as_json(except: [:created_at, :updated_at]),
+                    regions: regions.as_json(except: [:created_at, :updated_at])
                   }
   end
 

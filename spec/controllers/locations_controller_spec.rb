@@ -13,7 +13,7 @@ RSpec.describe LocationsController, type: :controller do
     end
 
     it "returns a list of locations as json" do
-      expect(response.body).to eq(Location.all.to_json)
+      expect(response.body).to eq(Location.all.as_json(except: [:created_at, :updated_at]).to_json)
     end
   end
 
@@ -32,9 +32,9 @@ RSpec.describe LocationsController, type: :controller do
 
     it "returns location details and a list of species for the requested location as json" do
       expected_data = {
-                        location: @location,
+                        location: @location.as_json(except: [:created_at, :updated_at]),
                         region: @region,
-                        species: @location.species.all
+                        species: @location.species.all.as_json(except: [:created_at, :updated_at])
                       }
       expect(response.body).to eq(expected_data.to_json)
     end
@@ -52,7 +52,7 @@ RSpec.describe LocationsController, type: :controller do
       end
 
       it "returns a list of locations matching the search term as json" do
-        expect(response.body).to include((Location.where("lower(name) LIKE ?", "%zealandia%")).to_json)
+        expect(response.body).to include((Location.where("lower(name) LIKE ?", "%zealandia%").as_json(except: [:created_at, :updated_at])).to_json)
       end
     end
 
@@ -64,7 +64,7 @@ RSpec.describe LocationsController, type: :controller do
       end
 
       it "returns a list of regions matching the search term as json" do
-        expect(response.body).to include((Region.where("lower(name) LIKE ?", '%wellington%')).to_json)
+        expect(response.body).to include((Region.where("lower(name) LIKE ?", '%wellington%').as_json(except: [:created_at, :updated_at])).to_json)
       end
     end
   end
