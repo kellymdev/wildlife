@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-08-17T13:33:03+12:00">2015-08-17T13:33:03+12:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-09-03T09:39:25+12:00">2015-09-03T09:39:25+12:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -564,7 +564,7 @@
         <li class="covered" data-hits="2" data-linenumber="9">
           <span class="hits">2</span>
           
-          <code class="ruby">    location = Location.find_by(id: params[:id])</code>
+          <code class="ruby">    location = Location.find_by(&quot;id = ?&quot;, params[:id])</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="10">
@@ -816,7 +816,7 @@
         <li class="covered" data-hits="3" data-linenumber="9">
           <span class="hits">3</span>
           
-          <code class="ruby">    region = Region.find_by(id: params[:id])</code>
+          <code class="ruby">    region = Region.find_by(&quot;id = ?&quot;, params[:id])</code>
         </li>
       
         <li class="covered" data-hits="3" data-linenumber="10">
@@ -942,7 +942,7 @@
         <li class="covered" data-hits="4" data-linenumber="9">
           <span class="hits">4</span>
           
-          <code class="ruby">    animal = Species.find_by(id: params[:id])</code>
+          <code class="ruby">    animal = Species.find_by(&quot;id = ?&quot;, params[:id])</code>
         </li>
       
         <li class="covered" data-hits="4" data-linenumber="10">
@@ -954,7 +954,7 @@
         <li class="covered" data-hits="4" data-linenumber="11">
           <span class="hits">4</span>
           
-          <code class="ruby">    other_species = Species.where.not(id: params[:id]).pluck(:id, :name)</code>
+          <code class="ruby">    other_species = Species.where.not(&quot;id = ?&quot;, params[:id]).pluck(:id, :name)</code>
         </li>
       
         <li class="covered" data-hits="4" data-linenumber="12">
@@ -1086,13 +1086,13 @@
         <li class="covered" data-hits="3" data-linenumber="33">
           <span class="hits">3</span>
           
-          <code class="ruby">    species_one = Species.find_by(id: params[:id])</code>
+          <code class="ruby">    species_one = Species.find_by(&quot;id = ?&quot;, params[:id])</code>
         </li>
       
         <li class="covered" data-hits="3" data-linenumber="34">
           <span class="hits">3</span>
           
-          <code class="ruby">    species_two = Species.find_by(id: params[:query])</code>
+          <code class="ruby">    species_two = Species.find_by(&quot;id = ?&quot;, params[:query])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="35">

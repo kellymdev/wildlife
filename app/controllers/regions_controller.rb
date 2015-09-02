@@ -6,7 +6,7 @@ class RegionsController < ApplicationController
   end
 
   def show
-    region = Region.find_by(id: params[:id])
+    region = Region.find_by("id = ?", params[:id])
     locations = region.locations
 
     render json:  {

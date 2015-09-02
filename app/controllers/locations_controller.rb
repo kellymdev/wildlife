@@ -6,7 +6,7 @@ class LocationsController < ApplicationController
   end
 
   def show
-    location = Location.find_by(id: params[:id])
+    location = Location.find_by("id = ?", params[:id])
     region = location.region.name
     species = location.species.all
     render json:  {

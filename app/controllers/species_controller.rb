@@ -6,9 +6,9 @@ class SpeciesController < ApplicationController
   end
 
   def show
-    animal = Species.find_by(id: params[:id])
+    animal = Species.find_by("id = ?", params[:id])
     locations = animal.locations.all
-    other_species = Species.where.not(id: params[:id]).pluck(:id, :name)
+    other_species = Species.where.not("id = ?", params[:id]).pluck(:id, :name)
     render json:  {
                     species: animal,
                     locations: locations,
@@ -30,8 +30,8 @@ class SpeciesController < ApplicationController
   end
 
   def compare
-    species_one = Species.find_by(id: params[:id])
-    species_two = Species.find_by(id: params[:query])
+    species_one = Species.find_by("id = ?", params[:id])
+    species_two = Species.find_by("id = ?", params[:query])
 
     render json:  {
                     species_one: species_one,
