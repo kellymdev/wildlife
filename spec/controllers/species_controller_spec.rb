@@ -1,11 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe SpeciesController, type: :controller do
+  let(:location) { create(:location) }
+  let(:species) { create(:species, name: "New Zealand Fantail", scientific_name: "Rhipidura fuliginosa", maori_name: "Piwakawaka") }
+  let!(:tui) { create(:species, name: "Tui") }
+  let(:gannet) { create(:species, name: "Australasian Gannet", scientific_name: "Morus serrator", maori_name: "Takapu") }
+
   describe "get #index" do
-    before do
-      @species = create(:species)
-      get :index
-    end
+    before { get :index }
 
     it "returns http status 200" do
       expect(response.status).to eq(200)
@@ -18,10 +20,8 @@ RSpec.describe SpeciesController, type: :controller do
 
   describe "get #show" do
     before do
-      @species = create(:species)
-      @location = create(:location)
-      @species_location = create(:species_location, location_id: @location.id, species_id: @species.id)
-      get :show, id: @species.id
+      location.species << species
+      get :show, id: species.id
     end
 
     it "returns http status 200" do
@@ -30,22 +30,11 @@ RSpec.describe SpeciesController, type: :controller do
 
     it "returns species details and a list of locations for the requested species as json" do
       expected_data = {
-                        species: @species.as_json(except: [:created_at, :updated_at]),
-                        locations: @species.locations.all.as_json(except: [:created_at, :updated_at]),
-                        otherSpecies: []
-                      }
-      expect(response.body).to eq(expected_data.to_json)
-    end
-
-    it "returns a list of otherSpecies, excluding the requested species as json" do
-      @species2 = create(:species, name: "Tui")
-      get :show, id: @species.id
-      expected_data = {
-                        species: @species.as_json(except: [:created_at, :updated_at]),
-                        locations: @species.locations.all.as_json(except: [:created_at, :updated_at]),
+                        species: species.as_json(except: [:created_at, :updated_at]),
+                        locations: species.locations.all.as_json(except: [:created_at, :updated_at]),
                         otherSpecies: [
-                                        [@species2.id,
-                                        @species2.name]
+                                        [tui.id,
+                                        tui.name]
                                       ]
                       }
       expect(response.body).to eq(expected_data.to_json)
@@ -54,10 +43,7 @@ RSpec.describe SpeciesController, type: :controller do
 
   describe "get #search" do
     context "Search by common name" do
-      before do
-        @species = create(:species, name: "New Zealand Fantail", scientific_name: "Rhipidura fuliginosa", maori_name: "Piwakawaka")
-        get :search, query: "Fantail"
-      end
+      before { get :search, query: "Fantail" }
 
       it "returns http status 200" do
         expect(response.status).to eq(200)
@@ -69,10 +55,7 @@ RSpec.describe SpeciesController, type: :controller do
     end
 
     context "Search by scientific name" do
-      before do
-        @species = create(:species, name: "New Zealand Fantail", scientific_name: "Rhipidura fulginosa", maori_name: "Piwakawaka")
-        get :search, query: "Rhipidura"
-      end
+      before { get :search, query: "Rhipidura" }
 
       it "returns a list of species with scientific names matching the search term as json" do
         expect(response.body).to include((Species.where("lower(scientific_name) LIKE ?", "%rhipidura%").as_json(except: [:created_at, :updated_at])).to_json)
@@ -80,10 +63,7 @@ RSpec.describe SpeciesController, type: :controller do
     end
 
     context "Search by maori name" do
-      before do
-        @species = create(:species, name: "New Zealand Fantail", scientific_name: "Rhipidura fulginosa", maori_name: "Piwakawaka")
-        get :search, query: "Piwakawaka"
-      end
+      before { get :search, query: "Piwakawaka" }
 
       it "returns a list of species with maori names matching the search term as json" do
         expect(response.body).to include((Species.where("lower(maori_name) LIKE ?", "%piwakawaka%").as_json(except: [:created_at, :updated_at])).to_json)
@@ -92,26 +72,18 @@ RSpec.describe SpeciesController, type: :controller do
   end
 
   describe "get #compare" do
-    before do
-      @species_one = create(:species, name: "New Zealand Fantail", scientific_name: "Rhipidura fulginosa", maori_name: "Piwakawaka")
-      @species_two = create(:species, name: "Australasian Gannet", scientific_name: "Morus serrator", maori_name: "Takapu")
-      get :compare, id: @species_one.id, query: @species_two.id
-    end
+    before { get :compare, id: species.id, query: gannet.id }
 
     it "returns http status 200" do
       expect(response.status).to eq(200)
     end
 
-    it "returns details for species one as json" do
-      expect(response.body).to include(@species_one.as_json(except: [:created_at, :updated_at]).to_json)
+    it "returns details for the selected species as json" do
+      expect(response.body).to include(species.as_json(except: [:created_at, :updated_at]).to_json)
     end
 
-    it "returns details for species two as json" do
-      expect(response.body).to include(@species_two.as_json(except: [:created_at, :updated_at]).to_json)
+    it "returns details for the species to compare with as json" do
+      expect(response.body).to include(gannet.as_json(except: [:created_at, :updated_at]).to_json)
     end
-  end
-
-  after do
-    Species.destroy_all
   end
 end

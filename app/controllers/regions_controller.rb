@@ -1,12 +1,11 @@
 class RegionsController < ApplicationController
-
   def index
     regions = Region.all
     render json: regions.as_json(except: [:created_at, :updated_at])
   end
 
   def show
-    region = Region.find_by("id = ?", params[:id])
+    region = Region.find(params[:id])
     locations = region.locations
 
     render json:  {
@@ -14,5 +13,4 @@ class RegionsController < ApplicationController
                     locations: locations.as_json(except: [:created_at, :updated_at])
                   }
   end
-
 end

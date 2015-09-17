@@ -1,12 +1,11 @@
 class SpeciesController < ApplicationController
-
   def index
     species = Species.all
     render json: species
   end
 
   def show
-    animal = Species.find_by("id = ?", params[:id])
+    animal = Species.find(params[:id])
     locations = animal.locations.all.as_json(except: [:created_at, :updated_at])
     other_species = Species.where.not("id = ?", params[:id]).pluck(:id, :name)
     render json:  {
@@ -30,13 +29,12 @@ class SpeciesController < ApplicationController
   end
 
   def compare
-    species_one = Species.find_by("id = ?", params[:id])
-    species_two = Species.find_by("id = ?", params[:query])
+    species_one = Species.find(params[:id])
+    species_two = Species.find(params[:query])
 
     render json:  {
                     species_one: species_one.as_json(except: [:created_at, :updated_at]),
                     species_two: species_two.as_json(except: [:created_at, :updated_at])
                   }
   end
-
 end

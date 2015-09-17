@@ -12,8 +12,4 @@ RSpec.describe SpeciesLocation, type: :model do
       expect(species_location).to belong_to(:location)
     end
   end
-
-  after do
-    SpeciesLocation.destroy_all
-  end
 end

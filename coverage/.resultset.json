@@ -7,7 +7,6 @@
       ],
       "/Users/Kel/Documents/dev/git/wildlife/app/controllers/locations_controller.rb": [
         1,
-        null,
         1,
         2,
         2,
@@ -30,7 +29,6 @@
         3,
         null,
         3,
-        null,
         null,
         null,
         null,
@@ -46,15 +44,12 @@
       ],
       "/Users/Kel/Documents/dev/git/wildlife/app/controllers/pages_controller.rb": [
         1,
-        null,
         1,
-        null,
         null,
         null
       ],
       "/Users/Kel/Documents/dev/git/wildlife/app/controllers/regions_controller.rb": [
         1,
-        null,
         1,
         2,
         2,
@@ -65,7 +60,6 @@
         3,
         null,
         3,
-        null,
         null,
         null,
         null,
@@ -74,17 +68,16 @@
       ],
       "/Users/Kel/Documents/dev/git/wildlife/app/controllers/species_controller.rb": [
         1,
-        null,
         1,
         2,
         2,
         null,
         null,
         1,
-        4,
-        4,
-        4,
-        4,
+        2,
+        2,
+        2,
+        2,
         null,
         null,
         null,
@@ -109,7 +102,6 @@
         3,
         null,
         3,
-        null,
         null,
         null,
         null,
@@ -120,8 +112,8 @@
         1,
         1,
         1,
-        null,
         1,
+        null,
         1,
         1,
         null
@@ -143,17 +135,17 @@
         1,
         1,
         1,
-        1,
-        1,
-        1,
-        1,
-        1,
         null,
+        1,
+        1,
+        1,
+        1,
+        1,
         1,
         1,
         null
       ]
     },
-    "timestamp": 1441231042
+    "timestamp": 1442483077
   }
 }

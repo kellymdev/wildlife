@@ -42,8 +42,4 @@ RSpec.describe Species, type: :model do
       expect(species).to have_many(:species_locations)
     end
   end
-
-  after do
-    Species.destroy_all
-  end
 end
