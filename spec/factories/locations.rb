@@ -4,5 +4,4 @@ FactoryGirl.define do
     description "A coastal lagooon and wetland area. Home to several species of sea bird."
     region
   end
-
 end

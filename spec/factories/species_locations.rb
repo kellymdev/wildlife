@@ -3,5 +3,4 @@ FactoryGirl.define do
     species
     location
   end
-
 end

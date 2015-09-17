@@ -26,9 +26,4 @@ RSpec.describe Location, type: :model do
       expect(location).to have_many(:species_locations)
     end
   end
-
-  after do
-    Location.destroy_all
-    Region.destroy_all
-  end
 end

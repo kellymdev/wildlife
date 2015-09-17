@@ -10,5 +10,4 @@ FactoryGirl.define do
     image_url "test.jpg"
     image_caption "New Zealand Fur Seal, Artocephalus forsteri."
   end
-
 end
