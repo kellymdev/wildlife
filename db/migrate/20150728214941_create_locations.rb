@@ -3,7 +3,6 @@ class CreateLocations < ActiveRecord::Migration
     create_table :locations do |t|
       t.string :name
       t.string :description
-
       t.timestamps null: false
     end
   end
