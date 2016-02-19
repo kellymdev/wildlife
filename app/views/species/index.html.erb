@@ -1,0 +1,7 @@
+<div class="speciesList">
+  <h2>Species</h2>
+
+  <% @species.each do |animal| %>
+    <h3 id=<%= animal.id %>><%= link_to animal.name, animal %></h3>
+  <% end %>
+</div>

@@ -200,8 +200,8 @@ Species.create([
                   id_male: "White body. Orange/yellow head and neck. Grey bill.",
                   id_female: "The same colouring as the male.",
                   id_juvenile: "Mottled dark brown and white.",
-                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/AustralasianGannet.jpg",
-                  image_caption: "Australasian Gannet in Queen Charlotte Sound. 2014. (c) Kelly Munro."
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/GannetChick.jpg",
+                  image_caption: "Australasian Gannet with Chick at Muriwai Gannet Colony. 2015. (c) Kelly Munro."
                 },
                 {
                   name: "Australasian Shoveler",
@@ -228,7 +228,9 @@ Species.create([
                   description: "Arctic migrant. Often seen foraging on mud flats. During migration, they perform the longest non-stop flight of any sea bird.",
                   id_male: "Brown back with dark streaks. Brown bars on the lower back, rump and tail. Pale grey-brown chest. Chestnut red (rufous) head, neck and chest during the breeding season.",
                   id_female: "Larger size and a longer bill than the male. Similar colour to the males in non-breeding plumage.",
-                  id_juvenile: "More mottled than the adults."
+                  id_juvenile: "More mottled than the adults.",
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/Godwit.jpg",
+                  image_caption: "Bar-tailed Godwit at Manawatu Estuary. 2015. (c) Kelly Munro"
                 },
                 {
                   name: "Black-billed Gull",
@@ -529,7 +531,9 @@ Species.create([
                   description: "Endemic (only found in New Zealand). Found in lakes and sheltered inlets.",
                   id_male: "Blackish head with silver feathers. Pale yellow eye. Black-brown back. Paler underparts. Olive-grey legs. Short black bill. Dark chestnut neck and chest during breeding season.",
                   id_female: "Similar to the male.",
-                  id_juvenile: "White body with black-brown horizontal striped markings. Red bill with black markings."
+                  id_juvenile: "White body with black-brown horizontal striped markings. Red bill with black markings.",
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/Dabchick.jpg",
+                  image_caption: "New Zealand Dabchick at Queen Elizabeth Park. 2015. (c) Kelly Munro."
                 },
                 {
                   name: "New Zealand Falcon",
@@ -588,7 +592,9 @@ Species.create([
                   description: "Endemic (only found in New Zealand). Large native pigeon.",
                   id_male: "Metallic green-purple head, back, throat and upper chest. White belly. Red or red-orange bill. Crimson eye and feet.",
                   id_female: "Similar to the male.",
-                  id_juvenile: "Duller body colour. May have a smudgy white-grey chest."
+                  id_juvenile: "Duller body colour. May have a smudgy white-grey chest.",
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/Kereru.jpg",
+                  image_caption: "New Zealand Wood Pigeon on Kapiti Island. 2015. (c) Kelly Munro."
                 },
                 {
                   name: "North Island Brown Kiwi",
@@ -671,8 +677,8 @@ Species.create([
                   id_male: "Black on the back of the head and neck. Black wings and back. Mainly white body. Long pink legs. Long fine black bill.",
                   id_female: "Similar to the male.",
                   id_juvenile: "Mottled fawn or brown head, wings and back. White or off-white underparts.",
-                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/PiedStiltChick.jpg",
-                  image_caption: "Pied Stilt Chick at Pauatahanui Wildlife Reserve. 2015. (c) Kelly Munro."
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/PiedStilt.jpg",
+                  image_caption: "Pied Stilt at Pauatahanui Wildlife Reserve. 2016. (c) Kelly Munro."
                 },
                 {
                   name: "Pukeko",
@@ -773,7 +779,9 @@ Species.create([
                   description: "Native. The only large gull found in New Zealand.",
                   id_male: "White head, neck, underparts, rump and tail. Black back and upper wings. Narrow white trailing edge on the wings. Yellow bill with a red spot near the tip of the lower bill. Pale yellow eyes. Greenish-yellow legs.",
                   id_female: "Similar to the male.",
-                  id_juvenile: "Dark mottled brown body. Black bill and legs. White-flecked chest and neck in the second year."
+                  id_juvenile: "Dark mottled brown body. Black bill and legs. White-flecked chest and neck in the second year.",
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/BlackBackedGull.jpg",
+                  image_caption: "Southern Black-backed Gull in flight. Taranaki. 2015. (c) Kelly Munro."
                 },
                 {
                   name: "South Island Robin",
@@ -821,7 +829,9 @@ Species.create([
                   description: "Endemic (only found in New Zealand). A medium-sized forest bird. One of the rarest species in New Zealand.",
                   id_male: "Black head, back and upper chest. White tufts behind the eyes. Golden-yellow band across chest and wings. White wingbars. Pale brown underparts.",
                   id_female: "Greyish-brown body. White wingbars.",
-                  id_juvenile: "Similar to the female."
+                  id_juvenile: "Similar to the female.",
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/Hihi.jpg",
+                  image_caption: "Female Hihi on Kapiti Island. 2015. (c) Kelly Munro."
                 },
                 {
                   name: "Takahe",
@@ -876,7 +886,9 @@ Species.create([
                   description: "Native. A blue-grey bird, with a white face. The most common Heron species in New Zealand.",
                   id_male: "Light blue-grey body. White face. Grey-black bill. Long pale yellow legs. Long feathers on the head, neck and back during the breeding season.",
                   id_female: "Similar to the male.",
-                  id_juvenile: "Similar to the adults but little to no white on the face."
+                  id_juvenile: "Similar to the adults but little to no white on the face.",
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/Heron.jpg",
+                  image_caption: "White-faced Heron at Manawatu Estuary. 2015. (c) Kelly Munro"
                 },
                 {
                   name: "White-fronted Tern",
@@ -893,7 +905,9 @@ Species.create([
                   description: "Endemic (only found in New Zealand). Small compact bird with a white head and light-grey body.",
                   id_male: "White head and underparts. Light brown-grey back, wings and tail. Black bill, legs and eyes.",
                   id_female: "Similar to the male, but with a brown crown and neck.",
-                  id_juvenile: "Similar to the female."
+                  id_juvenile: "Similar to the female.",
+                  image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/Whitehead.jpg",
+                  image_caption: "Whitehead at Zealandia Ecosanctuary. 2015. (c) Kelly Munro."
                 },
                 {
                   name: "White Heron",

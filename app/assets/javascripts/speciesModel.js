@@ -4,7 +4,8 @@ function SpeciesModel() {
 SpeciesModel.prototype.requestSpeciesList = function(successFunction, errorFunction) {
   $.ajax({
     type: 'get',
-    url: '/species'
+    url: '/species',
+    dataType: 'json'
   }).done(function(jsonResponse) {
     successFunction(jsonResponse);
   }).fail(function() {

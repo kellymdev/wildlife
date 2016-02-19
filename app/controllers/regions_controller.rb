@@ -1,6 +1,6 @@
 class RegionsController < ApplicationController
   def index
-    regions = Region.all
+    regions = Region.order(:name).all
     render json: regions.as_json(except: [:created_at, :updated_at])
   end
 

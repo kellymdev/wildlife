@@ -1,7 +1,11 @@
 class SpeciesController < ApplicationController
   def index
-    species = Species.all
-    render json: species
+    @species = Species.order(:name).all
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @species }
+    end
   end
 
   def show
