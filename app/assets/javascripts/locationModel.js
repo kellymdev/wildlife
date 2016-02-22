@@ -4,7 +4,8 @@ function LocationModel() {
 LocationModel.prototype.requestLocationList = function(successFunction, errorFunction) {
   $.ajax({
     type: 'get',
-    url: '/locations'
+    url: '/locations',
+    dataType: 'json'
   }).done(function(jsonResponse) {
     successFunction(jsonResponse);
   }).fail(function() {

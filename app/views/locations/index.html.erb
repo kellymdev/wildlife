@@ -1,0 +1,8 @@
+<div class="locationList">
+  <h2>Locations</h2>
+
+  <% @locations.each do |location| %>
+    <h3 id="<%= location.id %>"><%= link_to location.name, location %></h3>
+    <p><%= location.description %></p>
+  <% end %>
+</div>

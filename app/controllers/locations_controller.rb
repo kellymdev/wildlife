@@ -1,7 +1,11 @@
 class LocationsController < ApplicationController
   def index
-    locations = Location.order(:name).all
-    render json: locations.as_json(except: [:created_at, :updated_at])
+    @locations = Location.order(:name).all
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @locations.as_json(except: [:created_at, :updated_at]) }
+    end
   end
 
   def show
