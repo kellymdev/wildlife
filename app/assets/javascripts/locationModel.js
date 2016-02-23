@@ -16,7 +16,8 @@ LocationModel.prototype.requestLocationList = function(successFunction, errorFun
 LocationModel.prototype.requestLocationDetails = function(locationUrl, successFunction, errorFunction) {
   $.ajax({
     type: 'get',
-    url: locationUrl
+    url: locationUrl,
+    dataType: 'json'
   }).done(function(jsonResponse) {
     successFunction(jsonResponse);
   }).fail(function() {

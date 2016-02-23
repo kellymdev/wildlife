@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'pages#home'
+  root to: 'locations#index'
 
   get 'species/compare/:id', to: 'species#compare', as: :species_comparison
 

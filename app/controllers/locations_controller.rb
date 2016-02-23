@@ -4,19 +4,27 @@ class LocationsController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json { render json: @locations.as_json(except: [:created_at, :updated_at]) }
+      format.json {
+        render json: @locations.as_json(except: [:created_at, :updated_at])
+      }
     end
   end
 
   def show
-    location = Location.find(params[:id])
-    region = location.region.name
-    species = location.species.all
-    render json:  {
-                    location: location.as_json(except: [:created_at, :updated_at]),
-                    region: region,
-                    species: species.as_json(except: [:created_at, :updated_at])
-                  }
+    @location = Location.find(params[:id])
+    @region = @location.region.name
+    @species = @location.species.all
+
+    respond_to do |format|
+      format.html
+      format.json {
+        render json:  {
+          location: @location.as_json(except: [:created_at, :updated_at]),
+          region: @region,
+          species: @species.as_json(except: [:created_at, :updated_at])
+        }
+      }
+    end
   end
 
   def search

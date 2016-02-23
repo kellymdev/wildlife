@@ -1,0 +1,45 @@
+<div class="locationDetails">
+  <h2><%= @location.name %></h2>
+
+  <div class="location clearfix">
+    <div id="details">
+      <p>Region: <%= @region %></p>
+      <p><%= @location.description %></p>
+
+      <div class="speciesList">
+        <h3>Species</h3>
+
+        <ul>
+          <% @species.each do |animal| %>
+            <li id="<%= animal.id %>">
+              <%= link_to animal.name, animal %>
+
+              <% if animal.maori_name.present? %>
+                (<%= animal.maori_name %>)
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+
+    <div id="map-canvas">
+    </div>
+
+    <script>
+      var mapLatLng = new google.maps.LatLng(<%= @location.lat %>, <%= @location.lng %>);
+      var mapCanvas = document.getElementById('map-canvas');
+      var mapOptions = {
+        center: mapLatLng,
+        zoom: 13,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+      var map = new google.maps.Map(mapCanvas, mapOptions)
+      var marker = new google.maps.Marker({
+        position: mapLatLng,
+        map: map,
+        title: "<%= @location.name %>"
+      });
+    </script>
+  </div>
+</div>

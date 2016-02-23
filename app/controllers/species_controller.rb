@@ -9,14 +9,20 @@ class SpeciesController < ApplicationController
   end
 
   def show
-    animal = Species.find(params[:id])
-    locations = animal.locations.all.as_json(except: [:created_at, :updated_at])
-    other_species = Species.where.not("id = ?", params[:id]).pluck(:id, :name)
-    render json:  {
-                    species: animal.as_json(except: [:created_at, :updated_at]),
-                    locations: locations,
-                    otherSpecies: other_species
-                  }
+    @species = Species.find(params[:id])
+    @locations = @species.locations
+    @other_species = Species.where.not("id = ?", params[:id])
+
+    respond_to do |format|
+      format.html
+      format.json {
+        render json:  {
+          species: @species.as_json(except: [:created_at, :updated_at]),
+          locations: @locations.as_json(except: [:created_at, :updated_at]),
+          otherSpecies: @other_species.pluck(:id, :name)
+        }
+      }
+    end
   end
 
   def search

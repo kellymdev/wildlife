@@ -16,7 +16,8 @@ SpeciesModel.prototype.requestSpeciesList = function(successFunction, errorFunct
 SpeciesModel.prototype.requestSpeciesDetails = function(speciesUrl, successFunction, errorFunction) {
   $.ajax({
     type: 'get',
-    url: speciesUrl
+    url: speciesUrl,
+    dataType: 'json'
   }).done(function(jsonResponse) {
     successFunction(jsonResponse);
   }).fail(function() {

@@ -16,7 +16,8 @@ RegionModel.prototype.requestRegionList = function(successFunction, errorFunctio
 RegionModel.prototype.requestRegionDetails = function(regionUrl, successFunction, errorFunction) {
   $.ajax({
     type: 'get',
-    url: regionUrl
+    url: regionUrl,
+    dataType: 'json'
   }).done(function(jsonResponse) {
     successFunction(jsonResponse);
   }).fail(function() {

@@ -1,0 +1,59 @@
+<div class="speciesDetails">
+  <h2><%= @species.name %>
+    <% if @species.maori_name.present? %>
+      (<%= @species.maori_name %>)
+    <% end %>
+  </h2>
+
+  <div class="species-info clearfix">
+    <div class="info-panel">
+      <p>Scientific name: <%= @species.scientific_name %></p>
+
+      <p><%= @species.description %></p>
+
+      <div class="identification">
+        <h3>Identification</h3>
+
+        <p>Male: <%= @species.id_male %></p>
+
+        <p>Female: <%= @species.id_female %></p>
+
+        <p>Juvenile: <%= @species.id_juvenile %></p>
+      </div>
+
+      <div class="locationList">
+        <h3>Locations</h3>
+
+        <ul>
+          <% @locations.each do |location| %>
+            <li id="<%= location.id %>"><%= link_to location.name, location %></li>
+          <% end %>
+        </ul>
+      </div>
+
+      <div class="comparisonForm">
+        <h3>Species Comparison</h3>
+
+        <form id="speciesComparisonForm" action="/species/compare/<%= @species.id %>" method="get">
+          <label for="query">Compare with</label>
+
+          <select id="query">
+            <% @other_species.each do |animal| %>
+              <option value="<%= animal.id %>">
+                <%= animal.name %>
+              </option>
+            <% end %>
+          </select>
+
+          <button type="submit">Compare</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="species-image">
+      <img src="<%= @species.image_url %>"/>
+
+      <p class="caption"><%= @species.image_caption %></p>
+    </div>
+  </div>
+</div>

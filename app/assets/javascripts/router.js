@@ -3,8 +3,6 @@ $(document).ready(function() {
   var speciesController = new SpeciesController();
   var regionController = new RegionController();
 
-  locationController.locationListRequest();
-
   $('#content').on('click', '.locationList a', function(e) {
     e.preventDefault();
     var locationUrl = $(this).attr('href');
