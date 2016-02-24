@@ -53,7 +53,7 @@ SpeciesView.prototype.displaySpeciesDetails = function(details) {
                     '<select id="query">';
 
   details.otherSpecies.forEach(function(animal) {
-    speciesHtml += '<option value="' + animal[0] + '">' + animal[1] + '</option>';
+    speciesHtml += '<option value="' + animal[1] + '">' + animal[0] + '</option>';
   });
 
   speciesHtml += '</select>' +
@@ -70,19 +70,6 @@ SpeciesView.prototype.displaySpeciesDetails = function(details) {
   speciesHtml += '</div></div>';
   $('#content').append(speciesHtml);
   ViewHelper.prototype.scrollPage();
-};
-
-SpeciesView.prototype.displaySpeciesSearchForm = function() {
-  ViewHelper.prototype.clearPageContent();
-  var searchHtml = '<div class="speciesSearch">' +
-                      '<h2>Species Search</h2>' +
-                      '<form id="speciesSearchForm" action="/species/search/" method="get">' +
-                        '<label for="query">Species Name (Common name, Scientific name or Maori name)</label>' +
-                        '<input type="text" id="query" name="query">' +
-                        '<button type="submit">Search</button>' +
-                      '</form>' +
-                    '</div>';
-  $('#content').append(searchHtml);
 };
 
 SpeciesView.prototype.displaySpeciesSearchResults = function(searchResults) {

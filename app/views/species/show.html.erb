@@ -34,19 +34,12 @@
       <div class="comparisonForm">
         <h3>Species Comparison</h3>
 
-        <form id="speciesComparisonForm" action="/species/compare/<%= @species.id %>" method="get">
-          <label for="query">Compare with</label>
+        <%= form_tag(species_comparison_path(@species), method: "get", id: "speciesComparisonForm") do %>
+          <%= label_tag(:query, "Compare with") %>
+          <%= select_tag(:query, options_for_select(@other_species)) %>
 
-          <select id="query">
-            <% @other_species.each do |animal| %>
-              <option value="<%= animal.id %>">
-                <%= animal.name %>
-              </option>
-            <% end %>
-          </select>
-
-          <button type="submit">Compare</button>
-        </form>
+          <%= submit_tag("Compare") %>
+        <% end %>
       </div>
     </div>
 

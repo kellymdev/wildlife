@@ -1,0 +1,19 @@
+<div class="locationSearch">
+  <h2>Location Search</h2>
+
+  <%= form_tag("/locations/search/", method: "get", id: "locationSearchForm") do %>
+    <%= label_tag(:locationQuery, "Location Name") %>
+    <%= text_field_tag(:locationQuery) %>
+    <%= submit_tag("Search") %>
+  <% end %>
+</div>
+
+<div class="speciesSearch">
+  <h2>Species Search</h2>
+
+  <%= form_tag("/species/search/", method: "get", id: "speciesSearchForm") do %>
+    <%= label_tag(:speciesQuery, "Species Name (Common name, Scientific name or Maori name)") %>
+    <%= text_field_tag(:speciesQuery) %>
+    <%= submit_tag("Search") %>
+  <% end %>
+</div>

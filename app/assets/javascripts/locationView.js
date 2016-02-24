@@ -55,13 +55,21 @@ LocationView.prototype.displayLocationDetails = function(details) {
   });
 };
 
-LocationView.prototype.displayLocationSearchForm = function() {
+LocationView.prototype.displaySearchForm = function() {
   ViewHelper.prototype.clearPageContent();
   var searchHtml = '<div class="locationSearch">' +
                       '<h2>Location Search</h2>' +
                       '<form id="locationSearchForm" action="/locations/search/" method="get">' +
-                        '<label for="query">Location Name</label>' +
-                        '<input type="text" id="query" name="query">' +
+                        '<label for="locationQuery">Location Name</label>' +
+                        '<input type="text" id="locationQuery" name="LocationQuery">' +
+                        '<button type="submit">Search</button>' +
+                      '</form>' +
+                    '</div>' +
+                    '<div class="speciesSearch">' +
+                      '<h2>Species Search</h2>' +
+                      '<form id="speciesSearchForm" action="/species/search/" method="get">' +
+                        '<label for="speciesQuery">Species Name (Common name, Scientific name or Maori name)</label>' +
+                        '<input type="text" id="speciesQuery" name="speciesQuery">' +
                         '<button type="submit">Search</button>' +
                       '</form>' +
                     '</div>';

@@ -11,8 +11,8 @@ LocationController.prototype.locationDetailsRequest = function(locationUrl) {
   this.locationModel.requestLocationDetails(locationUrl, this.locationView.displayLocationDetails, this.locationView.displayErrorMessage);
 };
 
-LocationController.prototype.locationSearchFormRequest = function() {
-  this.locationView.displayLocationSearchForm();
+LocationController.prototype.searchFormRequest = function() {
+  this.locationView.displaySearchForm();
 };
 
 LocationController.prototype.locationSearchRequest = function(searchQuery) {
