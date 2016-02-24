@@ -1,39 +1,54 @@
 require 'rails_helper'
 
 RSpec.describe LocationsController, type: :controller do
-  let(:region) { create(:region, name: "Wellington") }
-  let(:location) { create(:location, name: "Zealandia Ecosanctuary", region: region) }
-  let(:species) { create(:species) }
+  let!(:region) { create(:region, name: "Wellington") }
+  let!(:location) { create(:location, name: "Zealandia Ecosanctuary", region: region) }
+  let!(:species) { create(:species) }
 
   describe "get #index" do
-    before { get :index }
+    context "when json is requested" do
+      before { get :index, format: :json }
 
-    it "returns http status 200" do
-      expect(response.status).to eq(200)
+      it "returns http status 200" do
+        expect(response.status).to eq(200)
+      end
+
+      it "returns a list of locations as json" do
+        expect(response.body).to eq(Location.all.as_json(except: [:created_at, :updated_at]).to_json)
+      end
     end
 
-    it "returns a list of locations as json" do
-      expect(response.body).to eq(Location.all.as_json(except: [:created_at, :updated_at]).to_json)
+    context "when html is requested" do
+      before { get :index }
+
+      it { is_expected.to render_template :index }
     end
   end
 
   describe "get #show" do
-    before do
-      location.species << species
-      get :show, id: location.id
+    before { location.species << species }
+
+    context "when json is requested" do
+      before { get :show, id: location.id, format: :json }
+
+      it "returns http status 200" do
+        expect(response.status).to eq(200)
+      end
+
+      it "returns location details and a list of species for the requested location as json" do
+        expected_data = {
+                          location: location.as_json(except: [:created_at, :updated_at]),
+                          region: location.region.name,
+                          species: location.species.all.as_json(except: [:created_at, :updated_at])
+                        }
+        expect(response.body).to eq(expected_data.to_json)
+      end
     end
 
-    it "returns http status 200" do
-      expect(response.status).to eq(200)
-    end
+    context "when html is requested" do
+      before { get :show, id: location.id }
 
-    it "returns location details and a list of species for the requested location as json" do
-      expected_data = {
-                        location: location.as_json(except: [:created_at, :updated_at]),
-                        region: location.region.name,
-                        species: location.species.all.as_json(except: [:created_at, :updated_at])
-                      }
-      expect(response.body).to eq(expected_data.to_json)
+      it { is_expected.to render_template :show }
     end
   end
 

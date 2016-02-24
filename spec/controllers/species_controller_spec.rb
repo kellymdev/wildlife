@@ -1,43 +1,59 @@
 require 'rails_helper'
 
 RSpec.describe SpeciesController, type: :controller do
-  let(:location) { create(:location) }
-  let(:species) { create(:species, name: "New Zealand Fantail", scientific_name: "Rhipidura fuliginosa", maori_name: "Piwakawaka") }
+  let!(:location) { create(:location) }
+  let!(:species) { create(:species, name: "New Zealand Fantail", scientific_name: "Rhipidura fuliginosa", maori_name: "Piwakawaka") }
   let!(:tui) { create(:species, name: "Tui") }
-  let(:gannet) { create(:species, name: "Australasian Gannet", scientific_name: "Morus serrator", maori_name: "Takapu") }
+  let!(:gannet) { create(:species, name: "Australasian Gannet", scientific_name: "Morus serrator", maori_name: "Takapu") }
 
   describe "get #index" do
-    before { get :index }
+    context "when json is requested" do
+      before { get :index, format: :json }
 
-    it "returns http status 200" do
-      expect(response.status).to eq(200)
+      it "returns http status 200" do
+        expect(response.status).to eq(200)
+      end
+
+      it "returns a list of all species as json" do
+        expect(response.body).to eq(Species.order(:name).all.to_json)
+      end
     end
 
-    it "returns a list of all species as json" do
-      expect(response.body).to eq(Species.all.to_json)
+    context "when html is requested" do
+      before { get :index }
+
+      it { is_expected.to render_template :index }
     end
   end
 
   describe "get #show" do
-    before do
-      location.species << species
-      get :show, id: species.id
+    before { location.species << species }
+
+    context "when json is requested" do
+      before { get :show, id: species.id, format: :json}
+
+      it "returns http status 200" do
+        expect(response.status).to eq(200)
+      end
+
+      it "returns species details and a list of locations for the requested species as json" do
+        expected_data = {
+          species: species.as_json(except: [:created_at, :updated_at]),
+          locations: species.locations.all.as_json(except: [:created_at, :updated_at]),
+          otherSpecies: [
+            [ tui.name, tui.id],
+            [ gannet.name, gannet.id ]
+          ]
+        }
+
+        expect(response.body).to eq(expected_data.to_json)
+      end
     end
 
-    it "returns http status 200" do
-      expect(response.status).to eq(200)
-    end
+    context "when html is requested" do
+      before { get :show, id: species.id }
 
-    it "returns species details and a list of locations for the requested species as json" do
-      expected_data = {
-                        species: species.as_json(except: [:created_at, :updated_at]),
-                        locations: species.locations.all.as_json(except: [:created_at, :updated_at]),
-                        otherSpecies: [
-                                        [tui.id,
-                                        tui.name]
-                                      ]
-                      }
-      expect(response.body).to eq(expected_data.to_json)
+      it { is_expected.to render_template :show }
     end
   end
 
