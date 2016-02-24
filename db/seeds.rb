@@ -122,6 +122,13 @@ Location.create([
                     lng: 174.855179
                   },
                   {
+                    name: "Queen Elizabeth Park",
+                    description: "The Marines Wetland at Queen Elizabeth Park features a bird hide where several native species can be viewed. There is also a walking track around the edge of the lagoon.",
+                    region_id: Region.find_by_name("Kapiti").id,
+                    lat: -40.967876,
+                    lng: 174.975272
+                  },
+                  {
                     name: "Sinclair Head",
                     description: "Also known as Te Rimurapa, Sinclair Head is located on Wellington's south coast, near Red Rocks. Up to 150 New Zealand Fur Seals come ashore between May and August to rest and feed. This colony contains male seals only.",
                     region_id: Region.find_by_name("Wellington").id,
@@ -1017,6 +1024,10 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("Black Shag").id,
+                            location_id: Location.find_by_name("Queen Elizabeth Park").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Black Shag").id,
                             location_id: Location.find_by_name("Waikanae Estuary").id
                           },
                           {
@@ -1149,6 +1160,10 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("Grey Duck").id,
+                            location_id: Location.find_by_name("Queen Elizabeth Park").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Grey Duck").id,
                             location_id: Location.find_by_name("Staglands Wildlife Reserve").id
                           },
                           {
@@ -1162,6 +1177,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Grey Teal").id,
                             location_id: Location.find_by_name("Matthews and Boggy Pond Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Grey Teal").id,
+                            location_id: Location.find_by_name("Queen Elizabeth Park").id
                           },
                           {
                             species_id: Species.find_by_name("Grey Teal").id,
@@ -1305,6 +1324,10 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("New Zealand Bellbird").id,
+                            location_id: Location.find_by_name("Kapiti Island Nature Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("New Zealand Bellbird").id,
                             location_id: Location.find_by_name("Motuara Island").id
                           },
                           {
@@ -1318,6 +1341,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("New Zealand Dabchick").id,
                             location_id: Location.find_by_name("Matthews and Boggy Pond Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("New Zealand Dabchick").id,
+                            location_id: Location.find_by_name("Queen Elizabeth Park").id
                           },
                           {
                             species_id: Species.find_by_name("New Zealand Dabchick").id,
@@ -1401,6 +1428,10 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("New Zealand Scaup").id,
+                            location_id: Location.find_by_name("Queen Elizabeth Park").id
+                          },
+                          {
+                            species_id: Species.find_by_name("New Zealand Scaup").id,
                             location_id: Location.find_by_name("Staglands Wildlife Reserve").id
                           },
                           {
@@ -1477,6 +1508,10 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("Paradise Shelduck").id,
+                            location_id: Location.find_by_name("Queen Elizabeth Park").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Paradise Shelduck").id,
                             location_id: Location.find_by_name("Zealandia Ecosanctuary").id
                           },
                           {
@@ -1526,6 +1561,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Pukeko").id,
                             location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Pukeko").id,
+                            location_id: Location.find_by_name("Queen Elizabeth Park").id
                           },
                           {
                             species_id: Species.find_by_name("Pukeko").id,
@@ -1601,6 +1640,10 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("Royal Spoonbill").id,
+                            location_id: Location.find_by_name("Queen Elizabeth Park").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Royal Spoonbill").id,
                             location_id: Location.find_by_name("Wairio Block and Lake Wairarapa Eastern Shore").id
                           },
                           {
@@ -1642,6 +1685,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Silvereye").id,
                             location_id: Location.find_by_name("Zealandia Ecosanctuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Southern Black-backed Gull").id,
+                            location_id: Location.find_by_name("Kapiti Island Nature Reserve").id
                           },
                           {
                             species_id: Species.find_by_name("Southern Black-backed Gull").id,
@@ -1781,6 +1828,10 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("Welcome Swallow").id,
+                            location_id: Location.find_by_name("Queen Elizabeth Park").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Welcome Swallow").id,
                             location_id: Location.find_by_name("Zealandia Ecosanctuary").id
                           },
                           {
@@ -1790,6 +1841,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("White-faced Heron").id,
                             location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("White-faced Heron").id,
+                            location_id: Location.find_by_name("Queen Elizabeth Park").id
                           },
                           {
                             species_id: Species.find_by_name("White-fronted Tern").id,
