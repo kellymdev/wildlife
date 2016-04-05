@@ -429,7 +429,7 @@ Species.create([
                   id_female: "Buff brown back with darker streaks. Greyish-white chest. Pale pinkish-brown bill and legs.",
                   id_juvenile: "Similar to the female.",
                   image_url: "https://s3-ap-southeast-2.amazonaws.com/wildlifesite/HouseSparrow.jpg",
-                  image_caption: "House Sparrow in Wellington. 2015. (c) Kelly Munro."
+                  image_caption: "Male House Sparrow in Wellington. 2015. (c) Kelly Munro."
                 },
                 {
                   name: "Kea",
@@ -976,6 +976,10 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("Australasian Shoveler").id,
+                            location_id: Location.find_by_name("Queen Elizabeth Park").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Australasian Shoveler").id,
                             location_id: Location.find_by_name("Staglands Wildlife Reserve").id
                           },
                           {
@@ -1085,6 +1089,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Canada Goose").id,
                             location_id: Location.find_by_name("Manawatu Estuary").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Canada Goose").id,
+                            location_id: Location.find_by_name("Queen Elizabeth Park").id
                           },
                           {
                             species_id: Species.find_by_name("Canada Goose").id,
@@ -1293,6 +1301,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Mallard Duck").id,
                             location_id: Location.find_by_name("Pauatahanui Wildlife Reserve").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Mallard Duck").id,
+                            location_id: Location.find_by_name("Queen Elizabeth Park").id
                           },
                           {
                             species_id: Species.find_by_name("Mallard Duck").id,
@@ -1668,6 +1680,10 @@ SpeciesLocation.create([
                           },
                           {
                             species_id: Species.find_by_name("Sacred Kingfisher").id,
+                            location_id: Location.find_by_name("Queen Elizabeth Park").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Sacred Kingfisher").id,
                             location_id: Location.find_by_name("Zealandia Ecosanctuary").id
                           },
                           {
@@ -1793,6 +1809,10 @@ SpeciesLocation.create([
                           {
                             species_id: Species.find_by_name("Tui").id,
                             location_id: Location.find_by_name("Otari-Wiltons Bush").id
+                          },
+                          {
+                            species_id: Species.find_by_name("Tui").id,
+                            location_id: Location.find_by_name("Queen Elizabeth Park").id
                           },
                           {
                             species_id: Species.find_by_name("Tui").id,

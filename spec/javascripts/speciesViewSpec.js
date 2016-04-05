@@ -131,24 +131,6 @@ describe("SpeciesView", function() {
     });
   });
 
-  describe("displaySpeciesSearchForm", function() {
-    beforeEach(function() {
-      view.displaySpeciesSearchForm();
-    });
-
-    it("appends a speciesSearch div to the page", function() {
-      expect($('#content .speciesSearch')).toBeInDOM();
-    });
-
-    it("displays the species search form", function() {
-      expect($('.speciesSearch')).toContainText('Species Name');
-    });
-
-    it("states which name fields will be searched", function() {
-      expect($('.speciesSearch')).toContainText('Common name, Scientific name or Maori name');
-    });
-  });
-
   describe("displaySpeciesSearchResults", function() {
     beforeEach(function() {
       var result = {"commonName":[{"id":28,"name":"New Zealand Wood Pigeon","scientific_name":"Hemiphaga novaeseelandiae","maori_name":"Kereru","description":"Large native pigeon, endemic to New Zealand"}],"scientificName":[{"id":2,"name":"Australasian Gannet","scientific_name":"Morus serrator","maori_name":null,"description":"Large white seabird with a distinctive orange head"}],"maoriName":[{"id":6,"name":"Blue Duck","scientific_name":"Hymenolaimus malacorhynchos","maori_name":"Whio","description":"Rare duck, found in fast flowing rivers."}]};

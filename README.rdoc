@@ -15,13 +15,11 @@ A site documenting wildlife viewing spots around Wellington and the surrounding 
 
 * Compare two Species
 
-* Location search
-
-* Species search
+* Search for a Location or Species
 
 
 === Technical Details
 
-This site uses Ruby on Rails (as an API), Javascript and jQuery. The code is tested with RSpec and Jasmine.
+This site uses Ruby on Rails, Javascript and jQuery. The code is tested with RSpec and Jasmine.
 
 The site also integrates with the Google Maps api to provide a map for each location.

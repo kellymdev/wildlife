@@ -73,9 +73,9 @@ describe("LocationView", function() {
     });
   });
 
-  describe("displayLocationSearchForm", function() {
+  describe("displaySearchForm", function() {
     beforeEach(function() {
-      view.displayLocationSearchForm();
+      view.displaySearchForm();
     });
 
     it("appends a locationSearch div to the page", function() {
@@ -84,6 +84,18 @@ describe("LocationView", function() {
 
     it("displays the location search form", function() {
       expect($('.locationSearch')).toContainText('Location Name');
+    });
+
+    it("appends a speciesSearch div to the page", function() {
+      expect($('#content .speciesSearch')).toBeInDOM();
+    });
+
+    it("displays the species search form", function() {
+      expect($('.speciesSearch')).toContainText('Species Name');
+    });
+
+    it("states which name fields will be searched", function() {
+      expect($('.speciesSearch')).toContainText('Common name, Scientific name or Maori name');
     });
   });
 
