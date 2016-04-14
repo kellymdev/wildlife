@@ -37,10 +37,11 @@ RSpec.describe LocationsController, type: :controller do
 
       it "returns location details and a list of species for the requested location as json" do
         expected_data = {
-                          location: location.as_json(except: [:created_at, :updated_at]),
-                          region: location.region.name,
-                          species: location.species.all.as_json(except: [:created_at, :updated_at])
-                        }
+          location: location.as_json(except: [:created_at, :updated_at]),
+          region: location.region.name,
+          species: location.species.all.as_json(except: [:created_at, :updated_at])
+        }
+
         expect(response.body).to eq(expected_data.to_json)
       end
     end

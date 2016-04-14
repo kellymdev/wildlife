@@ -4,9 +4,9 @@ class LocationsController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json {
+      format.json do
         render json: @locations.as_json(except: [:created_at, :updated_at])
-      }
+      end
     end
   end
 
@@ -17,13 +17,13 @@ class LocationsController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json {
+      format.json do
         render json:  {
           location: @location.as_json(except: [:created_at, :updated_at]),
           region: @region,
           species: @species.as_json(except: [:created_at, :updated_at])
         }
-      }
+      end
     end
   end
 
@@ -33,8 +33,8 @@ class LocationsController < ApplicationController
     regions = Region.where("lower(name) LIKE ?", term)
 
     render json:  {
-                    locations: locations.as_json(except: [:created_at, :updated_at]),
-                    regions: regions.as_json(except: [:created_at, :updated_at])
-                  }
+      locations: locations.as_json(except: [:created_at, :updated_at]),
+      regions: regions.as_json(except: [:created_at, :updated_at])
+    }
   end
 end

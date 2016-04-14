@@ -4,9 +4,9 @@ class RegionsController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json {
+      format.json do
         render json: @regions.as_json(except: [:created_at, :updated_at])
-      }
+      end
     end
   end
 
@@ -16,12 +16,12 @@ class RegionsController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json {
+      format.json do
         render json:  {
           region: @region.as_json(except: [:created_at, :updated_at]),
           locations: @locations.as_json(except: [:created_at, :updated_at])
         }
-      }
+      end
     end
   end
 end

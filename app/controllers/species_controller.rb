@@ -15,13 +15,13 @@ class SpeciesController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json {
+      format.json do
         render json:  {
           species: @species.as_json(except: [:created_at, :updated_at]),
           locations: @locations.as_json(except: [:created_at, :updated_at]),
           otherSpecies: @other_species
         }
-      }
+      end
     end
   end
 

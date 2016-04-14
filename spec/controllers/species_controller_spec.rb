@@ -30,7 +30,7 @@ RSpec.describe SpeciesController, type: :controller do
     before { location.species << species }
 
     context "when json is requested" do
-      before { get :show, id: species.id, format: :json}
+      before { get :show, id: species.id, format: :json }
 
       it "returns http status 200" do
         expect(response.status).to eq(200)
@@ -41,8 +41,8 @@ RSpec.describe SpeciesController, type: :controller do
           species: species.as_json(except: [:created_at, :updated_at]),
           locations: species.locations.all.as_json(except: [:created_at, :updated_at]),
           otherSpecies: [
-            [ tui.name, tui.id],
-            [ gannet.name, gannet.id ]
+            [tui.name, tui.id],
+            [gannet.name, gannet.id]
           ]
         }
 
