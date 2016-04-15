@@ -16,11 +16,7 @@ class SpeciesController < ApplicationController
     respond_to do |format|
       format.html
       format.json do
-        render json:  {
-          species: @species.as_json(except: [:created_at, :updated_at]),
-          locations: @locations.as_json(except: [:created_at, :updated_at]),
-          otherSpecies: @other_species
-        }
+        render json: JsonFormatter.new.species_details(@species, @other_species)
       end
     end
   end
@@ -31,20 +27,13 @@ class SpeciesController < ApplicationController
     scientific_names = Species.where("lower(scientific_name) LIKE ?", term)
     maori_names = Species.where("lower(maori_name) LIKE ?", term)
 
-    render json:  {
-      commonName: species.as_json(except: [:created_at, :updated_at]),
-      scientificName: scientific_names.as_json(except: [:created_at, :updated_at]),
-      maoriName: maori_names.as_json(except: [:created_at, :updated_at])
-    }
+    render json: JsonFormatter.new.species_search(species, scientific_names, maori_names)
   end
 
   def compare
     species_one = Species.find(params[:id])
     species_two = Species.find(params[:query])
 
-    render json:  {
-      species_one: species_one.as_json(except: [:created_at, :updated_at]),
-      species_two: species_two.as_json(except: [:created_at, :updated_at])
-    }
+    render json: JsonFormatter.new.species_comparison(species_one, species_two)
   end
 end

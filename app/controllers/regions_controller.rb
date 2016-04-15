@@ -5,7 +5,7 @@ class RegionsController < ApplicationController
     respond_to do |format|
       format.html
       format.json do
-        render json: @regions.as_json(except: [:created_at, :updated_at])
+        render json: JsonFormatter.new.location_list(@regions)
       end
     end
   end
@@ -17,10 +17,7 @@ class RegionsController < ApplicationController
     respond_to do |format|
       format.html
       format.json do
-        render json:  {
-          region: @region.as_json(except: [:created_at, :updated_at]),
-          locations: @locations.as_json(except: [:created_at, :updated_at])
-        }
+        render json: JsonFormatter.new.region_details(@region)
       end
     end
   end
