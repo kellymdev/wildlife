@@ -6,7 +6,7 @@ RSpec.describe RegionsController, type: :controller do
 
   describe "get #index" do
     context "when json is requested" do
-      before { get :index, format: :json }
+      before { get :index, params: { format: :json } }
 
       it "returns http status 200" do
         expect(response.status).to eq(200)
@@ -26,7 +26,7 @@ RSpec.describe RegionsController, type: :controller do
 
   describe "get #show" do
     context "when json is requested" do
-      before { get :show, id: region.id, format: :json }
+      before { get :show, params: { id: region.id, format: :json } }
 
       it "returns http status 200" do
         expect(response.status).to eq(200)
@@ -42,7 +42,7 @@ RSpec.describe RegionsController, type: :controller do
     end
 
     context "when html is requested" do
-      before { get :show, id: region.id }
+      before { get :show, params: { id: region.id } }
 
       it { is_expected.to render_template :show }
     end

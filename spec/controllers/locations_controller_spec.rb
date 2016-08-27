@@ -7,7 +7,7 @@ RSpec.describe LocationsController, type: :controller do
 
   describe "get #index" do
     context "when json is requested" do
-      before { get :index, format: :json }
+      before { get :index, params: { format: :json } }
 
       it "returns http status 200" do
         expect(response.status).to eq(200)
@@ -29,7 +29,7 @@ RSpec.describe LocationsController, type: :controller do
     before { location.species << species }
 
     context "when json is requested" do
-      before { get :show, id: location.id, format: :json }
+      before { get :show, params: { id: location.id, format: :json } }
 
       it "returns http status 200" do
         expect(response.status).to eq(200)
@@ -47,7 +47,7 @@ RSpec.describe LocationsController, type: :controller do
     end
 
     context "when html is requested" do
-      before { get :show, id: location.id }
+      before { get :show, params: { id: location.id } }
 
       it { is_expected.to render_template :show }
     end
@@ -55,7 +55,7 @@ RSpec.describe LocationsController, type: :controller do
 
   describe "get #search" do
     context "search for a location" do
-      before { get :search, query: "Zealandia" }
+      before { get :search, params: { query: "Zealandia" } }
 
       it "returns http status 200" do
         expect(response.status).to eq(200)
@@ -67,7 +67,7 @@ RSpec.describe LocationsController, type: :controller do
     end
 
     context "search for a region" do
-      before { get :search, query: "Wellington" }
+      before { get :search, params: { query: "Wellington" } }
 
       it "returns a list of regions matching the search term as json" do
         expect(response.body).to include((Region.where("lower(name) LIKE ?", '%wellington%').as_json(except: [:created_at, :updated_at])).to_json)

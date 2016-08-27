@@ -8,7 +8,7 @@ RSpec.describe SpeciesController, type: :controller do
 
   describe "get #index" do
     context "when json is requested" do
-      before { get :index, format: :json }
+      before { get :index, params: { format: :json } }
 
       it "returns http status 200" do
         expect(response.status).to eq(200)
@@ -30,7 +30,7 @@ RSpec.describe SpeciesController, type: :controller do
     before { location.species << species }
 
     context "when json is requested" do
-      before { get :show, id: species.id, format: :json }
+      before { get :show, params: { id: species.id, format: :json } }
 
       it "returns http status 200" do
         expect(response.status).to eq(200)
@@ -51,7 +51,7 @@ RSpec.describe SpeciesController, type: :controller do
     end
 
     context "when html is requested" do
-      before { get :show, id: species.id }
+      before { get :show, params: { id: species.id } }
 
       it { is_expected.to render_template :show }
     end
@@ -59,7 +59,7 @@ RSpec.describe SpeciesController, type: :controller do
 
   describe "get #search" do
     context "Search by common name" do
-      before { get :search, query: "Fantail" }
+      before { get :search, params: { query: "Fantail" } }
 
       it "returns http status 200" do
         expect(response.status).to eq(200)
@@ -71,7 +71,7 @@ RSpec.describe SpeciesController, type: :controller do
     end
 
     context "Search by scientific name" do
-      before { get :search, query: "Rhipidura" }
+      before { get :search, params: { query: "Rhipidura" } }
 
       it "returns a list of species with scientific names matching the search term as json" do
         expect(response.body).to include((Species.where("lower(scientific_name) LIKE ?", "%rhipidura%").as_json(except: [:created_at, :updated_at])).to_json)
@@ -79,7 +79,7 @@ RSpec.describe SpeciesController, type: :controller do
     end
 
     context "Search by maori name" do
-      before { get :search, query: "Piwakawaka" }
+      before { get :search, params: { query: "Piwakawaka" } }
 
       it "returns a list of species with maori names matching the search term as json" do
         expect(response.body).to include((Species.where("lower(maori_name) LIKE ?", "%piwakawaka%").as_json(except: [:created_at, :updated_at])).to_json)
@@ -88,7 +88,7 @@ RSpec.describe SpeciesController, type: :controller do
   end
 
   describe "get #compare" do
-    before { get :compare, id: species.id, query: gannet.id }
+    before { get :compare, params: { id: species.id, query: gannet.id } }
 
     it "returns http status 200" do
       expect(response.status).to eq(200)
