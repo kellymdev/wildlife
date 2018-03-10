@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :species do
     name "New Zealand Fur Seal"
     scientific_name "Arctocephalus forsteri"

@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :location do
     name "Waikanae Estuary"
     description "A coastal lagooon and wetland area. Home to several species of sea bird."

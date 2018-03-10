@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :species_location do
     species
     location
