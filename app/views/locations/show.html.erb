@@ -22,24 +22,5 @@
         </ul>
       </div>
     </div>
-
-    <div id="map-canvas">
-    </div>
-
-    <script>
-      var mapLatLng = new google.maps.LatLng(<%= @location.lat %>, <%= @location.lng %>);
-      var mapCanvas = document.getElementById('map-canvas');
-      var mapOptions = {
-        center: mapLatLng,
-        zoom: 13,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-      };
-      var map = new google.maps.Map(mapCanvas, mapOptions)
-      var marker = new google.maps.Marker({
-        position: mapLatLng,
-        map: map,
-        title: "<%= @location.name %>"
-      });
-    </script>
   </div>
 </div>

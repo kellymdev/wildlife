@@ -21,5 +21,3 @@ A site documenting wildlife viewing spots around Wellington and the surrounding 
 === Technical Details
 
 This site uses Ruby on Rails, Javascript and jQuery. The code is tested with RSpec and Jasmine.
-
-The site also integrates with the Google Maps api to provide a map for each location.

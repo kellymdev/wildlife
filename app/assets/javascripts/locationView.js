@@ -33,26 +33,10 @@ LocationView.prototype.displayLocationDetails = function(details) {
   });
 
   locationHtml += '</ul></div></div>';
-  locationHtml += '<div id="map-canvas">' +
-                  '</div>' +
-                  '</div>' +
+  locationHtml += '</div>' +
                   '</div>';
   $('#content').append(locationHtml);
   ViewHelper.prototype.scrollPage();
-
-  var mapLatLng = new google.maps.LatLng(details.location.lat, details.location.lng);
-  var mapCanvas = document.getElementById('map-canvas');
-  var mapOptions = {
-    center: mapLatLng,
-    zoom: 13,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
-  var map = new google.maps.Map(mapCanvas, mapOptions)
-  var marker = new google.maps.Marker({
-    position: mapLatLng,
-    map: map,
-    title: details.location.name
-  });
 };
 
 LocationView.prototype.displaySearchForm = function() {
