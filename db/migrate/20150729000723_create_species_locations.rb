@@ -1,4 +1,4 @@
-class CreateSpeciesLocations < ActiveRecord::Migration
+class CreateSpeciesLocations < ActiveRecord::Migration[4.2]
   def change
     create_table :species_locations do |t|
       t.belongs_to :species
